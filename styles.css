@@ -9,9 +9,9 @@
   --muted: #756f69;
   --white: #ffffff;
   --line: rgba(62, 58, 54, 0.09);
-  --shadow-soft: 0 18px 50px rgba(62, 58, 54, 0.07);
-  --shadow-phone: 0 28px 70px rgba(62, 58, 54, 0.16);
-  --page-width: 1180px;
+  --shadow-soft: 0 14px 38px rgba(62, 58, 54, 0.06);
+  --shadow-phone: 0 22px 52px rgba(62, 58, 54, 0.14);
+  --page-width: 1040px;
 }
 
 * {
@@ -30,7 +30,7 @@ body {
     linear-gradient(
       180deg,
       #f6f8f4 0%,
-      var(--cream) 34%,
+      var(--cream) 32%,
       var(--cream) 100%
     );
   -webkit-font-smoothing: antialiased;
@@ -53,7 +53,7 @@ button {
 
 .page-shell {
   width: min(
-    calc(100% - 40px),
+    calc(100% - 36px),
     var(--page-width)
   );
   margin: 0 auto;
@@ -65,36 +65,36 @@ button {
   position: sticky;
   top: 0;
   z-index: 50;
-  background: rgba(248, 245, 242, 0.9);
+  background: rgba(248, 245, 242, 0.92);
   border-bottom: 1px solid rgba(62, 58, 54, 0.06);
   backdrop-filter: blur(18px);
   -webkit-backdrop-filter: blur(18px);
 }
 
 .header-inner {
-  min-height: 84px;
+  min-height: 70px;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: 32px;
+  gap: 26px;
 }
 
 .brand {
   display: inline-flex;
   align-items: center;
-  gap: 13px;
+  gap: 11px;
 }
 
 .brand-logo {
-  width: 48px;
-  height: 48px;
-  border-radius: 16px;
+  width: 40px;
+  height: 40px;
+  border-radius: 13px;
   object-fit: cover;
 }
 
 .brand-name {
   font-family: "Cormorant Garamond", serif;
-  font-size: 30px;
+  font-size: 25px;
   font-weight: 700;
   letter-spacing: 0.12em;
   text-transform: uppercase;
@@ -103,8 +103,8 @@ button {
 .main-nav {
   display: flex;
   align-items: center;
-  gap: 30px;
-  font-size: 14px;
+  gap: 24px;
+  font-size: 12px;
   font-weight: 600;
 }
 
@@ -123,8 +123,8 @@ button {
 .language-switch {
   display: flex;
   align-items: center;
-  gap: 8px;
-  margin-left: 6px;
+  gap: 7px;
+  margin-left: 4px;
   color: rgba(62, 58, 54, 0.32);
 }
 
@@ -133,7 +133,7 @@ button {
   border: none;
   background: transparent;
   color: var(--muted);
-  font-size: 13px;
+  font-size: 12px;
   font-weight: 700;
   cursor: pointer;
 }
@@ -145,24 +145,24 @@ button {
 /* HERO */
 
 .hero {
-  padding: 90px 0 92px;
+  padding: 58px 0 64px;
 }
 
 .hero-inner {
   display: grid;
   grid-template-columns:
-    minmax(0, 1.05fr)
-    minmax(340px, 0.95fr);
+    minmax(0, 1.08fr)
+    minmax(300px, 0.92fr);
   align-items: center;
-  gap: 90px;
+  gap: 54px;
 }
 
 .eyebrow {
-  margin: 0 0 18px;
+  margin: 0 0 14px;
   color: var(--gold);
-  font-size: 12px;
+  font-size: 10px;
   font-weight: 700;
-  letter-spacing: 0.2em;
+  letter-spacing: 0.19em;
   text-transform: uppercase;
 }
 
@@ -172,12 +172,12 @@ button {
   margin: 0;
   font-family: "Cormorant Garamond", serif;
   font-weight: 600;
-  letter-spacing: -0.035em;
+  letter-spacing: -0.03em;
 }
 
 .hero h1 {
-  font-size: clamp(64px, 7vw, 100px);
-  line-height: 0.95;
+  font-size: clamp(52px, 5.8vw, 78px);
+  line-height: 0.97;
 }
 
 .hero h1 span {
@@ -186,30 +186,30 @@ button {
 }
 
 .hero-text {
-  max-width: 660px;
-  margin: 30px 0 0;
+  max-width: 570px;
+  margin: 22px 0 0;
   color: var(--muted);
-  font-size: 18px;
-  line-height: 1.8;
+  font-size: 14px;
+  line-height: 1.75;
 }
 
 .store-row {
   display: flex;
   flex-wrap: wrap;
-  gap: 14px;
-  margin-top: 34px;
+  gap: 10px;
+  margin-top: 25px;
 }
 
 .store-button {
-  min-width: 190px;
-  padding: 13px 22px;
+  min-width: 150px;
+  padding: 10px 18px;
   display: inline-flex;
   flex-direction: column;
   justify-content: center;
   border-radius: 999px;
   background: var(--sage-dark);
   color: var(--white);
-  box-shadow: 0 12px 28px rgba(82, 99, 79, 0.18);
+  box-shadow: 0 10px 22px rgba(82, 99, 79, 0.16);
   transition:
     transform 180ms ease,
     background-color 180ms ease,
@@ -219,32 +219,32 @@ button {
 .store-button:hover {
   transform: translateY(-2px);
   background: var(--sage);
-  box-shadow: 0 18px 36px rgba(82, 99, 79, 0.22);
+  box-shadow: 0 15px 30px rgba(82, 99, 79, 0.2);
 }
 
 .store-small {
-  font-size: 10px;
+  font-size: 8px;
   letter-spacing: 0.04em;
   opacity: 0.82;
 }
 
 .store-large {
-  margin-top: 2px;
-  font-size: 18px;
+  margin-top: 1px;
+  font-size: 15px;
   font-weight: 700;
 }
 
 .coming-soon {
-  margin: 14px 0 0;
+  margin: 10px 0 0;
   color: var(--muted);
-  font-size: 13px;
+  font-size: 11px;
 }
 
 /* PHONE */
 
 .hero-phone-wrap {
   position: relative;
-  min-height: 660px;
+  min-height: 500px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -252,48 +252,47 @@ button {
 
 .phone-glow {
   position: absolute;
-  width: 520px;
-  height: 520px;
+  width: 390px;
+  height: 390px;
   border-radius: 50%;
   background:
     radial-gradient(
       circle,
-      rgba(111, 130, 106, 0.17) 0%,
-      rgba(111, 130, 106, 0.08) 46%,
+      rgba(111, 130, 106, 0.15) 0%,
+      rgba(111, 130, 106, 0.07) 45%,
       transparent 72%
     );
-  filter: blur(4px);
 }
 
 .phone-frame {
   position: relative;
   z-index: 2;
-  width: 330px;
-  height: 650px;
-  padding: 10px;
+  width: 250px;
+  height: 492px;
+  padding: 8px;
   border: 2px solid #222;
-  border-radius: 52px;
+  border-radius: 42px;
   background: #111;
   box-shadow: var(--shadow-phone);
 }
 
 .phone-top-bar {
   position: absolute;
-  top: 17px;
-  left: 25px;
-  right: 25px;
+  top: 14px;
+  left: 20px;
+  right: 20px;
   z-index: 3;
   display: flex;
   align-items: center;
   justify-content: space-between;
   color: #222;
-  font-size: 11px;
+  font-size: 8px;
   font-weight: 700;
 }
 
 .phone-island {
-  width: 92px;
-  height: 24px;
+  width: 70px;
+  height: 19px;
   border-radius: 999px;
   background: #111;
 }
@@ -301,8 +300,8 @@ button {
 .phone-screen {
   height: 100%;
   overflow: hidden;
-  padding: 48px 18px 20px;
-  border-radius: 42px;
+  padding: 37px 13px 15px;
+  border-radius: 34px;
   background:
     linear-gradient(
       180deg,
@@ -315,113 +314,113 @@ button {
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-bottom: 18px;
+  margin-bottom: 12px;
 }
 
 .phone-brand img {
-  width: 66px;
-  height: 66px;
-  border-radius: 21px;
+  width: 48px;
+  height: 48px;
+  border-radius: 16px;
   object-fit: cover;
 }
 
 .phone-brand span {
-  margin-top: 8px;
+  margin-top: 5px;
   font-family: "Cormorant Garamond", serif;
-  font-size: 19px;
+  font-size: 14px;
   font-weight: 700;
-  letter-spacing: 0.14em;
+  letter-spacing: 0.13em;
   text-transform: uppercase;
 }
 
 .phone-greeting {
-  margin: 0 0 12px;
+  margin: 0 0 8px;
   color: var(--sage-dark);
-  font-size: 13px;
+  font-size: 9px;
   font-weight: 700;
 }
 
 .phone-focus-card,
 .phone-affirmation-card {
-  padding: 14px;
-  border-radius: 18px;
+  padding: 10px;
+  border-radius: 13px;
   background: rgba(255, 255, 255, 0.9);
-  box-shadow: 0 8px 22px rgba(62, 58, 54, 0.055);
+  box-shadow: 0 6px 16px rgba(62, 58, 54, 0.05);
 }
 
 .phone-focus-card {
-  margin-bottom: 15px;
+  margin-bottom: 10px;
 }
 
 .phone-focus-card small,
 .phone-affirmation-card small {
   display: block;
-  margin-bottom: 6px;
+  margin-bottom: 4px;
   color: var(--muted);
-  font-size: 10px;
+  font-size: 7px;
 }
 
 .phone-focus-card strong,
 .phone-affirmation-card strong {
   display: block;
   color: var(--text);
-  font-size: 12px;
-  line-height: 1.5;
+  font-size: 8px;
+  line-height: 1.45;
 }
 
 .phone-section-title {
-  margin: 15px 0 9px;
+  margin: 10px 0 6px;
   color: var(--sage-dark);
-  font-size: 11px;
+  font-size: 8px;
   font-weight: 700;
 }
 
 .phone-app-grid {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  gap: 7px;
+  gap: 5px;
 }
 
 .phone-app-grid span,
 .phone-universe-row span {
-  min-height: 54px;
-  padding: 8px 5px;
+  min-height: 40px;
+  padding: 6px 3px;
   display: flex;
   align-items: center;
   justify-content: center;
-  border-radius: 14px;
+  border-radius: 10px;
   background: rgba(255, 255, 255, 0.92);
   color: var(--text);
-  font-size: 8px;
+  font-size: 6px;
   font-weight: 600;
   text-align: center;
-  box-shadow: 0 6px 14px rgba(62, 58, 54, 0.04);
+  box-shadow: 0 4px 10px rgba(62, 58, 54, 0.04);
 }
 
 .phone-affirmation-card {
-  margin-top: 14px;
+  margin-top: 10px;
 }
 
 .phone-universe-row {
   display: grid;
   grid-template-columns: repeat(5, 1fr);
-  gap: 5px;
+  gap: 4px;
 }
 
 .phone-universe-row span {
-  min-height: 46px;
-  font-size: 7px;
+  min-height: 34px;
+  font-size: 5px;
 }
 
 /* SECTIONS */
 
 .section {
-  padding: 108px 0;
+  padding: 72px 0;
 }
 
 .section-heading {
-  max-width: 800px;
-  margin-bottom: 54px;
+  max-width: 680px;
+  margin-bottom: 36px;
 }
 
 .section-heading.centred {
@@ -432,23 +431,23 @@ button {
 
 .section-heading h2,
 .premium-card h2 {
-  font-size: clamp(44px, 5vw, 70px);
-  line-height: 1.02;
+  font-size: clamp(34px, 4.2vw, 52px);
+  line-height: 1.03;
 }
 
 .experience-grid {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 22px;
+  gap: 16px;
 }
 
 .experience-card {
-  min-height: 330px;
-  padding: 32px;
+  min-height: 250px;
+  padding: 24px;
   border: 1px solid var(--line);
-  border-radius: 32px;
+  border-radius: 24px;
   background: rgba(255, 255, 255, 0.82);
-  box-shadow: 0 14px 36px rgba(62, 58, 54, 0.045);
+  box-shadow: 0 10px 28px rgba(62, 58, 54, 0.04);
   transition:
     transform 190ms ease,
     box-shadow 190ms ease,
@@ -456,29 +455,29 @@ button {
 }
 
 .experience-card:hover {
-  transform: translateY(-5px);
-  border-color: rgba(168, 137, 74, 0.22);
-  box-shadow: 0 22px 48px rgba(62, 58, 54, 0.075);
+  transform: translateY(-4px);
+  border-color: rgba(168, 137, 74, 0.2);
+  box-shadow: 0 17px 36px rgba(62, 58, 54, 0.07);
 }
 
 .experience-icon {
-  width: 58px;
-  height: 58px;
+  width: 44px;
+  height: 44px;
   display: flex;
   align-items: center;
   justify-content: center;
   border-radius: 50%;
   background: var(--sage-soft);
   color: var(--gold);
-  font-size: 13px;
+  font-size: 10px;
   font-weight: 800;
   letter-spacing: 0.08em;
 }
 
 .experience-card h3 {
-  margin: 30px 0 15px;
+  margin: 22px 0 11px;
   font-family: "Cormorant Garamond", serif;
-  font-size: 36px;
+  font-size: 28px;
   font-weight: 600;
   line-height: 1.08;
 }
@@ -486,14 +485,14 @@ button {
 .experience-card p {
   margin: 0;
   color: var(--muted);
-  font-size: 15px;
-  line-height: 1.75;
+  font-size: 12px;
+  line-height: 1.65;
 }
 
 /* UNIVERSE */
 
 .universe-section {
-  padding: 108px 0;
+  padding: 72px 0;
   border-top: 1px solid rgba(62, 58, 54, 0.05);
   border-bottom: 1px solid rgba(62, 58, 54, 0.05);
   background: rgba(255, 255, 255, 0.42);
@@ -506,8 +505,8 @@ button {
 }
 
 .universe-list div {
-  min-height: 150px;
-  padding: 30px;
+  min-height: 112px;
+  padding: 22px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -521,26 +520,26 @@ button {
 
 .universe-list span {
   font-family: "Cormorant Garamond", serif;
-  font-size: 31px;
+  font-size: 24px;
   font-weight: 600;
 }
 
 .universe-list small {
-  margin-top: 8px;
+  margin-top: 5px;
   color: var(--muted);
-  font-size: 14px;
-  line-height: 1.6;
+  font-size: 11px;
+  line-height: 1.55;
 }
 
 /* PREMIUM */
 
 .premium-card {
-  padding: 52px;
+  padding: 38px;
   display: grid;
   grid-template-columns: 1.05fr 0.95fr;
   align-items: center;
-  gap: 70px;
-  border-radius: 40px;
+  gap: 46px;
+  border-radius: 30px;
   background:
     linear-gradient(
       135deg,
@@ -548,7 +547,7 @@ button {
       #4d5d49 100%
     );
   color: var(--white);
-  box-shadow: 0 24px 58px rgba(82, 99, 79, 0.2);
+  box-shadow: 0 18px 44px rgba(82, 99, 79, 0.18);
 }
 
 .premium-card .eyebrow {
@@ -558,14 +557,14 @@ button {
 .premium-card p {
   margin: 0;
   color: rgba(255, 255, 255, 0.82);
-  font-size: 17px;
-  line-height: 1.8;
+  font-size: 13px;
+  line-height: 1.7;
 }
 
 /* FOOTER */
 
 .site-footer {
-  padding: 42px 0;
+  padding: 30px 0;
   border-top: 1px solid rgba(62, 58, 54, 0.08);
   background: rgba(255, 255, 255, 0.38);
 }
@@ -574,24 +573,24 @@ button {
   display: grid;
   grid-template-columns: auto 1fr auto;
   align-items: center;
-  gap: 40px;
+  gap: 28px;
 }
 
 .footer-brand {
   display: inline-flex;
   align-items: center;
-  gap: 11px;
+  gap: 9px;
   font-family: "Cormorant Garamond", serif;
-  font-size: 23px;
+  font-size: 19px;
   font-weight: 700;
   letter-spacing: 0.1em;
   text-transform: uppercase;
 }
 
 .footer-brand img {
-  width: 42px;
-  height: 42px;
-  border-radius: 14px;
+  width: 34px;
+  height: 34px;
+  border-radius: 11px;
   object-fit: cover;
 }
 
@@ -599,9 +598,9 @@ button {
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
-  gap: 24px;
+  gap: 18px;
   color: var(--muted);
-  font-size: 13px;
+  font-size: 11px;
 }
 
 .footer-links a {
@@ -615,16 +614,16 @@ button {
 .copyright {
   margin: 0;
   color: var(--muted);
-  font-size: 12px;
+  font-size: 10px;
   text-align: right;
 }
 
 /* RESPONSIVE */
 
-@media (max-width: 980px) {
+@media (max-width: 900px) {
   .hero-inner {
     grid-template-columns: 1fr;
-    gap: 55px;
+    gap: 42px;
   }
 
   .hero-copy {
@@ -641,7 +640,7 @@ button {
   }
 
   .hero-phone-wrap {
-    min-height: 620px;
+    min-height: 470px;
   }
 
   .experience-grid {
@@ -666,7 +665,7 @@ button {
 
   .premium-card {
     grid-template-columns: 1fr;
-    gap: 34px;
+    gap: 24px;
   }
 
   .footer-inner {
@@ -680,30 +679,30 @@ button {
   }
 }
 
-@media (max-width: 760px) {
+@media (max-width: 700px) {
   .page-shell {
     width: min(
-      calc(100% - 28px),
+      calc(100% - 24px),
       var(--page-width)
     );
   }
 
   .header-inner {
-    min-height: 72px;
+    min-height: 64px;
   }
 
   .brand-logo {
-    width: 42px;
-    height: 42px;
-    border-radius: 14px;
+    width: 36px;
+    height: 36px;
+    border-radius: 12px;
   }
 
   .brand-name {
-    font-size: 24px;
+    font-size: 21px;
   }
 
   .main-nav {
-    gap: 14px;
+    gap: 12px;
   }
 
   .main-nav > a {
@@ -711,16 +710,15 @@ button {
   }
 
   .hero {
-    padding: 48px 0 64px;
+    padding: 38px 0 52px;
   }
 
   .hero h1 {
-    font-size: clamp(50px, 15vw, 70px);
+    font-size: clamp(45px, 14vw, 62px);
   }
 
   .hero-text {
-    font-size: 16px;
-    line-height: 1.7;
+    font-size: 14px;
   }
 
   .store-row {
@@ -735,45 +733,39 @@ button {
   }
 
   .hero-phone-wrap {
-    min-height: 560px;
+    min-height: 480px;
   }
 
   .phone-glow {
-    width: 390px;
-    height: 390px;
+    width: 330px;
+    height: 330px;
   }
 
   .phone-frame {
-    width: 286px;
-    height: 560px;
-    border-radius: 46px;
-  }
-
-  .phone-screen {
-    border-radius: 37px;
+    width: 238px;
+    height: 468px;
   }
 
   .section,
   .universe-section {
-    padding: 76px 0;
+    padding: 58px 0;
   }
 
   .section-heading {
-    margin-bottom: 36px;
+    margin-bottom: 28px;
   }
 
   .section-heading h2,
   .premium-card h2 {
-    font-size: clamp(39px, 11vw, 56px);
+    font-size: clamp(34px, 10vw, 48px);
   }
 
   .experience-card {
-    padding: 28px;
-    border-radius: 28px;
+    padding: 23px;
   }
 
   .experience-card h3 {
-    font-size: 34px;
+    font-size: 28px;
   }
 
   .universe-list {
@@ -783,17 +775,13 @@ button {
   .universe-list div,
   .universe-list div:nth-child(2n),
   .universe-list div:nth-child(3n) {
-    padding: 25px 0;
+    padding: 20px 0;
     border-right: none;
   }
 
   .premium-card {
-    padding: 32px 26px;
-    border-radius: 30px;
-  }
-
-  .footer-links {
-    gap: 18px;
+    padding: 28px 23px;
+    border-radius: 26px;
   }
 }
 
