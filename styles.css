@@ -1060,3 +1060,498 @@ main {
   }
 
 }
+/* ========================================
+   SUNZET – FINPUSS
+======================================== */
+
+/* HERO MER MOT MIDTEN */
+
+.hero {
+  grid-template-columns:
+    minmax(0, 0.92fr)
+    minmax(420px, 1.08fr);
+
+  gap: 58px;
+}
+
+.hero-copy {
+  padding-left: clamp(20px, 4vw, 70px);
+}
+
+.hero h1 {
+  font-size: clamp(38px, 4vw, 54px);
+}
+
+.hero-text {
+  max-width: 520px;
+}
+
+/* ========================================
+   TAROTKORT I LAG
+======================================== */
+
+.hero-art {
+  min-height: 310px;
+  padding-right: 110px;
+}
+
+.tarot-stack {
+  position: relative;
+
+  width: 245px;
+  height: 285px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.sun-card {
+  position: relative;
+  z-index: 4;
+
+  width: 166px;
+
+  border-radius: 14px;
+
+  box-shadow:
+    0 17px 42px
+    rgba(62, 58, 54, 0.17);
+}
+
+.tarot-card-back {
+  position: absolute;
+
+  width: 150px;
+  height: 255px;
+
+  border-radius: 14px;
+
+  background:
+    linear-gradient(
+      150deg,
+      #657761,
+      #465542
+    );
+
+  border:
+    1px solid
+    rgba(168, 137, 74, 0.35);
+
+  box-shadow:
+    0 13px 30px
+    rgba(62, 58, 54, 0.12);
+}
+
+.tarot-card-back::before {
+  content: "✦";
+
+  position: absolute;
+  inset: 11px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border:
+    1px solid
+    rgba(234, 215, 166, 0.34);
+
+  border-radius: 9px;
+
+  color:
+    rgba(234, 215, 166, 0.7);
+
+  font-family:
+    "Cormorant Garamond",
+    serif;
+
+  font-size: 32px;
+}
+
+.tarot-card-left {
+  z-index: 1;
+
+  left: 12px;
+
+  transform:
+    rotate(-8deg)
+    translateY(8px);
+}
+
+.tarot-card-right {
+  z-index: 2;
+
+  right: 12px;
+
+  transform:
+    rotate(8deg)
+    translateY(8px);
+}
+
+/* ========================================
+   KRYSTALLER SAMLET PÅ SIDEN
+======================================== */
+
+.crystal-column {
+  position: absolute;
+
+  right: 7px;
+  top: 50%;
+
+  transform: translateY(-50%);
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  gap: 20px;
+}
+
+.side-crystal {
+  width: 52px;
+  height: 52px;
+
+  object-fit: contain;
+
+  filter:
+    drop-shadow(
+      0 8px 10px
+      rgba(62, 58, 54, 0.13)
+    );
+
+  animation:
+    sideCrystalFloat
+    6s ease-in-out infinite;
+}
+
+.side-crystal:nth-child(2) {
+  animation-delay: -2s;
+}
+
+.side-crystal:nth-child(3) {
+  animation-delay: -4s;
+}
+
+@keyframes sideCrystalFloat {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-4px);
+  }
+}
+
+/* Fjern gamle, svevende krystaller */
+
+.hero-crystal {
+  display: none;
+}
+
+/* ========================================
+   NYE IKONER I KATEGORIBOKSENE
+======================================== */
+
+.category-symbol {
+  width: 44px;
+  height: 44px;
+
+  flex-shrink: 0;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 50%;
+
+  background: var(--sage-soft);
+  color: var(--olive);
+
+  font-family:
+    "Cormorant Garamond",
+    serif;
+
+  font-size: 22px;
+  font-weight: 600;
+}
+
+/* Litt lavere bokser */
+
+.category-card {
+  min-height: 145px;
+  padding: 15px 16px;
+}
+
+.category-card h2 {
+  font-size: 23px;
+}
+
+.category-intro {
+  margin-top: 9px;
+}
+
+.category-items {
+  margin-top: 10px;
+}
+
+/* ========================================
+   PREMIUM I FULL BREDDE
+======================================== */
+
+.premium-strip {
+  width: 100%;
+
+  margin-top: 12px;
+
+  padding: 14px 0;
+
+  border-top:
+    1px solid
+    rgba(168, 137, 74, 0.18);
+
+  border-bottom:
+    1px solid
+    rgba(168, 137, 74, 0.18);
+
+  background:
+    linear-gradient(
+      90deg,
+      rgba(255, 255, 255, 0.46),
+      rgba(237, 242, 235, 0.55)
+    );
+
+  color: var(--text);
+
+  box-shadow: none;
+}
+
+.premium-inner {
+  width: 100%;
+
+  display: grid;
+
+  grid-template-columns:
+    auto
+    1fr
+    auto;
+
+  align-items: center;
+
+  gap: 14px;
+}
+
+.premium-icon {
+  width: 42px;
+  height: 42px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 50%;
+
+  background:
+    rgba(168, 137, 74, 0.1);
+
+  color: var(--gold);
+
+  font-family:
+    "Cormorant Garamond",
+    serif;
+
+  font-size: 24px;
+}
+
+.premium-label {
+  color: var(--gold);
+}
+
+.premium-text {
+  color: var(--muted);
+}
+
+.premium-link {
+  padding: 9px 18px;
+
+  border:
+    1px solid
+    rgba(168, 137, 74, 0.48);
+
+  border-radius: 999px;
+
+  color: var(--gold);
+
+  font-size: 9px;
+  font-weight: 700;
+
+  white-space: nowrap;
+
+  transition:
+    background-color 170ms ease,
+    color 170ms ease;
+}
+
+.premium-link:hover {
+  background: var(--gold);
+  color: white;
+}
+
+/* ========================================
+   HELHVIT FOOTER I FULL BREDDE
+======================================== */
+
+.site-footer {
+  width: 100%;
+
+  min-height: auto;
+
+  margin-top: 0;
+
+  padding: 14px 0 12px;
+
+  display: block;
+
+  border: none;
+  border-radius: 0;
+
+  background: #ffffff;
+
+  text-align: center;
+}
+
+.footer-inner {
+  width: 100%;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  gap: 7px;
+}
+
+.footer-links {
+  justify-content: center;
+
+  gap: 0;
+}
+
+.footer-links a {
+  padding: 0 16px;
+
+  border-right:
+    1px solid
+    rgba(62, 58, 54, 0.18);
+}
+
+.footer-links a:last-child {
+  border-right: none;
+}
+
+.site-footer p {
+  margin: 0;
+
+  color: var(--muted);
+
+  font-size: 7px;
+}
+
+/* Den gamle bunnraden brukes ikke lenger */
+
+.bottom-row {
+  display: none;
+}
+
+/* ========================================
+   RESPONSIVT
+======================================== */
+
+@media (max-width: 900px) {
+
+  .hero {
+    grid-template-columns: 1fr;
+
+    gap: 30px;
+  }
+
+  .hero-copy {
+    padding-left: 0;
+    text-align: center;
+  }
+
+  .hero-text {
+    margin-right: auto;
+    margin-left: auto;
+  }
+
+  .hero-art {
+    padding-right: 84px;
+  }
+
+  .store-row {
+    justify-content: center;
+  }
+
+  .category-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .premium-inner {
+    grid-template-columns:
+      auto
+      1fr;
+  }
+
+  .premium-link {
+    grid-column: 1 / -1;
+
+    justify-self: center;
+  }
+
+}
+
+@media (max-width: 560px) {
+
+  .hero-art {
+    min-height: 285px;
+    padding-right: 58px;
+  }
+
+  .tarot-stack {
+    width: 210px;
+  }
+
+  .sun-card {
+    width: 144px;
+  }
+
+  .tarot-card-back {
+    width: 130px;
+    height: 220px;
+  }
+
+  .crystal-column {
+    right: 0;
+
+    gap: 14px;
+  }
+
+  .side-crystal {
+    width: 43px;
+    height: 43px;
+  }
+
+  .premium-inner {
+    grid-template-columns: 1fr;
+
+    justify-items: center;
+
+    text-align: center;
+  }
+
+  .footer-links a {
+    padding: 0 9px;
+  }
+
+}
