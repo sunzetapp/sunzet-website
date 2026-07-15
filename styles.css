@@ -1553,5 +1553,63 @@ main {
   .footer-links a {
     padding: 0 9px;
   }
+   .tarot-stack {
+  position: relative;
+
+  width: 260px;
+  height: 300px;
+}
+
+.sun-card {
+  position: absolute;
+
+  left: 50%;
+  top: 50%;
+
+  width: 170px;
+
+  transform:
+    translate(-50%, -50%);
+
+  z-index: 3;
+
+  border-radius: 14px;
+
+  box-shadow:
+    0 18px 42px
+    rgba(62,58,54,.18);
+}
+
+.tarot-card {
+  position: absolute;
+
+  width: 150px;
+
+  border-radius: 14px;
+
+  box-shadow:
+    0 12px 28px
+    rgba(62,58,54,.12);
+}
+
+.tarot-card-left {
+
+  left: 5px;
+  top: 18px;
+
+  transform: rotate(-12deg);
+
+  z-index: 1;
+}
+
+.tarot-card-right {
+
+  right: 5px;
+  top: 18px;
+
+  transform: rotate(12deg);
+
+  z-index: 2;
+}
 
 }
