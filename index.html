@@ -10,15 +10,12 @@
 
   <meta
     name="description"
-    content="Sunzet brings mindful planning, reflection and personal growth together in one calm experience."
+    content="Sunzet is a calm companion for mindful planning, reflection and personal growth."
   />
 
   <title>Sunzet</title>
 
-  <link
-    rel="preconnect"
-    href="https://fonts.googleapis.com"
-  />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
 
   <link
     rel="preconnect"
@@ -31,20 +28,18 @@
     rel="stylesheet"
   />
 
-  <link
-    rel="stylesheet"
-    href="styles.css"
-  />
+  <link rel="stylesheet" href="styles.css" />
 </head>
 
 <body>
 
-  <header class="site-header">
-    <div class="page-shell header-inner">
+  <div class="site-shell">
+
+    <header class="site-header">
 
       <a
-        href="#top"
         class="brand"
+        href="#"
         aria-label="Sunzet home"
       >
         <img
@@ -83,13 +78,11 @@
         </button>
       </div>
 
-    </div>
-  </header>
+    </header>
 
-  <main id="top">
+    <main>
 
-    <section class="hero-section">
-      <div class="page-shell hero-grid">
+      <section class="hero">
 
         <div class="hero-copy">
 
@@ -137,8 +130,8 @@
           <div class="store-row">
 
             <a
-              href="#"
               class="store-button"
+              href="#"
               aria-label="App Store, coming soon"
             >
               <span
@@ -155,8 +148,8 @@
             </a>
 
             <a
-              href="#"
               class="store-button store-button-outline"
+              href="#"
               aria-label="Google Play, coming soon"
             >
               <span
@@ -188,68 +181,48 @@
 
           <div class="sun-glow"></div>
 
-          <div class="tarot-stack">
+          <img
+            src="the-sun.png"
+            alt="The Sun tarot artwork"
+            class="sun-card"
+          />
 
-            <img
-              src="the-fool.png"
-              alt="The Fool tarot artwork"
-              class="tarot-card tarot-card-left"
-            />
+          <img
+            src="amethyst.png"
+            alt=""
+            class="hero-crystal hero-amethyst"
+          />
 
-            <img
-              src="strength.png"
-              alt="Strength tarot artwork"
-              class="tarot-card tarot-card-right"
-            />
+          <img
+            src="amazonite.png"
+            alt=""
+            class="hero-crystal hero-amazonite"
+          />
 
-            <img
-              src="the-sun.png"
-              alt="The Sun tarot artwork"
-              class="tarot-card tarot-card-center"
-            />
-
-          </div>
-
-          <div class="crystal-column">
-
-            <img
-              src="amethyst.png"
-              alt="Amethyst"
-              class="side-crystal"
-            />
-
-            <img
-              src="amazonite.png"
-              alt="Amazonite"
-              class="side-crystal"
-            />
-
-            <img
-              src="citrine.png"
-              alt="Citrine"
-              class="side-crystal"
-            />
-
-          </div>
+          <img
+            src="citrine.png"
+            alt=""
+            class="hero-crystal hero-citrine"
+          />
 
         </div>
 
-      </div>
-    </section>
+      </section>
 
-    <section class="categories-section">
-      <div class="page-shell category-grid">
+      <section class="category-grid">
 
         <article class="category-card">
 
           <div class="category-heading">
 
-            <div class="category-symbol">
-              ☾
-            </div>
+            <img
+              src="amethyst.png"
+              alt=""
+              class="category-crystal"
+            />
 
             <div>
-              <p class="category-number">
+              <p class="category-label">
                 01
               </p>
 
@@ -287,11 +260,12 @@
               Dream interpretation
             </span>
 
-            <span>
-              Tarot
-            </span>
+            <span>Tarot</span>
 
-            <span>
+            <span
+              data-en="Journal"
+              data-no="Journal"
+            >
               Journal
             </span>
 
@@ -303,12 +277,14 @@
 
           <div class="category-heading">
 
-            <div class="category-symbol">
-              ✦
-            </div>
+            <img
+              src="amazonite.png"
+              alt=""
+              class="category-crystal"
+            />
 
             <div>
-              <p class="category-number">
+              <p class="category-label">
                 02
               </p>
 
@@ -346,7 +322,10 @@
               Manifestation
             </span>
 
-            <span>
+            <span
+              data-en="Vision board"
+              data-no="Vision board"
+            >
               Vision board
             </span>
 
@@ -365,12 +344,12 @@
 
           <div class="category-heading">
 
-            <div class="category-symbol">
+            <div class="organise-symbol">
               ✓
             </div>
 
             <div>
-              <p class="category-number">
+              <p class="category-label">
                 03
               </p>
 
@@ -426,91 +405,83 @@
 
         </article>
 
-      </div>
-    </section>
+      </section>
 
-    <section class="premium-strip">
-      <div class="page-shell premium-inner">
+      <section class="bottom-row">
 
-        <div class="premium-symbol">
-          ✦
+        <div class="premium-strip">
+
+          <img
+            src="citrine.png"
+            alt=""
+            class="premium-crystal"
+          />
+
+          <div>
+            <p class="premium-label">
+              Sunzet Premium
+            </p>
+
+            <p
+              class="premium-text"
+              data-en="Unlock more guidance, content and meaningful rituals."
+              data-no="Lås opp mer veiledning, innhold og meningsfulle ritualer."
+            >
+              Unlock more guidance, content and meaningful rituals.
+            </p>
+          </div>
+
         </div>
 
-        <div class="premium-copy">
+        <footer class="site-footer">
 
-          <p class="premium-label">
-            Sunzet Premium
+          <nav class="footer-links">
+
+            <a
+              href="privacy.html"
+              data-en="Privacy"
+              data-no="Personvern"
+            >
+              Privacy
+            </a>
+
+            <a
+              href="terms.html"
+              data-en="Terms"
+              data-no="Vilkår"
+            >
+              Terms
+            </a>
+
+            <a
+              href="support.html"
+              data-en="Support"
+              data-no="Hjelp"
+            >
+              Support
+            </a>
+
+            <a
+              href="mailto:sunzet.app@gmail.com"
+              data-en="Contact"
+              data-no="Kontakt"
+            >
+              Contact
+            </a>
+
+          </nav>
+
+          <p>
+            © 2026 Sunzet
           </p>
 
-          <p
-            class="premium-text"
-            data-en="Unlock more guidance, content and meaningful rituals."
-            data-no="Lås opp mer veiledning, innhold og meningsfulle ritualer."
-          >
-            Unlock more guidance, content and meaningful rituals.
-          </p>
+        </footer>
 
-        </div>
+      </section>
 
-        <a
-          href="#"
-          class="premium-button"
-          data-en="Explore Premium"
-          data-no="Se Premium"
-        >
-          Explore Premium
-        </a>
+    </main>
 
-      </div>
-    </section>
-
-  </main>
-
-  <footer class="site-footer">
-    <div class="page-shell footer-inner">
-
-      <nav class="footer-links">
-
-        <a
-          href="privacy.html"
-          data-en="Privacy"
-          data-no="Personvern"
-        >
-          Privacy
-        </a>
-
-        <a
-          href="terms.html"
-          data-en="Terms"
-          data-no="Vilkår"
-        >
-          Terms
-        </a>
-
-        <a
-          href="support.html"
-          data-en="Support"
-          data-no="Hjelp"
-        >
-          Support
-        </a>
-
-        <a
-          href="mailto:sunzet.app@gmail.com"
-          data-en="Contact"
-          data-no="Kontakt"
-        >
-          Contact
-        </a>
-
-      </nav>
-
-      <p>
-        © 2026 Sunzet
-      </p>
-
-    </div>
-  </footer>
+  </div>
 
   <script>
     const languageButtons =
