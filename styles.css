@@ -1,17 +1,16 @@
 :root {
   --cream: #f8f5f2;
-  --soft-sage: #eef3ec;
+  --cream-deep: #f1ece7;
+  --sage-soft: #eef3ec;
   --sage: #6f826a;
-  --sage-dark: #52634f;
+  --sage-dark: #53624f;
   --gold: #a8894a;
   --text: #3e3a36;
-  --muted: #77716b;
+  --muted: #756f69;
   --white: #ffffff;
-  --line: rgba(62, 58, 54, 0.1);
-  --shadow: 0 18px 50px rgba(62, 58, 54, 0.07);
-  --radius-large: 34px;
-  --radius-medium: 24px;
-  --radius-small: 16px;
+  --line: rgba(62, 58, 54, 0.09);
+  --shadow-soft: 0 18px 50px rgba(62, 58, 54, 0.07);
+  --shadow-phone: 0 28px 70px rgba(62, 58, 54, 0.16);
   --page-width: 1180px;
 }
 
@@ -25,16 +24,17 @@ html {
 
 body {
   margin: 0;
+  color: var(--text);
+  font-family: "Inter", sans-serif;
   background:
     linear-gradient(
       180deg,
-      var(--soft-sage) 0%,
-      var(--cream) 28%,
+      #f6f8f4 0%,
+      var(--cream) 34%,
       var(--cream) 100%
     );
-  color: var(--text);
-  font-family: "Inter", sans-serif;
   -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
 }
 
 img {
@@ -47,9 +47,8 @@ a {
   text-decoration: none;
 }
 
-button,
-a {
-  -webkit-tap-highlight-color: transparent;
+button {
+  font: inherit;
 }
 
 .page-shell {
@@ -60,28 +59,30 @@ a {
   margin: 0 auto;
 }
 
+/* HEADER */
+
 .site-header {
   position: sticky;
   top: 0;
   z-index: 50;
-  background: rgba(248, 245, 242, 0.88);
+  background: rgba(248, 245, 242, 0.9);
   border-bottom: 1px solid rgba(62, 58, 54, 0.06);
   backdrop-filter: blur(18px);
   -webkit-backdrop-filter: blur(18px);
 }
 
 .header-inner {
-  min-height: 86px;
+  min-height: 84px;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: 30px;
+  gap: 32px;
 }
 
 .brand {
   display: inline-flex;
   align-items: center;
-  gap: 12px;
+  gap: 13px;
 }
 
 .brand-logo {
@@ -93,9 +94,9 @@ a {
 
 .brand-name {
   font-family: "Cormorant Garamond", serif;
-  font-size: 29px;
+  font-size: 30px;
   font-weight: 700;
-  letter-spacing: 0.08em;
+  letter-spacing: 0.12em;
   text-transform: uppercase;
 }
 
@@ -107,37 +108,44 @@ a {
   font-weight: 600;
 }
 
-.main-nav a {
-  position: relative;
-  padding: 10px 0;
+.main-nav > a {
   color: var(--muted);
   transition:
     color 180ms ease,
     transform 180ms ease;
 }
 
-.main-nav a::after {
-  content: "";
-  position: absolute;
-  left: 0;
-  right: 100%;
-  bottom: 2px;
-  height: 1px;
-  background: var(--gold);
-  transition: right 180ms ease;
-}
-
-.main-nav a:hover {
+.main-nav > a:hover {
   color: var(--text);
   transform: translateY(-1px);
 }
 
-.main-nav a:hover::after {
-  right: 0;
+.language-switch {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-left: 6px;
+  color: rgba(62, 58, 54, 0.32);
 }
 
+.language-button {
+  padding: 0;
+  border: none;
+  background: transparent;
+  color: var(--muted);
+  font-size: 13px;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.language-button.active {
+  color: var(--gold);
+}
+
+/* HERO */
+
 .hero {
-  padding: 96px 0 88px;
+  padding: 90px 0 92px;
 }
 
 .hero-inner {
@@ -146,7 +154,7 @@ a {
     minmax(0, 1.05fr)
     minmax(340px, 0.95fr);
   align-items: center;
-  gap: 80px;
+  gap: 90px;
 }
 
 .eyebrow {
@@ -154,24 +162,22 @@ a {
   color: var(--gold);
   font-size: 12px;
   font-weight: 700;
-  letter-spacing: 0.18em;
+  letter-spacing: 0.2em;
   text-transform: uppercase;
 }
 
 .hero h1,
 .section-heading h2,
-.premium-card h2,
-.about-copy h2 {
+.premium-card h2 {
   margin: 0;
   font-family: "Cormorant Garamond", serif;
   font-weight: 600;
-  line-height: 0.98;
+  letter-spacing: -0.035em;
 }
 
 .hero h1 {
-  max-width: 700px;
-  font-size: clamp(58px, 7vw, 96px);
-  letter-spacing: -0.035em;
+  font-size: clamp(64px, 7vw, 100px);
+  line-height: 0.95;
 }
 
 .hero h1 span {
@@ -203,27 +209,27 @@ a {
   border-radius: 999px;
   background: var(--sage-dark);
   color: var(--white);
-  box-shadow: 0 12px 26px rgba(82, 99, 79, 0.18);
+  box-shadow: 0 12px 28px rgba(82, 99, 79, 0.18);
   transition:
     transform 180ms ease,
-    box-shadow 180ms ease,
-    background-color 180ms ease;
+    background-color 180ms ease,
+    box-shadow 180ms ease;
 }
 
 .store-button:hover {
   transform: translateY(-2px);
   background: var(--sage);
-  box-shadow: 0 18px 34px rgba(82, 99, 79, 0.22);
+  box-shadow: 0 18px 36px rgba(82, 99, 79, 0.22);
 }
 
 .store-small {
   font-size: 10px;
   letter-spacing: 0.04em;
-  opacity: 0.84;
+  opacity: 0.82;
 }
 
 .store-large {
-  margin-top: 1px;
+  margin-top: 2px;
   font-size: 18px;
   font-weight: 700;
 }
@@ -234,52 +240,187 @@ a {
   font-size: 13px;
 }
 
-.hero-art {
+/* PHONE */
+
+.hero-phone-wrap {
+  position: relative;
+  min-height: 660px;
   display: flex;
+  align-items: center;
   justify-content: center;
 }
 
-.logo-panel {
-  width: min(100%, 510px);
-  min-height: 570px;
+.phone-glow {
+  position: absolute;
+  width: 520px;
+  height: 520px;
+  border-radius: 50%;
+  background:
+    radial-gradient(
+      circle,
+      rgba(111, 130, 106, 0.17) 0%,
+      rgba(111, 130, 106, 0.08) 46%,
+      transparent 72%
+    );
+  filter: blur(4px);
+}
+
+.phone-frame {
+  position: relative;
+  z-index: 2;
+  width: 330px;
+  height: 650px;
+  padding: 10px;
+  border: 2px solid #222;
+  border-radius: 52px;
+  background: #111;
+  box-shadow: var(--shadow-phone);
+}
+
+.phone-top-bar {
+  position: absolute;
+  top: 17px;
+  left: 25px;
+  right: 25px;
+  z-index: 3;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: #222;
+  font-size: 11px;
+  font-weight: 700;
+}
+
+.phone-island {
+  width: 92px;
+  height: 24px;
+  border-radius: 999px;
+  background: #111;
+}
+
+.phone-screen {
+  height: 100%;
+  overflow: hidden;
+  padding: 48px 18px 20px;
+  border-radius: 42px;
+  background:
+    linear-gradient(
+      180deg,
+      #fcfaf7 0%,
+      #f6f3ee 100%
+    );
+}
+
+.phone-brand {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  padding: 52px;
-  border: 1px solid rgba(168, 137, 74, 0.16);
-  border-radius: 48px;
-  background:
-    linear-gradient(
-      145deg,
-      rgba(255, 255, 255, 0.9),
-      rgba(238, 243, 236, 0.85)
-    );
-  box-shadow: var(--shadow);
+  margin-bottom: 18px;
 }
 
-.hero-logo {
-  width: min(100%, 330px);
-  border-radius: 38px;
-  box-shadow: 0 20px 60px rgba(62, 58, 54, 0.11);
+.phone-brand img {
+  width: 66px;
+  height: 66px;
+  border-radius: 21px;
+  object-fit: cover;
 }
 
-.logo-panel p {
-  max-width: 320px;
-  margin: 28px 0 0;
-  color: var(--muted);
+.phone-brand span {
+  margin-top: 8px;
   font-family: "Cormorant Garamond", serif;
-  font-size: 25px;
-  line-height: 1.35;
-  text-align: center;
+  font-size: 19px;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
 }
+
+.phone-greeting {
+  margin: 0 0 12px;
+  color: var(--sage-dark);
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.phone-focus-card,
+.phone-affirmation-card {
+  padding: 14px;
+  border-radius: 18px;
+  background: rgba(255, 255, 255, 0.9);
+  box-shadow: 0 8px 22px rgba(62, 58, 54, 0.055);
+}
+
+.phone-focus-card {
+  margin-bottom: 15px;
+}
+
+.phone-focus-card small,
+.phone-affirmation-card small {
+  display: block;
+  margin-bottom: 6px;
+  color: var(--muted);
+  font-size: 10px;
+}
+
+.phone-focus-card strong,
+.phone-affirmation-card strong {
+  display: block;
+  color: var(--text);
+  font-size: 12px;
+  line-height: 1.5;
+}
+
+.phone-section-title {
+  margin: 15px 0 9px;
+  color: var(--sage-dark);
+  font-size: 11px;
+  font-weight: 700;
+}
+
+.phone-app-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 7px;
+}
+
+.phone-app-grid span,
+.phone-universe-row span {
+  min-height: 54px;
+  padding: 8px 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 14px;
+  background: rgba(255, 255, 255, 0.92);
+  color: var(--text);
+  font-size: 8px;
+  font-weight: 600;
+  text-align: center;
+  box-shadow: 0 6px 14px rgba(62, 58, 54, 0.04);
+}
+
+.phone-affirmation-card {
+  margin-top: 14px;
+}
+
+.phone-universe-row {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 5px;
+}
+
+.phone-universe-row span {
+  min-height: 46px;
+  font-size: 7px;
+}
+
+/* SECTIONS */
 
 .section {
-  padding: 110px 0;
+  padding: 108px 0;
 }
 
 .section-heading {
-  max-width: 760px;
+  max-width: 800px;
   margin-bottom: 54px;
 }
 
@@ -290,10 +431,9 @@ a {
 }
 
 .section-heading h2,
-.premium-card h2,
-.about-copy h2 {
-  font-size: clamp(42px, 5vw, 68px);
-  letter-spacing: -0.025em;
+.premium-card h2 {
+  font-size: clamp(44px, 5vw, 70px);
+  line-height: 1.02;
 }
 
 .experience-grid {
@@ -303,18 +443,16 @@ a {
 }
 
 .experience-card {
-  min-height: 430px;
-  padding: 34px;
-  display: flex;
-  flex-direction: column;
+  min-height: 330px;
+  padding: 32px;
   border: 1px solid var(--line);
-  border-radius: var(--radius-large);
-  background: rgba(255, 255, 255, 0.86);
-  box-shadow: 0 14px 38px rgba(62, 58, 54, 0.045);
+  border-radius: 32px;
+  background: rgba(255, 255, 255, 0.82);
+  box-shadow: 0 14px 36px rgba(62, 58, 54, 0.045);
   transition:
-    transform 200ms ease,
-    box-shadow 200ms ease,
-    border-color 200ms ease;
+    transform 190ms ease,
+    box-shadow 190ms ease,
+    border-color 190ms ease;
 }
 
 .experience-card:hover {
@@ -323,19 +461,26 @@ a {
   box-shadow: 0 22px 48px rgba(62, 58, 54, 0.075);
 }
 
-.card-number {
+.experience-icon {
+  width: 58px;
+  height: 58px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background: var(--sage-soft);
   color: var(--gold);
-  font-size: 12px;
-  font-weight: 700;
-  letter-spacing: 0.18em;
+  font-size: 13px;
+  font-weight: 800;
+  letter-spacing: 0.08em;
 }
 
 .experience-card h3 {
-  margin: 42px 0 18px;
+  margin: 30px 0 15px;
   font-family: "Cormorant Garamond", serif;
-  font-size: 40px;
+  font-size: 36px;
   font-weight: 600;
-  line-height: 1.05;
+  line-height: 1.08;
 }
 
 .experience-card p {
@@ -345,82 +490,65 @@ a {
   line-height: 1.75;
 }
 
-.tag-row {
-  margin-top: auto;
-  padding-top: 34px;
-  display: flex;
-  flex-wrap: wrap;
-  gap: 9px;
-}
-
-.tag-row span {
-  padding: 9px 12px;
-  border-radius: 999px;
-  background: var(--soft-sage);
-  color: var(--sage-dark);
-  font-size: 12px;
-  font-weight: 600;
-}
+/* UNIVERSE */
 
 .universe-section {
-  padding: 110px 0;
-  background: rgba(255, 255, 255, 0.48);
+  padding: 108px 0;
   border-top: 1px solid rgba(62, 58, 54, 0.05);
   border-bottom: 1px solid rgba(62, 58, 54, 0.05);
+  background: rgba(255, 255, 255, 0.42);
 }
 
 .universe-list {
   display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
+  grid-template-columns: repeat(3, minmax(0, 1fr));
   border-top: 1px solid var(--line);
 }
 
 .universe-list div {
-  min-height: 130px;
-  padding: 30px 4px;
+  min-height: 150px;
+  padding: 30px;
   display: flex;
   flex-direction: column;
   justify-content: center;
+  border-right: 1px solid var(--line);
   border-bottom: 1px solid var(--line);
 }
 
-.universe-list div:nth-child(odd) {
-  padding-right: 42px;
-  border-right: 1px solid var(--line);
-}
-
-.universe-list div:nth-child(even) {
-  padding-left: 42px;
+.universe-list div:nth-child(3n) {
+  border-right: none;
 }
 
 .universe-list span {
   font-family: "Cormorant Garamond", serif;
-  font-size: 32px;
+  font-size: 31px;
   font-weight: 600;
 }
 
 .universe-list small {
-  margin-top: 7px;
+  margin-top: 8px;
   color: var(--muted);
   font-size: 14px;
-  line-height: 1.55;
+  line-height: 1.6;
 }
 
+/* PREMIUM */
+
 .premium-card {
-  padding: 50px;
+  padding: 52px;
   display: grid;
-  grid-template-columns: 1fr 0.85fr;
+  grid-template-columns: 1.05fr 0.95fr;
   align-items: center;
   gap: 70px;
-  border-radius: 42px;
+  border-radius: 40px;
   background:
     linear-gradient(
       135deg,
-      rgba(111, 130, 106, 0.95),
-      rgba(82, 99, 79, 0.98)
+      #61725c 0%,
+      #4d5d49 100%
     );
   color: var(--white);
-  box-shadow: 0 24px 60px rgba(82, 99, 79, 0.2);
+  box-shadow: 0 24px 58px rgba(82, 99, 79, 0.2);
 }
 
 .premium-card .eyebrow {
@@ -434,39 +562,12 @@ a {
   line-height: 1.8;
 }
 
-.about-grid {
-  display: grid;
-  grid-template-columns: 0.75fr 1.25fr;
-  align-items: center;
-  gap: 80px;
-}
-
-.about-mark {
-  display: flex;
-  justify-content: center;
-}
-
-.about-mark img {
-  width: min(100%, 360px);
-  border-radius: 42px;
-  box-shadow: var(--shadow);
-}
-
-.about-copy {
-  max-width: 650px;
-}
-
-.about-copy p:last-child {
-  margin: 28px 0 0;
-  color: var(--muted);
-  font-size: 17px;
-  line-height: 1.8;
-}
+/* FOOTER */
 
 .site-footer {
   padding: 42px 0;
   border-top: 1px solid rgba(62, 58, 54, 0.08);
-  background: rgba(255, 255, 255, 0.42);
+  background: rgba(255, 255, 255, 0.38);
 }
 
 .footer-inner {
@@ -483,7 +584,7 @@ a {
   font-family: "Cormorant Garamond", serif;
   font-size: 23px;
   font-weight: 700;
-  letter-spacing: 0.08em;
+  letter-spacing: 0.1em;
   text-transform: uppercase;
 }
 
@@ -491,6 +592,7 @@ a {
   width: 42px;
   height: 42px;
   border-radius: 14px;
+  object-fit: cover;
 }
 
 .footer-links {
@@ -517,11 +619,9 @@ a {
   text-align: right;
 }
 
-@media (max-width: 980px) {
-  .hero {
-    padding-top: 70px;
-  }
+/* RESPONSIVE */
 
+@media (max-width: 980px) {
   .hero-inner {
     grid-template-columns: 1fr;
     gap: 55px;
@@ -540,17 +640,8 @@ a {
     justify-content: center;
   }
 
-  .hero-art {
-    order: -1;
-  }
-
-  .logo-panel {
-    min-height: auto;
-    padding: 36px;
-  }
-
-  .hero-logo {
-    width: min(100%, 270px);
+  .hero-phone-wrap {
+    min-height: 620px;
   }
 
   .experience-grid {
@@ -558,18 +649,24 @@ a {
   }
 
   .experience-card {
-    min-height: 330px;
+    min-height: 0;
   }
 
-  .premium-card,
-  .about-grid {
+  .universe-list {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .universe-list div:nth-child(3n) {
+    border-right: 1px solid var(--line);
+  }
+
+  .universe-list div:nth-child(2n) {
+    border-right: none;
+  }
+
+  .premium-card {
     grid-template-columns: 1fr;
-    gap: 38px;
-  }
-
-  .about-copy {
-    max-width: none;
-    text-align: center;
+    gap: 34px;
   }
 
   .footer-inner {
@@ -592,7 +689,7 @@ a {
   }
 
   .header-inner {
-    min-height: 74px;
+    min-height: 72px;
   }
 
   .brand-logo {
@@ -606,6 +703,10 @@ a {
   }
 
   .main-nav {
+    gap: 14px;
+  }
+
+  .main-nav > a {
     display: none;
   }
 
@@ -614,7 +715,7 @@ a {
   }
 
   .hero h1 {
-    font-size: clamp(48px, 15vw, 68px);
+    font-size: clamp(50px, 15vw, 70px);
   }
 
   .hero-text {
@@ -633,13 +734,28 @@ a {
     text-align: center;
   }
 
-  .logo-panel {
-    border-radius: 32px;
+  .hero-phone-wrap {
+    min-height: 560px;
+  }
+
+  .phone-glow {
+    width: 390px;
+    height: 390px;
+  }
+
+  .phone-frame {
+    width: 286px;
+    height: 560px;
+    border-radius: 46px;
+  }
+
+  .phone-screen {
+    border-radius: 37px;
   }
 
   .section,
   .universe-section {
-    padding: 78px 0;
+    padding: 76px 0;
   }
 
   .section-heading {
@@ -647,20 +763,17 @@ a {
   }
 
   .section-heading h2,
-  .premium-card h2,
-  .about-copy h2 {
-    font-size: clamp(38px, 11vw, 54px);
+  .premium-card h2 {
+    font-size: clamp(39px, 11vw, 56px);
   }
 
   .experience-card {
-    min-height: 0;
     padding: 28px;
     border-radius: 28px;
   }
 
   .experience-card h3 {
-    margin-top: 28px;
-    font-size: 35px;
+    font-size: 34px;
   }
 
   .universe-list {
@@ -668,24 +781,15 @@ a {
   }
 
   .universe-list div,
-  .universe-list div:nth-child(odd),
-  .universe-list div:nth-child(even) {
-    padding: 24px 0;
+  .universe-list div:nth-child(2n),
+  .universe-list div:nth-child(3n) {
+    padding: 25px 0;
     border-right: none;
   }
 
   .premium-card {
     padding: 32px 26px;
     border-radius: 30px;
-  }
-
-  .about-grid {
-    gap: 34px;
-  }
-
-  .about-mark img {
-    width: min(100%, 280px);
-    border-radius: 34px;
   }
 
   .footer-links {
