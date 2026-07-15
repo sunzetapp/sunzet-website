@@ -24,7 +24,7 @@
   />
 
   <link
-    href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,600&family=Inter:wght@400;500;600&display=swap"
+    href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,600&family=Inter:wght@400;500;600;700&display=swap"
     rel="stylesheet"
   />
 
@@ -33,12 +33,13 @@
 
 <body>
 
-  <header class="site-header">
-    <div class="page-shell header-inner">
+  <div class="site-shell">
+
+    <header class="site-header">
 
       <a
-        href="#top"
         class="brand"
+        href="#"
         aria-label="Sunzet home"
       >
         <img
@@ -52,84 +53,45 @@
         </span>
       </a>
 
-      <nav
-        class="main-nav"
-        aria-label="Main navigation"
+      <div
+        class="language-switch"
+        aria-label="Choose language"
       >
-        <a
-          href="#reflect"
-          data-en="Reflect"
-          data-no="Reflekter"
+        <button
+          type="button"
+          class="language-button active"
+          data-language="en"
         >
-          Reflect
-        </a>
+          EN
+        </button>
 
-        <a
-          href="#discover"
-          data-en="Discover"
-          data-no="Utforsk"
+        <span aria-hidden="true">
+          /
+        </span>
+
+        <button
+          type="button"
+          class="language-button"
+          data-language="no"
         >
-          Discover
-        </a>
+          NO
+        </button>
+      </div>
 
-        <a
-          href="#organise"
-          data-en="Organise"
-          data-no="Planlegg"
-        >
-          Organise
-        </a>
+    </header>
 
-        <a
-          href="#premium"
-          data-en="Premium"
-          data-no="Premium"
-        >
-          Premium
-        </a>
+    <main>
 
-        <div
-          class="language-switch"
-          aria-label="Choose language"
-        >
-          <button
-            type="button"
-            class="language-button active"
-            data-language="en"
-          >
-            EN
-          </button>
-
-          <span aria-hidden="true">
-            /
-          </span>
-
-          <button
-            type="button"
-            class="language-button"
-            data-language="no"
-          >
-            NO
-          </button>
-        </div>
-      </nav>
-
-    </div>
-  </header>
-
-  <main id="top">
-
-    <section class="hero">
-      <div class="page-shell hero-grid">
+      <section class="hero">
 
         <div class="hero-copy">
 
           <p
             class="eyebrow"
-            data-en="Welcome to your quiet space"
-            data-no="Velkommen til ditt rolige rom"
+            data-en="A quiet space for everyday life"
+            data-no="Et rolig rom for hverdagen"
           >
-            Welcome to your quiet space
+            A quiet space for everyday life
           </p>
 
           <h1>
@@ -157,10 +119,12 @@
 
           <p
             class="hero-text"
-            data-en="A calm companion for your everyday rituals."
-            data-no="En rolig følgesvenn for hverdagens små ritualer."
+            data-en="Mindful planning, dreams, tarot, crystals and personal growth — gathered in one calm experience."
+            data-no="Planlegging, drømmer, tarot, krystaller og personlig utvikling — samlet i én rolig opplevelse."
           >
-            A calm companion for your everyday rituals.
+            Mindful planning, dreams, tarot, crystals
+            and personal growth — gathered in one calm
+            experience.
           </p>
 
           <div class="store-row">
@@ -223,42 +187,64 @@
             class="sun-card"
           />
 
+          <img
+            src="amethyst.png"
+            alt=""
+            class="hero-crystal hero-amethyst"
+          />
+
+          <img
+            src="amazonite.png"
+            alt=""
+            class="hero-crystal hero-amazonite"
+          />
+
+          <img
+            src="citrine.png"
+            alt=""
+            class="hero-crystal hero-citrine"
+          />
+
         </div>
 
-      </div>
-    </section>
+      </section>
 
-    <section
-      id="reflect"
-      class="story-section"
-    >
-      <div class="page-shell story-grid">
+      <section class="category-grid">
 
-        <div class="story-copy">
+        <article class="category-card">
+
+          <div class="category-heading">
+
+            <img
+              src="amethyst.png"
+              alt=""
+              class="category-crystal"
+            />
+
+            <div>
+              <p class="category-label">
+                01
+              </p>
+
+              <h2
+                data-en="Reflect"
+                data-no="Reflekter"
+              >
+                Reflect
+              </h2>
+            </div>
+
+          </div>
 
           <p
-            class="eyebrow"
-            data-en="Reflect"
-            data-no="Reflekter"
+            class="category-intro"
+            data-en="Dream, journal and explore."
+            data-no="Drøm, skriv og utforsk."
           >
-            Reflect
+            Dream, journal and explore.
           </p>
 
-          <h2
-            data-en="Make space for your inner world."
-            data-no="Gi plass til din indre verden."
-          >
-            Make space for your inner world.
-          </h2>
-
-          <p
-            data-en="Explore dreams, tarot and quiet moments of reflection."
-            data-no="Utforsk drømmer, tarot og rolige øyeblikk for refleksjon."
-          >
-            Explore dreams, tarot and quiet moments of reflection.
-          </p>
-
-          <div class="story-links">
+          <div class="category-items">
 
             <span
               data-en="Dream journal"
@@ -274,82 +260,53 @@
               Dream interpretation
             </span>
 
-            <span
-              data-en="Tarot"
-              data-no="Tarot"
-            >
-              Tarot
-            </span>
+            <span>Tarot</span>
 
             <span
-              data-en="Journaling"
-              data-no="Journaling"
+              data-en="Journal"
+              data-no="Journal"
             >
-              Journaling
+              Journal
             </span>
 
           </div>
 
-        </div>
+        </article>
 
-        <div class="story-art crystal-art crystal-art-right">
+        <article class="category-card">
 
-          <div class="crystal-glow crystal-glow-purple"></div>
+          <div class="category-heading">
 
-          <img
-            src="amethyst.png"
-            alt="Amethyst crystal"
-            class="crystal crystal-amethyst"
-          />
+            <img
+              src="amazonite.png"
+              alt=""
+              class="category-crystal"
+            />
 
-        </div>
+            <div>
+              <p class="category-label">
+                02
+              </p>
 
-      </div>
-    </section>
+              <h2
+                data-en="Discover"
+                data-no="Utforsk"
+              >
+                Discover
+              </h2>
+            </div>
 
-    <section
-      id="discover"
-      class="story-section story-section-alt"
-    >
-      <div class="page-shell story-grid story-grid-reversed">
-
-        <div class="story-art crystal-art crystal-art-left">
-
-          <div class="crystal-glow crystal-glow-blue"></div>
-
-          <img
-            src="amazonite.png"
-            alt="Amazonite crystal"
-            class="crystal crystal-amazonite"
-          />
-
-        </div>
-
-        <div class="story-copy">
+          </div>
 
           <p
-            class="eyebrow"
-            data-en="Discover"
-            data-no="Utforsk"
+            class="category-intro"
+            data-en="Crystals, chakras and manifestation."
+            data-no="Krystaller, chakraer og manifestering."
           >
-            Discover
+            Crystals, chakras and manifestation.
           </p>
 
-          <h2
-            data-en="Follow what feels meaningful."
-            data-no="Følg det som føles meningsfullt."
-          >
-            Follow what feels meaningful.
-          </h2>
-
-          <p
-            data-en="Explore crystals, manifestation, chakras and personal growth in your own way."
-            data-no="Utforsk krystaller, manifestering, chakraer og personlig utvikling på din egen måte."
-          >
-            Explore crystals, manifestation, chakras and personal growth in your own way.
-          </p>
-
-          <div class="story-links">
+          <div class="category-items">
 
             <span
               data-en="Crystals"
@@ -381,186 +338,150 @@
 
           </div>
 
-        </div>
+        </article>
 
-      </div>
-    </section>
+        <article class="category-card">
 
-    <section
-      id="organise"
-      class="story-section"
-    >
-      <div class="page-shell organise-grid">
+          <div class="category-heading">
 
-        <div class="story-copy">
+            <div class="organise-symbol">
+              ✓
+            </div>
+
+            <div>
+              <p class="category-label">
+                03
+              </p>
+
+              <h2
+                data-en="Organise"
+                data-no="Planlegg"
+              >
+                Organise
+              </h2>
+            </div>
+
+          </div>
 
           <p
-            class="eyebrow"
-            data-en="Organise"
-            data-no="Planlegg"
-          >
-            Organise
-          </p>
-
-          <h2
-            data-en="Bring calm into everyday life."
+            class="category-intro"
+            data-en="Bring calm to everyday life."
             data-no="Ta med ro inn i hverdagen."
           >
-            Bring calm into everyday life.
-          </h2>
-
-          <p
-            data-en="Plan your days without losing the quiet feeling that makes Sunzet yours."
-            data-no="Planlegg dagene uten å miste den rolige følelsen som gjør Sunzet til ditt."
-          >
-            Plan your days without losing the quiet feeling that makes Sunzet yours.
+            Bring calm to everyday life.
           </p>
 
-        </div>
+          <div class="category-items">
 
-        <div class="organise-list">
-
-          <article>
-            <span>01</span>
-
-            <h3
+            <span
               data-en="Calendar"
               data-no="Kalender"
             >
               Calendar
-            </h3>
-          </article>
+            </span>
 
-          <article>
-            <span>02</span>
-
-            <h3
+            <span
               data-en="Shopping lists"
               data-no="Handlelister"
             >
               Shopping lists
-            </h3>
-          </article>
+            </span>
 
-          <article>
-            <span>03</span>
-
-            <h3
+            <span
               data-en="To-do lists"
               data-no="Gjøremål"
             >
               To-do lists
-            </h3>
-          </article>
+            </span>
 
-        </div>
+            <span
+              data-en="Sharing"
+              data-no="Deling"
+            >
+              Sharing
+            </span>
 
-      </div>
-    </section>
+          </div>
 
-    <section
-      id="premium"
-      class="premium-section"
-    >
-      <div class="page-shell premium-grid">
+        </article>
 
-        <div class="premium-copy">
+      </section>
 
-          <p class="eyebrow">
-            Sunzet Premium
-          </p>
+      <section class="bottom-row">
 
-          <h2
-            data-en="Unlock the complete Sunzet experience."
-            data-no="Lås opp hele Sunzet-opplevelsen."
-          >
-            Unlock the complete Sunzet experience.
-          </h2>
-
-          <p
-            data-en="Go deeper with selected Premium content, extended guidance and more ways to build meaningful rituals."
-            data-no="Gå dypere med utvalgt Premium-innhold, utvidet veiledning og flere måter å bygge meningsfulle ritualer på."
-          >
-            Go deeper with selected Premium content, extended guidance and more ways to build meaningful rituals.
-          </p>
-
-        </div>
-
-        <div class="premium-art">
-
-          <div class="crystal-glow crystal-glow-gold"></div>
+        <div class="premium-strip">
 
           <img
             src="citrine.png"
-            alt="Citrine crystal"
-            class="crystal crystal-citrine"
+            alt=""
+            class="premium-crystal"
           />
+
+          <div>
+            <p class="premium-label">
+              Sunzet Premium
+            </p>
+
+            <p
+              class="premium-text"
+              data-en="Unlock more guidance, content and meaningful rituals."
+              data-no="Lås opp mer veiledning, innhold og meningsfulle ritualer."
+            >
+              Unlock more guidance, content and meaningful rituals.
+            </p>
+          </div>
 
         </div>
 
-      </div>
-    </section>
+        <footer class="site-footer">
 
-  </main>
+          <nav class="footer-links">
 
-  <footer class="site-footer">
-    <div class="page-shell footer-inner">
+            <a
+              href="privacy.html"
+              data-en="Privacy"
+              data-no="Personvern"
+            >
+              Privacy
+            </a>
 
-      <div class="footer-brand">
+            <a
+              href="terms.html"
+              data-en="Terms"
+              data-no="Vilkår"
+            >
+              Terms
+            </a>
 
-        <img
-          src="sunzet-logo.png"
-          alt=""
-        />
+            <a
+              href="support.html"
+              data-en="Support"
+              data-no="Hjelp"
+            >
+              Support
+            </a>
 
-        <span>
-          Sunzet
-        </span>
+            <a
+              href="mailto:sunzet.app@gmail.com"
+              data-en="Contact"
+              data-no="Kontakt"
+            >
+              Contact
+            </a>
 
-      </div>
+          </nav>
 
-      <div class="footer-links">
+          <p>
+            © 2026 Sunzet
+          </p>
 
-        <a
-          href="privacy.html"
-          data-en="Privacy Policy"
-          data-no="Personvern"
-        >
-          Privacy Policy
-        </a>
+        </footer>
 
-        <a
-          href="terms.html"
-          data-en="Terms of Use"
-          data-no="Bruksvilkår"
-        >
-          Terms of Use
-        </a>
+      </section>
 
-        <a
-          href="support.html"
-          data-en="Support"
-          data-no="Hjelp"
-        >
-          Support
-        </a>
+    </main>
 
-        <a
-          href="mailto:sunzet.app@gmail.com"
-          data-en="Contact"
-          data-no="Kontakt"
-        >
-          Contact
-        </a>
-
-      </div>
-
-      <p class="copyright">
-        © 2026 Sunzet
-      </p>
-
-    </div>
-  </footer>
+  </div>
 
   <script>
     const languageButtons =
