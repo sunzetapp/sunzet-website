@@ -10,7 +10,7 @@
 
   <meta
     name="description"
-    content="Sunzet is a calm space for mindful planning, reflection and personal growth."
+    content="Sunzet brings mindful planning, reflection and personal growth together in one calm space."
   />
 
   <title>Sunzet</title>
@@ -24,7 +24,7 @@
   />
 
   <link
-    href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Inter:wght@400;500;600;700&display=swap"
+    href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,600&family=Inter:wght@400;500;600;700&display=swap"
     rel="stylesheet"
   />
 
@@ -42,9 +42,9 @@
         aria-label="Sunzet home"
       >
         <img
+          class="brand-logo"
           src="sunzet-logo.png"
           alt="Sunzet logo"
-          class="brand-logo"
         />
 
         <span class="brand-name">
@@ -56,33 +56,50 @@
         class="main-nav"
         aria-label="Main navigation"
       >
-        <a href="#features">
+        <a
+          href="#features"
+          data-en="Features"
+          data-no="Funksjoner"
+        >
           Features
         </a>
 
-        <a href="#premium">
+        <a
+          href="#premium"
+          data-en="Premium"
+          data-no="Premium"
+        >
           Premium
         </a>
 
-        <a href="support.html">
+        <a
+          href="support.html"
+          data-en="Support"
+          data-no="Hjelp"
+        >
           Support
         </a>
 
-        <div class="language-switch" aria-label="Language selector">
+        <div
+          class="language-switch"
+          aria-label="Choose language"
+        >
           <button
-            type="button"
             class="language-button active"
+            type="button"
+            data-language="en"
           >
             EN
           </button>
 
-          <span>
-            |
+          <span aria-hidden="true">
+            /
           </span>
 
           <button
-            type="button"
             class="language-button"
+            type="button"
+            data-language="no"
           >
             NO
           </button>
@@ -95,25 +112,46 @@
   <main id="top">
 
     <section class="hero">
-      <div class="page-shell hero-inner">
+      <div class="page-shell hero-grid">
 
         <div class="hero-copy">
 
-          <p class="eyebrow">
+          <p
+            class="eyebrow"
+            data-en="Mindful living, gathered in one place"
+            data-no="Et roligere hverdagsliv samlet på ett sted"
+          >
             Mindful living, gathered in one place
           </p>
 
           <h1>
-            Find calm.
-            <br />
-            Create balance.
-            <br />
-            <span>
-              Grow with intention.
+            <span
+              data-en="Find calm."
+              data-no="Finn ro."
+            >
+              Find calm.
             </span>
+
+            <span
+              data-en="Create balance."
+              data-no="Skap balanse."
+            >
+              Create balance.
+            </span>
+
+            <em
+              data-en="Grow with intention."
+              data-no="Voks med intensjon."
+            >
+              Grow with intention.
+            </em>
           </h1>
 
-          <p class="hero-text">
+          <p
+            class="hero-text"
+            data-en="Sunzet brings together mindful planning, journaling, dreams, tarot, manifestation, crystals, chakras and personal growth in one calm and thoughtfully designed experience."
+            data-no="Sunzet samler planlegging, journaling, drømmer, tarot, manifestering, krystaller, chakraer og personlig utvikling i én rolig og gjennomført opplevelse."
+          >
             Sunzet brings together mindful planning,
             journaling, dreams, tarot, manifestation,
             crystals, chakras and personal growth in one
@@ -125,9 +163,13 @@
             <a
               class="store-button"
               href="#"
-              aria-label="Sunzet on the App Store, coming soon"
+              aria-label="App Store, coming soon"
             >
-              <span class="store-small">
+              <span
+                class="store-small"
+                data-en="Download on the"
+                data-no="Last ned fra"
+              >
                 Download on the
               </span>
 
@@ -139,9 +181,13 @@
             <a
               class="store-button"
               href="#"
-              aria-label="Sunzet on Google Play, coming soon"
+              aria-label="Google Play, coming soon"
             >
-              <span class="store-small">
+              <span
+                class="store-small"
+                data-en="Get it on"
+                data-no="Last ned fra"
+              >
                 Get it on
               </span>
 
@@ -152,28 +198,26 @@
 
           </div>
 
-          <p class="coming-soon">
+          <p
+            class="coming-soon"
+            data-en="Coming soon to iPhone and Android."
+            data-no="Kommer snart til iPhone og Android."
+          >
             Coming soon to iPhone and Android.
           </p>
 
         </div>
 
-        <div class="hero-phone-wrap">
+        <div class="hero-preview">
 
-          <div class="phone-glow"></div>
+          <div class="preview-orbit"></div>
 
           <div class="phone-frame">
 
-            <div class="phone-top-bar">
-              <span>
-                9:41
-              </span>
-
-              <div class="phone-island"></div>
-
-              <span>
-                ●●●
-              </span>
+            <div class="phone-status">
+              <span>9:41</span>
+              <span class="phone-island"></span>
+              <span>•••</span>
             </div>
 
             <div class="phone-screen">
@@ -193,7 +237,7 @@
                 Good morning ✨
               </p>
 
-              <div class="phone-focus-card">
+              <div class="phone-card">
 
                 <small>
                   Today’s focus
@@ -205,11 +249,11 @@
 
               </div>
 
-              <div class="phone-section-title">
+              <div class="phone-label">
                 Today
               </div>
 
-              <div class="phone-app-grid">
+              <div class="phone-grid">
 
                 <span>Calendar</span>
                 <span>To-do</span>
@@ -218,7 +262,7 @@
 
               </div>
 
-              <div class="phone-affirmation-card">
+              <div class="phone-card phone-card-spaced">
 
                 <small>
                   Daily affirmation
@@ -230,11 +274,11 @@
 
               </div>
 
-              <div class="phone-section-title">
-                Explore the universe
+              <div class="phone-label">
+                Explore
               </div>
 
-              <div class="phone-universe-row">
+              <div class="phone-grid phone-grid-five">
 
                 <span>Dreams</span>
                 <span>Tarot</span>
@@ -255,74 +299,97 @@
 
     <section
       id="features"
-      class="section"
+      class="section features-section"
     >
       <div class="page-shell">
 
         <div class="section-heading centred">
 
-          <p class="eyebrow">
+          <p
+            class="eyebrow"
+            data-en="The Sunzet experience"
+            data-no="Sunzet-opplevelsen"
+          >
             The Sunzet experience
           </p>
 
-          <h2>
-            One space for the practical,
+          <h2
+            data-en="One place for the practical, the reflective and the personal."
+            data-no="Ett sted for det praktiske, det reflekterende og det personlige."
+          >
+            One place for the practical,
             the reflective and the personal.
           </h2>
 
         </div>
 
-        <div class="experience-grid">
+        <div class="feature-grid">
 
-          <article class="experience-card">
+          <article class="feature-card">
 
-            <div class="experience-icon">
+            <span class="feature-number">
               01
-            </div>
+            </span>
 
-            <h3>
+            <h3
+              data-en="Organise your day."
+              data-no="Organiser dagen din."
+            >
               Organise your day.
             </h3>
 
-            <p>
-              Keep everyday life clear and manageable
-              with a calendar, shopping lists and
-              to-do lists.
+            <p
+              data-en="Keep everyday life clear with a calendar, shopping lists and to-do lists."
+              data-no="Hold hverdagen oversiktlig med kalender, handlelister og gjøremål."
+            >
+              Keep everyday life clear with a calendar,
+              shopping lists and to-do lists.
             </p>
 
           </article>
 
-          <article class="experience-card">
+          <article class="feature-card">
 
-            <div class="experience-icon">
+            <span class="feature-number">
               02
-            </div>
+            </span>
 
-            <h3>
+            <h3
+              data-en="Reflect on your life."
+              data-no="Reflekter over livet ditt."
+            >
               Reflect on your life.
             </h3>
 
-            <p>
-              Journal your thoughts, explore dreams,
-              draw tarot and discover meaningful insight.
+            <p
+              data-en="Explore dreams, tarot, journaling and meaningful personal insight."
+              data-no="Utforsk drømmer, tarot, journaling og meningsfull personlig innsikt."
+            >
+              Explore dreams, tarot, journaling and
+              meaningful personal insight.
             </p>
 
           </article>
 
-          <article class="experience-card">
+          <article class="feature-card">
 
-            <div class="experience-icon">
+            <span class="feature-number">
               03
-            </div>
+            </span>
 
-            <h3>
+            <h3
+              data-en="Grow with intention."
+              data-no="Voks med intensjon."
+            >
               Grow with intention.
             </h3>
 
-            <p>
-              Build mindful rituals through
-              manifestation, crystals, chakras
-              and vision boards.
+            <p
+              data-en="Build mindful rituals with manifestation, crystals, chakras and vision boards."
+              data-no="Bygg meningsfulle ritualer med manifestering, krystaller, chakraer og vision board."
+            >
+              Build mindful rituals with manifestation,
+              crystals, chakras and vision boards.
             </p>
 
           </article>
@@ -332,83 +399,108 @@
       </div>
     </section>
 
-    <section class="universe-section">
+    <section class="section universe-section">
       <div class="page-shell">
 
         <div class="section-heading centred">
 
-          <p class="eyebrow">
+          <p
+            class="eyebrow"
+            data-en="Explore the universe"
+            data-no="Utforsk universet"
+          >
             Explore the universe
           </p>
 
-          <h2>
+          <h2
+            data-en="Every part of your journey, gathered in one place."
+            data-no="Hele reisen din samlet på ett sted."
+          >
             Every part of your journey,
             gathered in one place.
           </h2>
 
         </div>
 
-        <div class="universe-list">
+        <div class="universe-grid">
 
-          <div>
-            <span>
+          <article>
+            <h3 data-en="Dreams" data-no="Drømmer">
               Dreams
-            </span>
+            </h3>
 
-            <small>
-              Dream journal, interpretation and symbols
-            </small>
-          </div>
+            <p
+              data-en="Dream journal, interpretation and symbols."
+              data-no="Drømmedagbok, tolkning og symboler."
+            >
+              Dream journal, interpretation and symbols.
+            </p>
+          </article>
 
-          <div>
-            <span>
+          <article>
+            <h3 data-en="Tarot" data-no="Tarot">
               Tarot
-            </span>
+            </h3>
 
-            <small>
-              Daily guidance and a complete card library
-            </small>
-          </div>
+            <p
+              data-en="Daily guidance and a complete card library."
+              data-no="Daglig veiledning og et komplett kortbibliotek."
+            >
+              Daily guidance and a complete card library.
+            </p>
+          </article>
 
-          <div>
-            <span>
+          <article>
+            <h3 data-en="Crystals" data-no="Krystaller">
               Crystals
-            </span>
+            </h3>
 
-            <small>
-              Meanings, recommendations and reflection
-            </small>
-          </div>
+            <p
+              data-en="Meanings, recommendations and reflection."
+              data-no="Betydninger, anbefalinger og refleksjon."
+            >
+              Meanings, recommendations and reflection.
+            </p>
+          </article>
 
-          <div>
-            <span>
+          <article>
+            <h3 data-en="Manifestation" data-no="Manifestering">
               Manifestation
-            </span>
+            </h3>
 
-            <small>
-              Journal, vision board and manifestation games
-            </small>
-          </div>
+            <p
+              data-en="Journal, vision board and manifestation games."
+              data-no="Journal, vision board og manifesteringsleker."
+            >
+              Journal, vision board and manifestation games.
+            </p>
+          </article>
 
-          <div>
-            <span>
+          <article>
+            <h3 data-en="Chakras" data-no="Chakraer">
               Chakras
-            </span>
+            </h3>
 
-            <small>
-              Energy reflection and balance
-            </small>
-          </div>
+            <p
+              data-en="Energy reflection and balance."
+              data-no="Energirefleksjon og balanse."
+            >
+              Energy reflection and balance.
+            </p>
+          </article>
 
-          <div>
-            <span>
+          <article>
+            <h3 data-en="Planning" data-no="Planlegging">
               Planning
-            </span>
+            </h3>
 
-            <small>
-              Calendar, shopping and everyday structure
-            </small>
-          </div>
+            <p
+              data-en="Calendar, shopping and everyday structure."
+              data-no="Kalender, handlelister og struktur i hverdagen."
+            >
+              Calendar, shopping and everyday structure.
+            </p>
+          </article>
 
         </div>
 
@@ -417,7 +509,7 @@
 
     <section
       id="premium"
-      class="section"
+      class="section premium-section"
     >
       <div class="page-shell">
 
@@ -425,22 +517,30 @@
 
           <div>
 
-            <p class="eyebrow">
+            <p
+              class="eyebrow"
+              data-en="Sunzet Premium"
+              data-no="Sunzet Premium"
+            >
               Sunzet Premium
             </p>
 
-            <h2>
-              Unlock the complete
-              Sunzet experience.
+            <h2
+              data-en="Unlock the complete Sunzet experience."
+              data-no="Lås opp hele Sunzet-opplevelsen."
+            >
+              Unlock the complete Sunzet experience.
             </h2>
 
           </div>
 
-          <p>
-            Access selected Premium content,
-            extended guidance, beautiful journals
-            and additional features designed to
-            support your personal journey.
+          <p
+            data-en="Access selected Premium content, extended guidance and additional features designed to support your personal journey."
+            data-no="Få tilgang til utvalgt Premium-innhold, utvidet veiledning og flere funksjoner som støtter din personlige reise."
+          >
+            Access selected Premium content, extended
+            guidance and additional features designed
+            to support your personal journey.
           </p>
 
         </div>
@@ -468,30 +568,119 @@
 
       <div class="footer-links">
 
-        <a href="privacy.html">
+        <a
+          href="privacy.html"
+          data-en="Privacy Policy"
+          data-no="Personvern"
+        >
           Privacy Policy
         </a>
 
-        <a href="terms.html">
+        <a
+          href="terms.html"
+          data-en="Terms of Use"
+          data-no="Bruksvilkår"
+        >
           Terms of Use
         </a>
 
-        <a href="support.html">
+        <a
+          href="support.html"
+          data-en="Support"
+          data-no="Hjelp"
+        >
           Support
         </a>
 
-        <a href="mailto:sunzet.app@gmail.com">
+        <a
+          href="mailto:sunzet.app@gmail.com"
+          data-en="Contact"
+          data-no="Kontakt"
+        >
           Contact
         </a>
 
       </div>
 
       <p class="copyright">
-        © 2026 Sunzet. All rights reserved.
+        © 2026 Sunzet
       </p>
 
     </div>
   </footer>
+
+  <script>
+    const languageButtons =
+      document.querySelectorAll(
+        '.language-button'
+      );
+
+    const translatedElements =
+      document.querySelectorAll(
+        '[data-en][data-no]'
+      );
+
+    const setLanguage = (
+      language
+    ) => {
+      document.documentElement.lang =
+        language === 'no'
+          ? 'nb'
+          : 'en';
+
+      translatedElements.forEach(
+        (element) => {
+          element.textContent =
+            element.dataset[language];
+        }
+      );
+
+      languageButtons.forEach(
+        (button) => {
+          button.classList.toggle(
+            'active',
+            button.dataset.language ===
+              language
+          );
+        }
+      );
+
+      localStorage.setItem(
+        'sunzet-language',
+        language
+      );
+    };
+
+    languageButtons.forEach(
+      (button) => {
+        button.addEventListener(
+          'click',
+          () => {
+            setLanguage(
+              button.dataset.language
+            );
+          }
+        );
+      }
+    );
+
+    const savedLanguage =
+      localStorage.getItem(
+        'sunzet-language'
+      );
+
+    const browserLanguage =
+      navigator.language
+        .toLowerCase()
+        .startsWith('no')
+        ? 'no'
+        : 'en';
+
+    setLanguage(
+      savedLanguage ||
+      browserLanguage
+    );
+  </script>
 
 </body>
 </html>
