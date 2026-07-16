@@ -12,7 +12,7 @@
   --line: rgba(62, 58, 54, 0.1);
 
   --page-width: 1180px;
-  --card-radius: 22px;
+  --card-radius: 19px;
 }
 
 /* ========================================
@@ -29,7 +29,9 @@ html {
 
 body {
   margin: 0;
+
   color: var(--text);
+
   background:
     linear-gradient(
       145deg,
@@ -37,7 +39,9 @@ body {
       var(--cream) 46%,
       #faf7f3 100%
     );
+
   font-family: "Inter", sans-serif;
+
   -webkit-font-smoothing: antialiased;
   text-rendering: optimizeLegibility;
 }
@@ -66,6 +70,7 @@ a {
     calc(100% - 48px),
     var(--page-width)
   );
+
   margin: 0 auto;
 }
 
@@ -75,7 +80,8 @@ a {
 
 .site-header {
   border-bottom:
-    1px solid rgba(62, 58, 54, 0.06);
+    1px solid
+    rgba(62, 58, 54, 0.06);
 }
 
 .header-inner {
@@ -158,26 +164,23 @@ a {
 ======================================== */
 
 .hero-section {
-  padding: 18px 0 12px;
+  padding: 24px 0 28px;
 }
 
 .hero-grid {
   display: grid;
 
   grid-template-columns:
-    minmax(0, 0.92fr)
-    minmax(480px, 1.08fr);
+    minmax(0, 1fr)
+    minmax(390px, 0.86fr);
 
   align-items: center;
 
-  gap: 52px;
+  gap: 74px;
 }
 
 .hero-copy {
   max-width: 560px;
-
-  padding-left:
-    clamp(10px, 2vw, 30px);
 }
 
 .eyebrow {
@@ -203,7 +206,7 @@ a {
     serif;
 
   font-size:
-    clamp(43px, 4.2vw, 59px);
+    clamp(42px, 4vw, 57px);
 
   font-weight: 500;
 
@@ -226,7 +229,7 @@ a {
 }
 
 .hero-text {
-  max-width: 520px;
+  max-width: 525px;
 
   margin: 19px 0 0;
 
@@ -237,7 +240,7 @@ a {
 }
 
 /* ========================================
-   APP STORE-KNAPPER
+   STORE BUTTONS
 ======================================== */
 
 .store-row {
@@ -319,29 +322,28 @@ a {
 }
 
 /* ========================================
-   HERO-KUNST
+   HERO ART
 ======================================== */
 
 .hero-art {
   position: relative;
 
-  min-height: 350px;
+  min-height: 310px;
 
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
-
-  padding-right: 78px;
 }
 
 .sun-glow {
   position: absolute;
 
-  left: 47%;
-  top: 50%;
+  left: 50%;
+  top: 46%;
 
-  width: 330px;
-  height: 330px;
+  width: 290px;
+  height: 290px;
 
   transform:
     translate(-50%, -50%);
@@ -351,21 +353,17 @@ a {
   background:
     radial-gradient(
       circle,
-      rgba(201, 162, 77, 0.18) 0%,
-      rgba(201, 162, 77, 0.07) 44%,
+      rgba(201, 162, 77, 0.17) 0%,
+      rgba(201, 162, 77, 0.06) 45%,
       transparent 72%
     );
 }
 
-/* ========================================
-   TAROTKORT
-======================================== */
-
 .tarot-stack {
   position: relative;
 
-  width: 325px;
-  height: 290px;
+  width: 310px;
+  height: 245px;
 }
 
 .tarot-card {
@@ -375,33 +373,33 @@ a {
 
   object-fit: cover;
 
-  border-radius: 13px;
+  border-radius: 11px;
 
   box-shadow:
-    0 14px 32px
-    rgba(62, 58, 54, 0.15);
+    0 12px 29px
+    rgba(62, 58, 54, 0.14);
 }
 
 .tarot-card-left {
-  left: 23px;
+  left: 25px;
 
-  width: 132px;
+  width: 112px;
 
   transform:
-    translateY(-46%)
-    rotate(-8deg);
+    translateY(-44%)
+    rotate(-7deg);
 
   z-index: 1;
 }
 
 .tarot-card-right {
-  right: 23px;
+  right: 25px;
 
-  width: 132px;
+  width: 112px;
 
   transform:
-    translateY(-46%)
-    rotate(8deg);
+    translateY(-44%)
+    rotate(7deg);
 
   z-index: 2;
 }
@@ -409,7 +407,7 @@ a {
 .tarot-card-center {
   left: 50%;
 
-  width: 160px;
+  width: 139px;
 
   transform:
     translate(-50%, -50%);
@@ -417,64 +415,98 @@ a {
   z-index: 4;
 
   box-shadow:
-    0 19px 42px
-    rgba(62, 58, 54, 0.2);
+    0 17px 37px
+    rgba(62, 58, 54, 0.19);
+}
+
+.hero-art-caption {
+  position: relative;
+  z-index: 5;
+
+  margin: 1px 0 0;
+
+  color: var(--muted);
+
+  font-size: 8px;
+  font-weight: 500;
+
+  letter-spacing: 0.07em;
 }
 
 /* ========================================
-   KRYSTALLER VED SIDEN AV KORTENE
+   EXPERIENCE SECTION
 ======================================== */
 
-.crystal-column {
-  position: absolute;
+.experience-section {
+  padding: 34px 0 26px;
 
-  right: 6px;
-  top: 50%;
+  border-top:
+    1px solid
+    rgba(62, 58, 54, 0.055);
 
-  transform:
-    translateY(-50%);
-
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-
-  gap: 16px;
+  background:
+    rgba(255, 255, 255, 0.24);
 }
 
-.side-crystal {
-  width: 44px;
-  height: 44px;
+.experience-heading {
+  max-width: 650px;
 
-  object-fit: contain;
+  margin-bottom: 22px;
+}
 
-  filter:
-    drop-shadow(
-      0 7px 9px
-      rgba(62, 58, 54, 0.12)
-    );
+.experience-heading h2 {
+  margin: 0;
+
+  font-family:
+    "Cormorant Garamond",
+    serif;
+
+  font-size:
+    clamp(32px, 3vw, 42px);
+
+  font-weight: 600;
+
+  line-height: 1.03;
+  letter-spacing: -0.025em;
+}
+
+.experience-heading > p:not(.eyebrow) {
+  margin: 11px 0 0;
+
+  color: var(--muted);
+
+  font-size: 11px;
+  line-height: 1.6;
 }
 
 /* ========================================
-   KATEGORIER
+   EXPERIENCE CARDS
 ======================================== */
 
-.categories-section {
-  padding: 22 0 18px;
-}
-
-.category-grid {
+.experience-grid {
   display: grid;
 
   grid-template-columns:
     repeat(3, minmax(0, 1fr));
 
-  gap: 14px;
+  gap: 11px;
 }
 
-.category-card {
-  min-height: 185px;
+.experience-card {
+  min-height: 104px;
 
-  padding: 17px;
+  padding: 14px 15px;
+
+  display: grid;
+
+  grid-template-columns:
+    auto
+    1fr
+    auto;
+
+  align-items: center;
+
+  gap: 12px;
 
   border:
     1px solid var(--line);
@@ -483,10 +515,10 @@ a {
     var(--card-radius);
 
   background:
-    rgba(255, 255, 255, 0.67);
+    rgba(255, 255, 255, 0.76);
 
   box-shadow:
-    0 8px 20px
+    0 7px 18px
     rgba(62, 58, 54, 0.035);
 
   transition:
@@ -495,27 +527,20 @@ a {
     box-shadow 170ms ease;
 }
 
-.category-card:hover {
-  transform: translateY(-3px);
+.experience-card:hover {
+  transform: translateY(-2px);
 
   border-color:
-    rgba(168, 137, 74, 0.22);
+    rgba(168, 137, 74, 0.23);
 
   box-shadow:
-    0 13px 28px
+    0 12px 25px
     rgba(62, 58, 54, 0.055);
 }
 
-.category-heading {
-  display: flex;
-  align-items: center;
-
-  gap: 12px;
-}
-
-.category-symbol {
-  width: 45px;
-  height: 45px;
+.experience-icon {
+  width: 42px;
+  height: 42px;
 
   flex-shrink: 0;
 
@@ -532,66 +557,52 @@ a {
     "Cormorant Garamond",
     serif;
 
-  font-size: 22px;
+  font-size: 21px;
   font-weight: 600;
 }
 
-.category-number {
-  margin: 0 0 2px;
-
-  color: var(--gold);
-
-  font-size: 7px;
-  font-weight: 800;
-
-  letter-spacing: 0.15em;
+.experience-content {
+  min-width: 0;
 }
 
-.category-card h2 {
+.experience-content h3 {
   margin: 0;
 
   font-family:
     "Cormorant Garamond",
     serif;
 
-  font-size: 34px;
+  font-size: 22px;
   font-weight: 600;
 
   line-height: 1;
 }
 
-.category-intro {
-  margin: 12px 0 0;
+.experience-content p {
+  margin: 6px 0 0;
 
   color: var(--muted);
 
-  font-size: 12px;
-  line-height: 1.6;
+  font-size: 8px;
+  line-height: 1.5;
 }
 
-.category-items {
-  margin-top: 12px;
+.experience-arrow {
+  color: var(--gold);
 
-  display: flex;
-  flex-wrap: wrap;
+  font-size: 17px;
 
-  gap: 6px;
+  transition:
+    transform 170ms ease;
 }
 
-.category-items span {
-  padding: 7px 12px;
-
-  border-radius: 999px;
-
-  background: var(--sage-soft);
-  color: var(--olive);
-
-  font-size: 9px;
-  font-weight: 600;
+.experience-card:hover
+.experience-arrow {
+  transform: translateX(3px);
 }
 
 /* ========================================
-   PREMIUM-LINJE I FULL BREDDE
+   PREMIUM
 ======================================== */
 
 .premium-strip {
@@ -607,10 +618,6 @@ a {
     );
 
   color: white;
-
-  box-shadow:
-    0 -1px 0
-    rgba(255, 255, 255, 0.08);
 }
 
 .premium-inner {
@@ -697,7 +704,7 @@ a {
 }
 
 /* ========================================
-   HELHVIT FOOTER I FULL BREDDE
+   FOOTER
 ======================================== */
 
 .site-footer {
@@ -735,9 +742,6 @@ a {
 
   font-size: 8px;
   font-weight: 600;
-
-  transition:
-    color 160ms ease;
 }
 
 .footer-links a:last-child {
@@ -757,7 +761,7 @@ a {
 }
 
 /* ========================================
-   TILGJENGELIGHET
+   ACCESSIBILITY
 ======================================== */
 
 .language-button,
@@ -777,7 +781,7 @@ a {
 }
 
 /* ========================================
-   NETTBRETT
+   TABLET
 ======================================== */
 
 @media (max-width: 1000px) {
@@ -785,14 +789,13 @@ a {
   .hero-grid {
     grid-template-columns: 1fr;
 
-    gap: 26px;
+    gap: 25px;
   }
 
   .hero-copy {
     max-width: 680px;
 
     margin: 0 auto;
-    padding-left: 0;
 
     text-align: center;
   }
@@ -807,19 +810,25 @@ a {
   }
 
   .hero-art {
-    min-height: 330px;
-
-    padding-right: 70px;
+    min-height: 275px;
   }
 
-  .category-grid {
-    grid-template-columns: 1fr;
+  .experience-heading {
+    margin-right: auto;
+    margin-left: auto;
+
+    text-align: center;
+  }
+
+  .experience-grid {
+    grid-template-columns:
+      repeat(2, minmax(0, 1fr));
   }
 
 }
 
 /* ========================================
-   MOBIL
+   MOBILE
 ======================================== */
 
 @media (max-width: 650px) {
@@ -845,7 +854,7 @@ a {
   }
 
   .hero-section {
-    padding-top: 25px;
+    padding-top: 24px;
   }
 
   .hero-copy h1 {
@@ -869,45 +878,31 @@ a {
     text-align: center;
   }
 
-  .hero-art {
-    min-height: 290px;
-
-    padding-right: 48px;
-  }
-
   .tarot-stack {
-    width: 278px;
-    height: 260px;
+    width: 265px;
+    height: 225px;
   }
 
   .tarot-card-left,
   .tarot-card-right {
-    width: 112px;
+    width: 96px;
   }
 
   .tarot-card-center {
-    width: 132px;
+    width: 120px;
   }
 
-  .crystal-column {
-    right: 0;
-
-    gap: 11px;
+  .experience-grid {
+    grid-template-columns: 1fr;
   }
 
-  .side-crystal {
-    width: 36px;
-    height: 36px;
+  .experience-card {
+    min-height: 96px;
   }
 
-  .category-card {
-    min-height: 0;
-
-    padding: 16px;
-  }
-
-  .category-card h2 {
-    font-size: 24px;
+  .experience-heading h2 {
+    font-size:
+      clamp(30px, 9vw, 39px);
   }
 
   .premium-inner {
@@ -929,7 +924,7 @@ a {
 }
 
 /* ========================================
-   REDUSERT BEVEGELSE
+   REDUCED MOTION
 ======================================== */
 
 @media (prefers-reduced-motion: reduce) {
