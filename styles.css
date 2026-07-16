@@ -15,8 +15,9 @@
   --muted: #746f69;
 
   --line: rgba(62, 58, 54, 0.1);
+
   --page-width: 1180px;
-  --card-radius: 20px;
+  --card-radius: 22px;
 }
 
 /* ========================================
@@ -84,7 +85,7 @@ a {
 
 .site-header {
   background:
-    rgba(248, 245, 242, 0.88);
+    rgba(248, 245, 242, 0.92);
 
   border-bottom:
     1px solid
@@ -98,7 +99,7 @@ a {
   align-items: center;
   justify-content: space-between;
 
-  gap: 24px;
+  gap: 26px;
 }
 
 .brand {
@@ -127,6 +128,31 @@ a {
 
   letter-spacing: 0.14em;
   text-transform: uppercase;
+}
+
+.header-actions {
+  display: flex;
+  align-items: center;
+
+  gap: 22px;
+}
+
+.back-link {
+  color: var(--muted);
+
+  font-size: 10px;
+  font-weight: 600;
+
+  transition:
+    color 160ms ease,
+    transform 160ms ease;
+}
+
+.back-link:hover {
+  color: var(--text);
+
+  transform:
+    translateX(-2px);
 }
 
 .language-switch {
@@ -169,28 +195,8 @@ a {
 }
 
 /* ========================================
-   HERO
+   FELLES TYPOGRAFI
 ======================================== */
-
-.hero-section {
-  padding: 34px 0 32px;
-}
-
-.hero-grid {
-  display: grid;
-
-  grid-template-columns:
-    minmax(0, 0.92fr)
-    minmax(500px, 1.08fr);
-
-  align-items: center;
-
-  gap: 58px;
-}
-
-.hero-copy {
-  max-width: 540px;
-}
 
 .eyebrow {
   margin: 0 0 11px;
@@ -204,132 +210,118 @@ a {
   text-transform: uppercase;
 }
 
+.section-heading {
+  max-width: 720px;
+
+  margin-bottom: 28px;
+}
+
+.section-heading.centered {
+  margin-right: auto;
+  margin-left: auto;
+
+  text-align: center;
+}
+
+.section-heading h2,
+.intro-heading h2,
+.download-copy h2 {
+  margin: 0;
+
+  font-family:
+    "Cormorant Garamond",
+    serif;
+
+  font-weight: 600;
+
+  letter-spacing: -0.025em;
+}
+
+.section-heading h2 {
+  font-size:
+    clamp(34px, 3.4vw, 47px);
+
+  line-height: 1.04;
+}
+
+/* ========================================
+   HERO
+======================================== */
+
+.subpage-hero {
+  padding: 38px 0 42px;
+}
+
+.hero-grid {
+  display: grid;
+
+  grid-template-columns:
+    minmax(0, 0.9fr)
+    minmax(500px, 1.1fr);
+
+  align-items: center;
+
+  gap: 58px;
+}
+
+.hero-copy {
+  max-width: 560px;
+}
+
 .hero-copy h1 {
   margin: 0;
 
-  display: flex;
-  flex-direction: column;
+  max-width: 540px;
 
   font-family:
     "Cormorant Garamond",
     serif;
 
   font-size:
-    clamp(43px, 4.1vw, 59px);
+    clamp(42px, 4.2vw, 58px);
 
   font-weight: 500;
 
-  line-height: 0.96;
-  letter-spacing: -0.035em;
-}
-
-.hero-copy h1 span,
-.hero-copy h1 em {
-  display: block;
-}
-
-.hero-copy h1 em {
-  margin-top: 3px;
-
-  color: var(--sage);
-
-  font-style: italic;
-  font-weight: 500;
+  line-height: 0.98;
+  letter-spacing: -0.04em;
 }
 
 .hero-text {
-  max-width: 520px;
+  max-width: 540px;
 
-  margin: 19px 0 0;
+  margin: 20px 0 0;
 
   color: var(--muted);
 
   font-size: 12px;
-  line-height: 1.65;
+  line-height: 1.72;
 }
 
-/* ========================================
-   STORE-KNAPPER
-======================================== */
-
-.store-row {
-  margin-top: 20px;
+.hero-tags {
+  margin-top: 23px;
 
   display: flex;
   flex-wrap: wrap;
 
-  gap: 9px;
+  gap: 8px;
 }
 
-.store-button {
-  min-width: 142px;
-
-  padding: 8px 17px;
-
-  display: inline-flex;
-  flex-direction: column;
-  justify-content: center;
+.hero-tags span {
+  padding: 7px 12px;
 
   border:
-    1px solid var(--olive);
+    1px solid
+    rgba(86, 103, 82, 0.12);
 
   border-radius: 999px;
 
-  background: var(--olive);
-  color: var(--white);
+  background:
+    rgba(237, 242, 235, 0.9);
 
-  box-shadow:
-    0 8px 18px
-    rgba(82, 99, 79, 0.14);
-
-  transition:
-    transform 170ms ease,
-    background-color 170ms ease,
-    box-shadow 170ms ease;
-}
-
-.store-button:hover {
-  transform:
-    translateY(-2px);
-
-  background: var(--sage);
-
-  box-shadow:
-    0 12px 24px
-    rgba(82, 99, 79, 0.18);
-}
-
-.store-button-outline {
-  background: transparent;
   color: var(--olive);
 
-  box-shadow: none;
-}
-
-.store-button-outline:hover {
-  background: var(--sage-soft);
-}
-
-.store-small {
-  font-size: 7px;
-  line-height: 1.1;
-
-  opacity: 0.82;
-}
-
-.store-large {
-  margin-top: 1px;
-
-  font-size: 13px;
-  font-weight: 700;
-}
-
-.coming-soon {
-  margin: 9px 0 0;
-
-  color: var(--muted);
-
-  font-size: 8px;
+  font-size: 9px;
+  font-weight: 600;
 }
 
 /* ========================================
@@ -337,21 +329,17 @@ a {
 ======================================== */
 
 .hero-art {
-  position: relative;
-
-  min-height: 360px;
+  min-height: 350px;
 
   display: flex;
-  align-items: center;
-  justify-content: center;
+  align-items: stretch;
 }
 
-.hero-scene-frame {
+.hero-image-frame {
   position: relative;
 
   width: 100%;
-  max-width: 560px;
-  height: 350px;
+  min-height: 350px;
 
   overflow: hidden;
 
@@ -365,143 +353,92 @@ a {
 
   box-shadow:
     0 22px 52px
-    rgba(62, 58, 54, 0.12);
+    rgba(62, 58, 54, 0.11);
 }
 
-.hero-scene {
+.hero-image {
+  position: absolute;
+  inset: 0;
+
   width: 100%;
   height: 100%;
 
   object-fit: cover;
-
-  /*
-    Dette flytter bildet litt mot høyre,
-    slik at journal, krystall og kopp får
-    god plass i utsnittet.
-  */
-
-  object-position: 58% center;
-
-  transform:
-    scale(1.015);
-}
-
-.hero-scene-overlay {
-  position: absolute;
-  inset: 0;
-
-  pointer-events: none;
-
-  background:
-    linear-gradient(
-      90deg,
-      rgba(248, 245, 242, 0.05) 0%,
-      transparent 32%,
-      rgba(44, 40, 34, 0.02) 100%
-    );
-
-  z-index: 2;
-}
-
-/*
-  Dette legger det ekte The Sun-kortet oppå
-  kortet som finnes i selve bakgrunnsbildet.
-*/
-
-.hero-tarot-card {
-  position: absolute;
-
-  left: 10.5%;
-  bottom: 4.5%;
-
-  width: 124px;
-
-  border-radius: 9px;
-
-  transform:
-    rotate(-8deg);
-
-  z-index: 3;
-
-  box-shadow:
-    0 15px 32px
-    rgba(40, 34, 28, 0.24);
+  object-position: center;
 }
 
 /* ========================================
-   EXPERIENCE-SEKSJON
+   INTRO
 ======================================== */
 
-.experience-section {
-  padding: 38px 0 30px;
+.intro-section {
+  padding: 72px 0;
 
   border-top:
     1px solid
-    rgba(62, 58, 54, 0.055);
+    rgba(62, 58, 54, 0.06);
 
   background:
-    rgba(255, 255, 255, 0.25);
+    rgba(255, 255, 255, 0.28);
 }
 
-.experience-heading {
-  max-width: 700px;
+.intro-grid {
+  display: grid;
 
-  margin-bottom: 24px;
+  grid-template-columns:
+    minmax(0, 0.9fr)
+    minmax(0, 1.1fr);
+
+  gap: 90px;
 }
 
-.experience-heading h2 {
-  margin: 0;
-
-  font-family:
-    "Cormorant Garamond",
-    serif;
+.intro-heading h2 {
+  max-width: 520px;
 
   font-size:
-    clamp(33px, 3vw, 43px);
+    clamp(38px, 4vw, 55px);
 
-  font-weight: 600;
-
-  line-height: 1.04;
-  letter-spacing: -0.025em;
+  line-height: 1.03;
 }
 
-.experience-heading > p:not(.eyebrow) {
-  margin: 11px 0 0;
+.intro-copy {
+  max-width: 600px;
+}
+
+.intro-copy p {
+  margin: 0;
 
   color: var(--muted);
 
-  font-size: 11px;
-  line-height: 1.65;
+  font-size: 13px;
+  line-height: 1.85;
+}
+
+.intro-copy p + p {
+  margin-top: 22px;
 }
 
 /* ========================================
-   EXPERIENCE-KORT
+   FEATURES
 ======================================== */
 
-.experience-grid {
+.features-section {
+  padding: 78px 0;
+}
+
+.feature-grid {
   display: grid;
 
   grid-template-columns:
     repeat(3, minmax(0, 1fr));
 
-  gap: 12px;
+  gap: 16px;
 }
 
-.experience-card {
-  min-height: 106px;
+.feature-card {
+  min-height: 250px;
 
-  padding: 15px 16px;
-
-  display: grid;
-
-  grid-template-columns:
-    auto
-    1fr
-    auto;
-
-  align-items: center;
-
-  gap: 13px;
+  padding: 24px;
 
   border:
     1px solid var(--line);
@@ -510,35 +447,33 @@ a {
     var(--card-radius);
 
   background:
-    rgba(255, 255, 255, 0.82);
+    rgba(255, 255, 255, 0.8);
 
   box-shadow:
-    0 7px 18px
-    rgba(62, 58, 54, 0.035);
+    0 10px 28px
+    rgba(62, 58, 54, 0.04);
 
   transition:
-    transform 170ms ease,
-    border-color 170ms ease,
-    box-shadow 170ms ease;
+    transform 180ms ease,
+    border-color 180ms ease,
+    box-shadow 180ms ease;
 }
 
-.experience-card:hover {
+.feature-card:hover {
   transform:
-    translateY(-2px);
+    translateY(-4px);
 
   border-color:
-    rgba(168, 137, 74, 0.24);
+    rgba(168, 137, 74, 0.26);
 
   box-shadow:
-    0 12px 25px
-    rgba(62, 58, 54, 0.06);
+    0 17px 36px
+    rgba(62, 58, 54, 0.065);
 }
 
-.experience-icon {
-  width: 44px;
-  height: 44px;
-
-  flex-shrink: 0;
+.feature-icon {
+  width: 49px;
+  height: 49px;
 
   display: flex;
   align-items: center;
@@ -553,59 +488,128 @@ a {
     "Cormorant Garamond",
     serif;
 
-  font-size: 22px;
+  font-size: 23px;
   font-weight: 600;
 }
 
-.experience-content {
-  min-width: 0;
+.feature-number {
+  margin: 25px 0 0;
+
+  color: var(--gold);
+
+  font-size: 8px;
+  font-weight: 800;
+
+  letter-spacing: 0.18em;
 }
 
-.experience-content h3 {
-  margin: 0;
+.feature-card h3 {
+  margin: 7px 0 0;
 
   font-family:
     "Cormorant Garamond",
     serif;
 
-  font-size: 23px;
+  font-size: 28px;
+  font-weight: 600;
+
+  line-height: 1.05;
+}
+
+.feature-card > p:last-child {
+  margin: 14px 0 0;
+
+  color: var(--muted);
+
+  font-size: 10px;
+  line-height: 1.72;
+}
+
+/* ========================================
+   STEPS
+======================================== */
+
+.steps-section {
+  padding: 74px 0;
+
+  border-top:
+    1px solid
+    rgba(62, 58, 54, 0.055);
+
+  background:
+    rgba(255, 255, 255, 0.3);
+}
+
+.steps-grid {
+  margin-top: 34px;
+
+  display: grid;
+
+  grid-template-columns:
+    repeat(3, minmax(0, 1fr));
+
+  gap: 0;
+
+  border-top:
+    1px solid
+    rgba(62, 58, 54, 0.1);
+
+  border-bottom:
+    1px solid
+    rgba(62, 58, 54, 0.1);
+}
+
+.step-card {
+  min-height: 220px;
+
+  padding: 30px;
+
+  border-right:
+    1px solid
+    rgba(62, 58, 54, 0.1);
+}
+
+.step-card:last-child {
+  border-right: none;
+}
+
+.step-number {
+  color: var(--gold);
+
+  font-size: 9px;
+  font-weight: 800;
+
+  letter-spacing: 0.18em;
+}
+
+.step-card h3 {
+  margin: 23px 0 0;
+
+  font-family:
+    "Cormorant Garamond",
+    serif;
+
+  font-size: 30px;
   font-weight: 600;
 
   line-height: 1;
 }
 
-.experience-content p {
-  margin: 6px 0 0;
+.step-card p {
+  margin: 15px 0 0;
 
   color: var(--muted);
 
-  font-size: 8px;
-  line-height: 1.52;
-}
-
-.experience-arrow {
-  color: var(--gold);
-
-  font-size: 17px;
-
-  transition:
-    transform 170ms ease;
-}
-
-.experience-card:hover
-.experience-arrow {
-  transform:
-    translateX(3px);
+  font-size: 10px;
+  line-height: 1.72;
 }
 
 /* ========================================
-   PREMIUM
+   DOWNLOAD
 ======================================== */
 
-.premium-strip {
-  width: 100%;
-
-  padding: 16px 0;
+.download-section {
+  padding: 46px 0;
 
   background:
     linear-gradient(
@@ -617,7 +621,115 @@ a {
   color: var(--white);
 }
 
-.premium-inner {
+.download-inner {
+  display: grid;
+
+  grid-template-columns:
+    minmax(0, 1fr)
+    auto;
+
+  align-items: center;
+
+  gap: 58px;
+}
+
+.download-copy .eyebrow {
+  color: var(--gold-light);
+}
+
+.download-copy h2 {
+  max-width: 640px;
+
+  color: var(--white);
+
+  font-size:
+    clamp(35px, 3.4vw, 48px);
+
+  line-height: 1.03;
+}
+
+.download-copy > p:last-child {
+  margin: 14px 0 0;
+
+  color:
+    rgba(255, 255, 255, 0.76);
+
+  font-size: 11px;
+  line-height: 1.65;
+}
+
+.download-buttons {
+  display: flex;
+  flex-wrap: wrap;
+
+  justify-content: flex-end;
+
+  gap: 9px;
+}
+
+.download-button {
+  min-width: 145px;
+
+  padding: 9px 18px;
+
+  display: flex;
+  flex-direction: column;
+
+  border:
+    1px solid
+    rgba(234, 215, 166, 0.6);
+
+  border-radius: 999px;
+
+  background: var(--gold-light);
+  color: var(--olive-dark);
+
+  transition:
+    transform 170ms ease,
+    background-color 170ms ease;
+}
+
+.download-button:hover {
+  transform:
+    translateY(-2px);
+
+  background: var(--white);
+}
+
+.download-button-outline {
+  background: transparent;
+  color: var(--gold-light);
+}
+
+.download-button-outline:hover {
+  background:
+    rgba(255, 255, 255, 0.09);
+
+  color: var(--white);
+}
+
+.download-button span {
+  font-size: 7px;
+  opacity: 0.8;
+}
+
+.download-button strong {
+  margin-top: 1px;
+
+  font-size: 13px;
+}
+
+/* ========================================
+   FOOTER
+======================================== */
+
+.site-footer {
+  padding: 24px 0;
+
+  background: var(--white);
+}
+
+.footer-inner {
   display: grid;
 
   grid-template-columns:
@@ -627,97 +739,33 @@ a {
 
   align-items: center;
 
-  gap: 15px;
+  gap: 30px;
 }
 
-.premium-symbol {
-  width: 44px;
-  height: 44px;
-
+.footer-brand {
   display: flex;
   align-items: center;
-  justify-content: center;
 
-  border-radius: 50%;
-
-  background:
-    rgba(255, 255, 255, 0.1);
-
-  color: var(--gold-light);
+  gap: 9px;
 
   font-family:
     "Cormorant Garamond",
     serif;
 
-  font-size: 25px;
-}
+  font-size: 18px;
+  font-weight: 600;
 
-.premium-label {
-  margin: 0 0 3px;
-
-  color: var(--gold-light);
-
-  font-size: 8px;
-  font-weight: 700;
-
-  letter-spacing: 0.16em;
+  letter-spacing: 0.12em;
   text-transform: uppercase;
 }
 
-.premium-text {
-  margin: 0;
+.footer-brand img {
+  width: 32px;
+  height: 32px;
 
-  color:
-    rgba(255, 255, 255, 0.84);
+  border-radius: 10px;
 
-  font-size: 9px;
-  line-height: 1.45;
-}
-
-.premium-button {
-  padding: 9px 19px;
-
-  border:
-    1px solid
-    rgba(234, 215, 166, 0.5);
-
-  border-radius: 999px;
-
-  color: var(--gold-light);
-
-  font-size: 9px;
-  font-weight: 700;
-
-  white-space: nowrap;
-
-  transition:
-    background-color 170ms ease,
-    color 170ms ease;
-}
-
-.premium-button:hover {
-  background: var(--gold-light);
-  color: var(--olive-dark);
-}
-
-/* ========================================
-   FOOTER
-======================================== */
-
-.site-footer {
-  width: 100%;
-
-  padding: 14px 0 12px;
-
-  background: var(--white);
-}
-
-.footer-inner {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-
-  gap: 7px;
+  object-fit: cover;
 }
 
 .footer-links {
@@ -729,7 +777,7 @@ a {
 }
 
 .footer-links a {
-  padding: 0 16px;
+  padding: 0 15px;
 
   border-right:
     1px solid
@@ -752,28 +800,28 @@ a {
   color: var(--text);
 }
 
-.site-footer p {
+.footer-inner > p {
   margin: 0;
 
   color: var(--muted);
 
-  font-size: 7px;
+  font-size: 8px;
 }
 
 /* ========================================
-   FOKUS / TILGJENGELIGHET
+   FOKUS
 ======================================== */
 
 .language-button,
-.store-button,
-.premium-button,
+.back-link,
+.download-button,
 .footer-links a {
   outline-offset: 3px;
 }
 
 .language-button:focus-visible,
-.store-button:focus-visible,
-.premium-button:focus-visible,
+.back-link:focus-visible,
+.download-button:focus-visible,
 .footer-links a:focus-visible {
   outline:
     2px solid
@@ -784,49 +832,73 @@ a {
    NETTBRETT
 ======================================== */
 
-@media (max-width: 1000px) {
+@media (max-width: 950px) {
+
+  .hero-grid,
+  .intro-grid,
+  .download-inner {
+    grid-template-columns: 1fr;
+  }
 
   .hero-grid {
-    grid-template-columns: 1fr;
-
     gap: 30px;
   }
 
-  .hero-copy {
-    max-width: 680px;
+  .hero-copy,
+  .intro-heading,
+  .intro-copy,
+  .download-copy {
+    max-width: 700px;
 
-    margin: 0 auto;
+    margin-right: auto;
+    margin-left: auto;
 
     text-align: center;
   }
 
-  .hero-text {
-    margin-right: auto;
-    margin-left: auto;
-  }
-
-  .store-row {
+  .hero-tags,
+  .download-buttons {
     justify-content: center;
   }
 
   .hero-art {
-    min-height: 350px;
+    min-height: 340px;
   }
 
-  .hero-scene-frame {
-    max-width: 600px;
+  .hero-image-frame {
+    max-width: 700px;
+    min-height: 340px;
+
+    margin: 0 auto;
   }
 
-  .experience-heading {
-    margin-right: auto;
-    margin-left: auto;
-
-    text-align: center;
-  }
-
-  .experience-grid {
+  .feature-grid {
     grid-template-columns:
       repeat(2, minmax(0, 1fr));
+  }
+
+  .steps-grid {
+    grid-template-columns: 1fr;
+
+    border-bottom: none;
+  }
+
+  .step-card {
+    min-height: 0;
+
+    border-right: none;
+
+    border-bottom:
+      1px solid
+      rgba(62, 58, 54, 0.1);
+  }
+
+  .footer-inner {
+    grid-template-columns: 1fr;
+
+    justify-items: center;
+
+    text-align: center;
   }
 
 }
@@ -845,7 +917,7 @@ a {
   }
 
   .header-inner {
-    min-height: 56px;
+    min-height: 58px;
   }
 
   .brand-logo {
@@ -859,82 +931,73 @@ a {
     font-size: 19px;
   }
 
-  .hero-section {
-    padding: 25px 0 27px;
+  .header-actions {
+    gap: 12px;
+  }
+
+  .back-link {
+    font-size: 8px;
+  }
+
+  .subpage-hero {
+    padding: 30px 0 35px;
   }
 
   .hero-copy h1 {
     font-size:
-      clamp(39px, 12vw, 53px);
+      clamp(38px, 11vw, 50px);
   }
 
   .hero-text {
     font-size: 11px;
   }
 
-  .store-row {
+  .hero-art {
+    min-height: 270px;
+  }
+
+  .hero-image-frame {
+    min-height: 270px;
+
+    border-radius: 22px;
+  }
+
+  .intro-section,
+  .features-section,
+  .steps-section {
+    padding: 55px 0;
+  }
+
+  .feature-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .feature-card {
+    min-height: 0;
+  }
+
+  .section-heading h2,
+  .intro-heading h2 {
+    font-size:
+      clamp(31px, 9.5vw, 42px);
+  }
+
+  .download-section {
+    padding: 38px 0;
+  }
+
+  .download-buttons {
+    width: 100%;
+
     flex-direction: column;
   }
 
-  .store-button {
+  .download-button {
     width: 100%;
 
     align-items: center;
 
     text-align: center;
-  }
-
-  .hero-art {
-    min-height: 275px;
-  }
-
-  .hero-scene-frame {
-    max-width: 430px;
-    height: 270px;
-
-    border-radius: 22px;
-  }
-
-  .hero-scene {
-    object-position: 58% center;
-  }
-
-  .hero-tarot-card {
-    left: 9%;
-    bottom: 4.5%;
-
-    width: 94px;
-
-    border-radius: 7px;
-  }
-
-  .experience-section {
-    padding-top: 31px;
-  }
-
-  .experience-heading h2 {
-    font-size:
-      clamp(30px, 9vw, 39px);
-  }
-
-  .experience-grid {
-    grid-template-columns: 1fr;
-  }
-
-  .experience-card {
-    min-height: 98px;
-  }
-
-  .premium-inner {
-    grid-template-columns: 1fr;
-
-    justify-items: center;
-
-    text-align: center;
-  }
-
-  .premium-button {
-    margin-top: 3px;
   }
 
   .footer-links a {
@@ -949,24 +1012,19 @@ a {
 
 @media (max-width: 390px) {
 
-  .hero-scene-frame {
-    height: 245px;
+  .header-actions {
+    gap: 8px;
   }
 
-  .hero-tarot-card {
-    width: 84px;
+  .back-link {
+    max-width: 88px;
+
+    line-height: 1.3;
+    text-align: right;
   }
 
-  .experience-card {
-    grid-template-columns:
-      auto
-      1fr;
-
-    align-items: start;
-  }
-
-  .experience-arrow {
-    display: none;
+  .feature-card {
+    padding: 21px;
   }
 
 }
@@ -981,193 +1039,6 @@ a {
   *::before,
   *::after {
     transition: none !important;
-  }
-
-}
-/* ========================================
-   TRE HOVEDOMRÅDER
-======================================== */
-
-.category-grid {
-  display: grid;
-
-  grid-template-columns:
-    repeat(3, minmax(0, 1fr));
-
-  gap: 18px;
-}
-
-.category-card {
-  min-height: 330px;
-
-  padding: 26px;
-
-  display: flex;
-  flex-direction: column;
-
-  border:
-    1px solid rgba(62, 58, 54, 0.1);
-
-  border-radius: 24px;
-
-  background:
-    rgba(255, 255, 255, 0.82);
-
-  box-shadow:
-    0 12px 30px
-    rgba(62, 58, 54, 0.045);
-
-  transition:
-    transform 180ms ease,
-    border-color 180ms ease,
-    box-shadow 180ms ease;
-}
-
-.category-card:hover {
-  transform: translateY(-4px);
-
-  border-color:
-    rgba(168, 137, 74, 0.28);
-
-  box-shadow:
-    0 18px 38px
-    rgba(62, 58, 54, 0.07);
-}
-
-.category-icon {
-  width: 52px;
-  height: 52px;
-
-  display: flex;
-  align-items: center;
-  justify-content: center;
-
-  border-radius: 50%;
-
-  background: var(--sage-soft);
-  color: var(--olive);
-
-  font-family:
-    "Cormorant Garamond",
-    serif;
-
-  font-size: 25px;
-  font-weight: 600;
-}
-
-.category-card h3 {
-  margin: 22px 0 0;
-
-  font-family:
-    "Cormorant Garamond",
-    serif;
-
-  font-size: 34px;
-  font-weight: 600;
-
-  line-height: 1;
-  letter-spacing: -0.02em;
-}
-
-.category-description {
-  margin: 15px 0 0;
-
-  color: var(--muted);
-
-  font-size: 11px;
-  line-height: 1.7;
-}
-
-.category-list {
-  margin: 22px 0 0;
-  padding: 0;
-
-  display: grid;
-
-  gap: 10px;
-
-  list-style: none;
-}
-
-.category-list li {
-  position: relative;
-
-  padding-left: 19px;
-
-  color: var(--text);
-
-  font-size: 10px;
-  font-weight: 600;
-}
-
-.category-list li::before {
-  content: "✓";
-
-  position: absolute;
-
-  left: 0;
-  top: 0;
-
-  color: var(--gold);
-
-  font-size: 9px;
-  font-weight: 700;
-}
-
-.category-link {
-  margin-top: auto;
-  padding-top: 24px;
-
-  color: var(--gold);
-
-  font-size: 10px;
-  font-weight: 700;
-
-  transition:
-    transform 170ms ease,
-    color 170ms ease;
-}
-
-.category-card:hover .category-link {
-  color: var(--olive);
-
-  transform: translateX(3px);
-}
-
-/* Den gamle ni-korts-layouten brukes ikke lenger */
-
-.experience-grid {
-  display: none;
-}
-
-/* ========================================
-   RESPONSIVT
-======================================== */
-
-@media (max-width: 900px) {
-
-  .category-grid {
-    grid-template-columns: 1fr;
-  }
-
-  .category-card {
-    min-height: 0;
-  }
-
-}
-
-@media (max-width: 650px) {
-
-  .category-card {
-    padding: 22px;
-  }
-
-  .category-card h3 {
-    font-size: 31px;
-  }
-
-  .category-description {
-    font-size: 10px;
   }
 
 }
