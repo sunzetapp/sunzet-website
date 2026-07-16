@@ -172,11 +172,11 @@ a {
 
   grid-template-columns:
     minmax(0, 1fr)
-    minmax(390px, 0.86fr);
+    minmax(400px, 0.9fr);
 
   align-items: center;
 
-  gap: 74px;
+  gap: 68px;
 }
 
 .hero-copy {
@@ -322,115 +322,230 @@ a {
 }
 
 /* ========================================
-   HERO ART
+   SUNZET-UNIVERSET I HERO
 ======================================== */
 
 .hero-art {
   position: relative;
 
-  min-height: 310px;
+  min-height: 330px;
 
   display: flex;
-  flex-direction: column;
   align-items: center;
   justify-content: center;
 }
 
-.sun-glow {
+.universe-glow {
   position: absolute;
 
-  left: 50%;
-  top: 46%;
-
-  width: 290px;
-  height: 290px;
-
-  transform:
-    translate(-50%, -50%);
+  width: 320px;
+  height: 320px;
 
   border-radius: 50%;
 
   background:
     radial-gradient(
       circle,
-      rgba(201, 162, 77, 0.17) 0%,
-      rgba(201, 162, 77, 0.06) 45%,
-      transparent 72%
+      rgba(201, 162, 77, 0.15) 0%,
+      rgba(112, 131, 107, 0.07) 48%,
+      transparent 73%
     );
 }
 
-.tarot-stack {
+.sunzet-universe {
   position: relative;
 
-  width: 310px;
-  height: 245px;
+  width: 400px;
+  height: 320px;
 }
 
-.tarot-card {
+/* ========================================
+   LOGO I SENTRUM
+======================================== */
+
+.universe-center {
   position: absolute;
 
+  left: 50%;
   top: 50%;
 
-  object-fit: cover;
-
-  border-radius: 11px;
-
-  box-shadow:
-    0 12px 29px
-    rgba(62, 58, 54, 0.14);
-}
-
-.tarot-card-left {
-  left: 25px;
-
-  width: 112px;
-
-  transform:
-    translateY(-44%)
-    rotate(-7deg);
-
-  z-index: 1;
-}
-
-.tarot-card-right {
-  right: 25px;
-
-  width: 112px;
-
-  transform:
-    translateY(-44%)
-    rotate(7deg);
-
-  z-index: 2;
-}
-
-.tarot-card-center {
-  left: 50%;
-
-  width: 139px;
+  width: 106px;
+  height: 106px;
 
   transform:
     translate(-50%, -50%);
 
-  z-index: 4;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 33px;
+
+  background:
+    rgba(255, 255, 255, 0.78);
+
+  border:
+    1px solid
+    rgba(62, 58, 54, 0.06);
 
   box-shadow:
-    0 17px 37px
-    rgba(62, 58, 54, 0.19);
+    0 14px 35px
+    rgba(62, 58, 54, 0.08);
+
+  z-index: 5;
 }
 
-.hero-art-caption {
-  position: relative;
-  z-index: 5;
+.universe-logo {
+  width: 78px;
+  height: 78px;
 
-  margin: 1px 0 0;
+  border-radius: 24px;
+
+  object-fit: cover;
+}
+
+/* ========================================
+   SMÅ FUNKSJONSSYMBOLER
+======================================== */
+
+.universe-item {
+  position: absolute;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  gap: 5px;
 
   color: var(--muted);
 
   font-size: 8px;
-  font-weight: 500;
+  font-weight: 600;
 
-  letter-spacing: 0.07em;
+  white-space: nowrap;
+}
+
+.universe-icon {
+  width: 47px;
+  height: 47px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border:
+    1px solid
+    rgba(62, 58, 54, 0.08);
+
+  border-radius: 50%;
+
+  background:
+    rgba(255, 255, 255, 0.82);
+
+  color: var(--olive);
+
+  font-family:
+    "Cormorant Garamond",
+    serif;
+
+  font-size: 22px;
+
+  box-shadow:
+    0 9px 22px
+    rgba(62, 58, 54, 0.055);
+}
+
+.universe-dreams {
+  left: 34px;
+  top: 31px;
+}
+
+.universe-journal {
+  right: 29px;
+  top: 33px;
+}
+
+.universe-planning {
+  left: 22px;
+  bottom: 32px;
+}
+
+.universe-growth {
+  right: 18px;
+  bottom: 33px;
+}
+
+/* ========================================
+   TAROT SOM ÉN DEL AV UNIVERS
+======================================== */
+
+.universe-tarot {
+  position: absolute;
+
+  left: 88px;
+  top: 88px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  gap: 5px;
+
+  color: var(--muted);
+
+  font-size: 8px;
+  font-weight: 600;
+
+  transform: rotate(-5deg);
+
+  z-index: 3;
+}
+
+.universe-tarot img {
+  width: 74px;
+
+  border-radius: 8px;
+
+  box-shadow:
+    0 12px 27px
+    rgba(62, 58, 54, 0.14);
+}
+
+/* ========================================
+   KRYSTALL SOM ÉN DEL AV UNIVERS
+======================================== */
+
+.universe-crystal {
+  position: absolute;
+
+  right: 80px;
+  top: 106px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  gap: 3px;
+
+  color: var(--muted);
+
+  font-size: 8px;
+  font-weight: 600;
+
+  z-index: 6;
+}
+
+.universe-crystal img {
+  width: 69px;
+  height: 69px;
+
+  object-fit: contain;
+
+  filter:
+    drop-shadow(
+      0 9px 11px
+      rgba(62, 58, 54, 0.14)
+    );
 }
 
 /* ========================================
@@ -789,7 +904,7 @@ a {
   .hero-grid {
     grid-template-columns: 1fr;
 
-    gap: 25px;
+    gap: 26px;
   }
 
   .hero-copy {
@@ -810,7 +925,7 @@ a {
   }
 
   .hero-art {
-    min-height: 275px;
+    min-height: 305px;
   }
 
   .experience-heading {
@@ -878,18 +993,25 @@ a {
     text-align: center;
   }
 
-  .tarot-stack {
-    width: 265px;
-    height: 225px;
+  .hero-art {
+    min-height: 280px;
   }
 
-  .tarot-card-left,
-  .tarot-card-right {
-    width: 96px;
+  .sunzet-universe {
+    width: 330px;
+    height: 280px;
+
+    transform: scale(0.9);
   }
 
-  .tarot-card-center {
-    width: 120px;
+  .universe-center {
+    width: 94px;
+    height: 94px;
+  }
+
+  .universe-logo {
+    width: 68px;
+    height: 68px;
   }
 
   .experience-grid {
