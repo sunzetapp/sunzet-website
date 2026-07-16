@@ -1058,3 +1058,87 @@ a {
   }
 
 }
+/* ========================================
+   HERO-BILDE MED EKTE SUNZET-TAROTKORT
+======================================== */
+
+.hero-art {
+  position: relative;
+
+  min-height: 340px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.hero-scene-frame {
+  position: relative;
+
+  width: 100%;
+  max-width: 510px;
+  height: 330px;
+
+  overflow: hidden;
+
+  border-radius: 28px;
+
+  background: #eee9e1;
+
+  box-shadow:
+    0 22px 52px
+    rgba(62, 58, 54, 0.11);
+}
+
+.hero-scene {
+  width: 100%;
+  height: 100%;
+
+  object-fit: cover;
+
+  /*
+    Bildet inneholder også tekst på venstre side.
+    Denne plasseringen viser hovedsakelig bordscenen.
+  */
+  object-position: 78% center;
+
+  transform: scale(1.03);
+}
+
+.hero-scene-shade {
+  position: absolute;
+  inset: 0;
+
+  pointer-events: none;
+
+  background:
+    linear-gradient(
+      90deg,
+      rgba(248, 245, 242, 0.16) 0%,
+      transparent 38%
+    );
+}
+
+/*
+  Det ekte Sunzet-kortet legges over kortet
+  som allerede finnes i bakgrunnsbildet.
+*/
+
+.hero-real-tarot-card {
+  position: absolute;
+
+  left: 8%;
+  bottom: 5%;
+
+  width: 118px;
+
+  border-radius: 10px;
+
+  transform: rotate(-7deg);
+
+  z-index: 3;
+
+  box-shadow:
+    0 16px 32px
+    rgba(40, 34, 28, 0.24);
+}
