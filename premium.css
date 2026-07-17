@@ -883,3 +883,132 @@
   }
 
 }
+/* ========================================
+   FINPUSS
+======================================== */
+
+.premium-intro,
+.premium-section-heading,
+.premium-download-inner {
+  animation: premiumFadeUp .7s ease both;
+}
+
+.premium-feature-card {
+  animation: premiumFadeUp .55s ease both;
+}
+
+.premium-feature-card:nth-child(2) {
+  animation-delay: .05s;
+}
+
+.premium-feature-card:nth-child(3) {
+  animation-delay: .1s;
+}
+
+.premium-feature-card:nth-child(4) {
+  animation-delay: .15s;
+}
+
+.premium-feature-card:nth-child(5) {
+  animation-delay: .2s;
+}
+
+.premium-feature-card:nth-child(6) {
+  animation-delay: .25s;
+}
+
+.premium-experience-item {
+  animation: premiumFadeUp .65s ease both;
+}
+
+.premium-experience-item:nth-child(2) {
+  animation-delay: .08s;
+}
+
+.premium-experience-item:nth-child(3) {
+  animation-delay: .16s;
+}
+
+
+/* ========================================
+   ANIMASJON
+======================================== */
+
+@keyframes premiumFadeUp {
+
+  from {
+
+    opacity: 0;
+
+    transform:
+      translateY(18px);
+  }
+
+  to {
+
+    opacity: 1;
+
+    transform:
+      translateY(0);
+  }
+
+}
+
+
+/* ========================================
+   STORE SKJERMER
+======================================== */
+
+@media (min-width:1400px){
+
+  .premium-feature-grid{
+
+    gap:22px;
+  }
+
+  .premium-feature-card{
+
+    min-height:355px;
+  }
+
+}
+
+
+/* ========================================
+   MOBIL
+======================================== */
+
+@media (max-width:650px){
+
+  .premium-feature-card,
+  .premium-experience-item{
+
+    animation:none;
+  }
+
+}
+
+
+/* ========================================
+   REDUSERT BEVEGELSE
+======================================== */
+
+@media (prefers-reduced-motion:reduce){
+
+  *,
+  *::before,
+  *::after{
+
+    animation:none !important;
+
+    transition:none !important;
+
+    scroll-behavior:auto;
+  }
+
+}
+
+
+/* ========================================
+   SLUTT
+======================================== */
