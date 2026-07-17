@@ -1,0 +1,1035 @@
+:root {
+  --cream: #f8f5f2;
+  --cream-light: #fcfaf7;
+  --white: #ffffff;
+
+  --sage-soft: #edf2eb;
+  --sage: #74866f;
+  --olive: #566752;
+  --olive-dark: #465441;
+
+  --gold: #a8894a;
+  --gold-light: #ead7a6;
+
+  --text: #3e3a36;
+  --muted: #746f69;
+  --line: rgba(62, 58, 54, 0.1);
+
+  --page-width: 1180px;
+  --card-radius: 22px;
+}
+
+/* ========================================
+   RESET
+======================================== */
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+
+  color: var(--text);
+
+  background:
+    linear-gradient(
+      145deg,
+      #f3f6f1 0%,
+      var(--cream) 46%,
+      #faf7f3 100%
+    );
+
+  font-family: "Inter", sans-serif;
+
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+button {
+  font: inherit;
+}
+
+button,
+a {
+  -webkit-tap-highlight-color: transparent;
+}
+
+.page-shell {
+  width: min(
+    calc(100% - 48px),
+    var(--page-width)
+  );
+
+  margin: 0 auto;
+}
+
+/* ========================================
+   HEADER
+======================================== */
+
+.site-header {
+  background:
+    rgba(248, 245, 242, 0.92);
+
+  border-bottom:
+    1px solid
+    rgba(62, 58, 54, 0.07);
+}
+
+.header-inner {
+  min-height: 64px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  gap: 26px;
+}
+
+.brand {
+  display: inline-flex;
+  align-items: center;
+
+  gap: 10px;
+}
+
+.brand-logo {
+  width: 36px;
+  height: 36px;
+
+  border-radius: 11px;
+
+  object-fit: cover;
+}
+
+.brand-name {
+  font-family:
+    "Cormorant Garamond",
+    serif;
+
+  font-size: 23px;
+  font-weight: 600;
+
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
+.header-actions {
+  display: flex;
+  align-items: center;
+
+  gap: 22px;
+}
+
+.back-link {
+  color: var(--muted);
+
+  font-size: 10px;
+  font-weight: 600;
+
+  transition:
+    color 160ms ease,
+    transform 160ms ease;
+}
+
+.back-link:hover {
+  color: var(--text);
+
+  transform:
+    translateX(-2px);
+}
+
+.language-switch {
+  display: flex;
+  align-items: center;
+
+  gap: 7px;
+
+  color:
+    rgba(62, 58, 54, 0.3);
+}
+
+.language-button {
+  padding: 4px 2px;
+
+  border: none;
+  background: transparent;
+
+  color: var(--muted);
+
+  font-size: 10px;
+  font-weight: 700;
+
+  cursor: pointer;
+
+  transition:
+    color 160ms ease,
+    transform 160ms ease;
+}
+
+.language-button:hover {
+  color: var(--text);
+
+  transform:
+    translateY(-1px);
+}
+
+.language-button.active {
+  color: var(--gold);
+}
+
+/* ========================================
+   FELLES TYPOGRAFI
+======================================== */
+
+.eyebrow {
+  margin: 0 0 11px;
+
+  color: var(--gold);
+
+  font-size: 9px;
+  font-weight: 700;
+
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+}
+
+.section-heading {
+  max-width: 720px;
+
+  margin-bottom: 28px;
+}
+
+.section-heading.centered {
+  margin-right: auto;
+  margin-left: auto;
+
+  text-align: center;
+}
+
+.section-heading h2,
+.intro-heading h2,
+.download-copy h2 {
+  margin: 0;
+
+  font-family:
+    "Cormorant Garamond",
+    serif;
+
+  font-weight: 600;
+
+  letter-spacing: -0.025em;
+}
+
+.section-heading h2 {
+  font-size:
+    clamp(34px, 3.4vw, 47px);
+
+  line-height: 1.04;
+}
+
+/* ========================================
+   HERO
+======================================== */
+
+.subpage-hero {
+  padding: 38px 0 42px;
+}
+
+.hero-grid {
+  display: grid;
+
+  grid-template-columns:
+    minmax(0, 0.9fr)
+    minmax(500px, 1.1fr);
+
+  align-items: center;
+
+  gap: 58px;
+}
+
+.hero-copy {
+  max-width: 560px;
+}
+
+.hero-copy h1 {
+  margin: 0;
+
+  max-width: 550px;
+
+  font-family:
+    "Cormorant Garamond",
+    serif;
+
+  font-size:
+    clamp(42px, 4.2vw, 58px);
+
+  font-weight: 500;
+
+  line-height: 0.98;
+  letter-spacing: -0.04em;
+}
+
+.hero-text {
+  max-width: 540px;
+
+  margin: 20px 0 0;
+
+  color: var(--muted);
+
+  font-size: 12px;
+  line-height: 1.72;
+}
+
+.hero-tags {
+  margin-top: 23px;
+
+  display: flex;
+  flex-wrap: wrap;
+
+  gap: 8px;
+}
+
+.hero-tags span {
+  padding: 7px 12px;
+
+  border:
+    1px solid
+    rgba(86, 103, 82, 0.12);
+
+  border-radius: 999px;
+
+  background:
+    rgba(237, 242, 235, 0.9);
+
+  color: var(--olive);
+
+  font-size: 9px;
+  font-weight: 600;
+}
+
+/* ========================================
+   HERO-BILDE
+======================================== */
+
+.hero-art {
+  min-height: 350px;
+
+  display: flex;
+  align-items: stretch;
+}
+
+.hero-image-frame {
+  position: relative;
+
+  width: 100%;
+  min-height: 350px;
+
+  overflow: hidden;
+
+  border:
+    1px solid
+    rgba(62, 58, 54, 0.08);
+
+  border-radius: 28px;
+
+  background: #eee9e1;
+
+  box-shadow:
+    0 22px 52px
+    rgba(62, 58, 54, 0.11);
+}
+
+.hero-image {
+  position: absolute;
+  inset: 0;
+
+  width: 100%;
+  height: 100%;
+
+  object-fit: cover;
+  object-position: center;
+}
+
+/* ========================================
+   INTRO
+======================================== */
+
+.intro-section {
+  padding: 72px 0;
+
+  border-top:
+    1px solid
+    rgba(62, 58, 54, 0.06);
+
+  background:
+    rgba(255, 255, 255, 0.28);
+}
+
+.intro-grid {
+  display: grid;
+
+  grid-template-columns:
+    minmax(0, 0.9fr)
+    minmax(0, 1.1fr);
+
+  gap: 90px;
+}
+
+.intro-heading h2 {
+  max-width: 520px;
+
+  font-size:
+    clamp(38px, 4vw, 55px);
+
+  line-height: 1.03;
+}
+
+.intro-copy {
+  max-width: 600px;
+}
+
+.intro-copy p {
+  margin: 0;
+
+  color: var(--muted);
+
+  font-size: 13px;
+  line-height: 1.85;
+}
+
+.intro-copy p + p {
+  margin-top: 22px;
+}
+
+/* ========================================
+   FEATURES
+======================================== */
+
+.features-section {
+  padding: 78px 0;
+}
+
+.feature-grid {
+  display: grid;
+
+  grid-template-columns:
+    repeat(3, minmax(0, 1fr));
+
+  gap: 16px;
+}
+
+.feature-card {
+  min-height: 250px;
+
+  padding: 24px;
+
+  border:
+    1px solid var(--line);
+
+  border-radius:
+    var(--card-radius);
+
+  background:
+    rgba(255, 255, 255, 0.8);
+
+  box-shadow:
+    0 10px 28px
+    rgba(62, 58, 54, 0.04);
+
+  transition:
+    transform 180ms ease,
+    border-color 180ms ease,
+    box-shadow 180ms ease;
+}
+
+.feature-card:hover {
+  transform:
+    translateY(-4px);
+
+  border-color:
+    rgba(168, 137, 74, 0.26);
+
+  box-shadow:
+    0 17px 36px
+    rgba(62, 58, 54, 0.065);
+}
+
+.feature-icon {
+  width: 49px;
+  height: 49px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 50%;
+
+  background: var(--sage-soft);
+  color: var(--olive);
+
+  font-family:
+    "Cormorant Garamond",
+    serif;
+
+  font-size: 23px;
+  font-weight: 600;
+}
+
+.feature-number {
+  margin: 25px 0 0;
+
+  color: var(--gold);
+
+  font-size: 8px;
+  font-weight: 800;
+
+  letter-spacing: 0.18em;
+}
+
+.feature-card h3 {
+  margin: 7px 0 0;
+
+  font-family:
+    "Cormorant Garamond",
+    serif;
+
+  font-size: 28px;
+  font-weight: 600;
+
+  line-height: 1.05;
+}
+
+.feature-card > p:last-child {
+  margin: 14px 0 0;
+
+  color: var(--muted);
+
+  font-size: 10px;
+  line-height: 1.72;
+}
+
+/* ========================================
+   TRE STEG
+======================================== */
+
+.steps-section {
+  padding: 74px 0;
+
+  border-top:
+    1px solid
+    rgba(62, 58, 54, 0.055);
+
+  background:
+    rgba(255, 255, 255, 0.3);
+}
+
+.steps-grid {
+  margin-top: 34px;
+
+  display: grid;
+
+  grid-template-columns:
+    repeat(3, minmax(0, 1fr));
+
+  gap: 0;
+
+  border-top:
+    1px solid
+    rgba(62, 58, 54, 0.1);
+
+  border-bottom:
+    1px solid
+    rgba(62, 58, 54, 0.1);
+}
+
+.step-card {
+  min-height: 220px;
+
+  padding: 30px;
+
+  border-right:
+    1px solid
+    rgba(62, 58, 54, 0.1);
+}
+
+.step-card:last-child {
+  border-right: none;
+}
+
+.step-number {
+  color: var(--gold);
+
+  font-size: 9px;
+  font-weight: 800;
+
+  letter-spacing: 0.18em;
+}
+
+.step-card h3 {
+  margin: 23px 0 0;
+
+  font-family:
+    "Cormorant Garamond",
+    serif;
+
+  font-size: 30px;
+  font-weight: 600;
+
+  line-height: 1;
+}
+
+.step-card p {
+  margin: 15px 0 0;
+
+  color: var(--muted);
+
+  font-size: 10px;
+  line-height: 1.72;
+}
+
+/* ========================================
+   DOWNLOAD
+======================================== */
+
+.download-section {
+  padding: 46px 0;
+
+  background:
+    linear-gradient(
+      135deg,
+      #61725c 0%,
+      var(--olive-dark) 100%
+    );
+
+  color: var(--white);
+}
+
+.download-inner {
+  display: grid;
+
+  grid-template-columns:
+    minmax(0, 1fr)
+    auto;
+
+  align-items: center;
+
+  gap: 58px;
+}
+
+.download-copy .eyebrow {
+  color: var(--gold-light);
+}
+
+.download-copy h2 {
+  max-width: 640px;
+
+  color: var(--white);
+
+  font-size:
+    clamp(35px, 3.4vw, 48px);
+
+  line-height: 1.03;
+}
+
+.download-copy > p:last-child {
+  margin: 14px 0 0;
+
+  color:
+    rgba(255, 255, 255, 0.76);
+
+  font-size: 11px;
+  line-height: 1.65;
+}
+
+.download-buttons {
+  display: flex;
+  flex-wrap: wrap;
+
+  justify-content: flex-end;
+
+  gap: 9px;
+}
+
+.download-button {
+  min-width: 145px;
+
+  padding: 9px 18px;
+
+  display: flex;
+  flex-direction: column;
+
+  border:
+    1px solid
+    rgba(234, 215, 166, 0.6);
+
+  border-radius: 999px;
+
+  background: var(--gold-light);
+  color: var(--olive-dark);
+
+  transition:
+    transform 170ms ease,
+    background-color 170ms ease;
+}
+
+.download-button:hover {
+  transform:
+    translateY(-2px);
+
+  background: var(--white);
+}
+
+.download-button-outline {
+  background: transparent;
+  color: var(--gold-light);
+}
+
+.download-button-outline:hover {
+  background:
+    rgba(255, 255, 255, 0.09);
+
+  color: var(--white);
+}
+
+.download-button span {
+  font-size: 7px;
+  opacity: 0.8;
+}
+
+.download-button strong {
+  margin-top: 1px;
+
+  font-size: 13px;
+}
+
+/* ========================================
+   FOOTER
+======================================== */
+
+.site-footer {
+  padding: 24px 0;
+
+  background: var(--white);
+}
+
+.footer-inner {
+  display: grid;
+
+  grid-template-columns:
+    auto
+    1fr
+    auto;
+
+  align-items: center;
+
+  gap: 30px;
+}
+
+.footer-brand {
+  display: flex;
+  align-items: center;
+
+  gap: 9px;
+
+  font-family:
+    "Cormorant Garamond",
+    serif;
+
+  font-size: 18px;
+  font-weight: 600;
+
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.footer-brand img {
+  width: 32px;
+  height: 32px;
+
+  border-radius: 10px;
+
+  object-fit: cover;
+}
+
+.footer-links {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+
+  gap: 0;
+}
+
+.footer-links a {
+  padding: 0 15px;
+
+  border-right:
+    1px solid
+    rgba(62, 58, 54, 0.18);
+
+  color: var(--muted);
+
+  font-size: 8px;
+  font-weight: 600;
+
+  transition:
+    color 160ms ease;
+}
+
+.footer-links a:last-child {
+  border-right: none;
+}
+
+.footer-links a:hover {
+  color: var(--text);
+}
+
+.footer-inner > p {
+  margin: 0;
+
+  color: var(--muted);
+
+  font-size: 8px;
+}
+
+/* ========================================
+   FOKUS
+======================================== */
+
+.language-button,
+.back-link,
+.download-button,
+.footer-links a {
+  outline-offset: 3px;
+}
+
+.language-button:focus-visible,
+.back-link:focus-visible,
+.download-button:focus-visible,
+.footer-links a:focus-visible {
+  outline:
+    2px solid
+    rgba(168, 137, 74, 0.55);
+}
+
+/* ========================================
+   NETTBRETT
+======================================== */
+
+@media (max-width: 950px) {
+  .hero-grid,
+  .intro-grid,
+  .download-inner {
+    grid-template-columns: 1fr;
+  }
+
+  .hero-grid {
+    gap: 30px;
+  }
+
+  .hero-copy,
+  .intro-heading,
+  .intro-copy,
+  .download-copy {
+    max-width: 700px;
+
+    margin-right: auto;
+    margin-left: auto;
+
+    text-align: center;
+  }
+
+  .hero-tags,
+  .download-buttons {
+    justify-content: center;
+  }
+
+  .hero-art {
+    min-height: 340px;
+  }
+
+  .hero-image-frame {
+    max-width: 700px;
+    min-height: 340px;
+
+    margin: 0 auto;
+  }
+
+  .feature-grid {
+    grid-template-columns:
+      repeat(2, minmax(0, 1fr));
+  }
+
+  .steps-grid {
+    grid-template-columns: 1fr;
+
+    border-bottom: none;
+  }
+
+  .step-card {
+    min-height: 0;
+
+    border-right: none;
+
+    border-bottom:
+      1px solid
+      rgba(62, 58, 54, 0.1);
+  }
+
+  .footer-inner {
+    grid-template-columns: 1fr;
+
+    justify-items: center;
+
+    text-align: center;
+  }
+}
+
+/* ========================================
+   MOBIL
+======================================== */
+
+@media (max-width: 650px) {
+  .page-shell {
+    width: min(
+      calc(100% - 24px),
+      var(--page-width)
+    );
+  }
+
+  .header-inner {
+    min-height: 58px;
+  }
+
+  .brand-logo {
+    width: 30px;
+    height: 30px;
+
+    border-radius: 9px;
+  }
+
+  .brand-name {
+    font-size: 19px;
+  }
+
+  .header-actions {
+    gap: 12px;
+  }
+
+  .back-link {
+    font-size: 8px;
+  }
+
+  .subpage-hero {
+    padding: 30px 0 35px;
+  }
+
+  .hero-copy h1 {
+    font-size:
+      clamp(38px, 11vw, 50px);
+  }
+
+  .hero-text {
+    font-size: 11px;
+  }
+
+  .hero-art {
+    min-height: 270px;
+  }
+
+  .hero-image-frame {
+    min-height: 270px;
+
+    border-radius: 22px;
+  }
+
+  .intro-section,
+  .features-section,
+  .steps-section {
+    padding: 55px 0;
+  }
+
+  .feature-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .feature-card {
+    min-height: 0;
+  }
+
+  .section-heading h2,
+  .intro-heading h2 {
+    font-size:
+      clamp(31px, 9.5vw, 42px);
+  }
+
+  .download-section {
+    padding: 38px 0;
+  }
+
+  .download-buttons {
+    width: 100%;
+
+    flex-direction: column;
+  }
+
+  .download-button {
+    width: 100%;
+
+    align-items: center;
+
+    text-align: center;
+  }
+
+  .footer-links a {
+    padding: 0 9px;
+  }
+}
+
+/* ========================================
+   LITEN MOBIL
+======================================== */
+
+@media (max-width: 390px) {
+  .header-actions {
+    gap: 8px;
+  }
+
+  .back-link {
+    max-width: 88px;
+
+    line-height: 1.3;
+    text-align: right;
+  }
+
+  .feature-card {
+    padding: 21px;
+  }
+}
+
+/* ========================================
+   REDUSERT BEVEGELSE
+======================================== */
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    transition: none !important;
+  }
+}
