@@ -10,15 +10,14 @@
 
   <meta
     name="description"
-    content="Sunzet brings planning, reflection and personal growth together in one calm experience."
+    content="Sunzet brings mindful planning, reflection and personal growth together in one calm and beautifully designed app."
   />
 
-  <title>Sunzet</title>
+  <title>Sunzet — A calmer way to plan, reflect and grow</title>
 
-  <link
-    rel="preconnect"
-    href="https://fonts.googleapis.com"
-  />
+  <link rel="stylesheet" href="styles.css" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
 
   <link
     rel="preconnect"
@@ -27,611 +26,794 @@
   />
 
   <link
-    href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,600&family=Inter:wght@400;500;600;700&display=swap"
+    href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=Playfair+Display:wght@500;600&display=swap"
     rel="stylesheet"
-  />
-
-  <link
-    rel="stylesheet"
-    href="styles.css"
   />
 </head>
 
 <body>
 
-  <!-- =====================================
-       HEADER
-  ====================================== -->
-
+  <!-- HEADER -->
   <header class="site-header">
-
-    <div class="page-shell header-inner">
+    <div class="header-inner">
 
       <a
-        href="#top"
+        href="index.html"
         class="brand"
         aria-label="Sunzet home"
       >
-
         <img
-          src="sunzet-logo.png"
-          alt="Sunzet logo"
+          src="images/sunzet-logo.png"
+          alt="Sunzet"
           class="brand-logo"
         />
-
-        <span class="brand-name">
-          Sunzet
-        </span>
-
       </a>
 
-      <div
-        class="language-switch"
-        aria-label="Choose language"
+      <nav
+        class="desktop-navigation"
+        aria-label="Main navigation"
       >
-
-        <button
-          type="button"
-          class="language-button active"
-          data-language="en"
+        <a
+          href="#discover"
+          class="navigation-link"
         >
-          EN
-        </button>
+          Discover
+        </a>
 
-        <span aria-hidden="true">
-          /
-        </span>
-
-        <button
-          type="button"
-          class="language-button"
-          data-language="no"
+        <a
+          href="premium.html"
+          class="navigation-link"
         >
-          NO
-        </button>
+          Premium
+        </a>
 
-      </div>
+        <a
+          href="#download"
+          class="navigation-button"
+        >
+          Get Sunzet
+        </a>
+      </nav>
+
+      <button
+        class="mobile-menu-button"
+        type="button"
+        aria-label="Open navigation"
+        aria-expanded="false"
+        aria-controls="mobile-navigation"
+      >
+        <span></span>
+        <span></span>
+      </button>
 
     </div>
 
+    <nav
+      class="mobile-navigation"
+      id="mobile-navigation"
+      aria-label="Mobile navigation"
+    >
+      <a href="#discover">
+        Discover
+      </a>
+
+      <a href="premium.html">
+        Premium
+      </a>
+
+      <a href="#download">
+        Get Sunzet
+      </a>
+    </nav>
   </header>
 
-  <main id="top">
 
-    <!-- =====================================
-         HERO
-    ====================================== -->
+  <main>
 
+    <!-- HERO -->
     <section class="hero-section">
+      <div class="hero-inner">
 
-      <div class="page-shell hero-grid">
+        <div class="hero-content">
 
-        <div class="hero-copy">
-
-          <p
-            class="eyebrow"
-            data-en="A quiet space for everyday life"
-            data-no="Et rolig rom for hverdagen"
-          >
-            A quiet space for everyday life
+          <p class="eyebrow">
+            Your everyday space for calm
           </p>
 
-          <h1>
-
-            <span
-              data-en="Find calm."
-              data-no="Finn ro."
-            >
-              Find calm.
-            </span>
-
-            <span
-              data-en="Create balance."
-              data-no="Skap balanse."
-            >
-              Create balance.
-            </span>
-
-            <em
-              data-en="Grow with intention."
-              data-no="Voks med intensjon."
-            >
-              Grow with intention.
-            </em>
-
+          <h1 class="hero-title">
+            Plan with clarity.<br />
+            Reflect with intention.
           </h1>
 
-          <p
-            class="hero-text"
-            data-en="Planning, dreams, tarot, crystals and personal growth — gathered in one calm experience."
-            data-no="Planlegging, drømmer, tarot, krystaller og personlig utvikling — samlet i én rolig opplevelse."
-          >
-            Planning, dreams, tarot, crystals and personal growth —
-            gathered in one calm experience.
+          <p class="hero-description">
+            Sunzet brings planning, reflection and personal
+            growth together in one beautifully designed app —
+            helping you create more calm in everyday life.
           </p>
 
-          <div class="store-row">
+          <div class="hero-actions">
+            <a
+              href="#download"
+              class="primary-button"
+            >
+              Get Sunzet
+            </a>
+
+            <a
+              href="#discover"
+              class="text-link"
+            >
+              Explore the app
+              <span aria-hidden="true">→</span>
+            </a>
+          </div>
+
+          <p class="hero-note">
+            Start with Sunzet for free. Unlock the complete
+            experience with Premium.
+          </p>
+
+        </div>
+
+        <div class="hero-visual">
+          <img
+            src="images/sunzet-home-hero.webp"
+            alt="A calm and peaceful Sunzet lifestyle scene"
+            class="hero-image"
+          />
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- INTRODUCTION -->
+    <section class="introduction-section">
+      <div class="narrow-container">
+
+        <p class="eyebrow">
+          One app. One calmer rhythm.
+        </p>
+
+        <h2 class="section-title">
+          Everything you need to feel more present,
+          organised and connected to yourself.
+        </h2>
+
+        <p class="section-description">
+          Sunzet is designed around the different parts of
+          everyday life. Plan what needs to be done, make room
+          for reflection and explore tools for meaningful
+          personal growth — without noise or pressure.
+        </p>
+
+      </div>
+    </section>
+
+
+    <!-- DISCOVER -->
+    <section
+      class="discover-section"
+      id="discover"
+    >
+
+      <!-- ORGANISE -->
+      <article class="feature-section feature-section-light">
+        <div class="feature-inner">
+
+          <div class="feature-visual">
+            <img
+              src="images/sunzet-organise-hero.webp"
+              alt="A clean and organised desk representing calm planning"
+              class="feature-image"
+              loading="lazy"
+            />
+          </div>
+
+          <div class="feature-content">
+
+            <div class="feature-heading-row">
+              <p class="eyebrow">
+                Organise
+              </p>
+
+              <span class="access-label access-label-free">
+                Free
+              </span>
+            </div>
+
+            <h2 class="feature-title">
+              Create clarity around your day.
+            </h2>
+
+            <p class="feature-description">
+              Keep your plans, appointments and everyday tasks
+              together in a calm space that makes organising
+              feel lighter.
+            </p>
+
+            <ul class="feature-list">
+              <li>Calendar and daily appointments</li>
+              <li>Personal to-do lists</li>
+              <li>Simple shopping lists</li>
+              <li>A clear overview of your week</li>
+            </ul>
+
+            <p class="feature-access-note">
+              Core planning tools are included with the free
+              version of Sunzet.
+            </p>
+
+          </div>
+
+        </div>
+      </article>
+
+
+      <!-- REFLECT -->
+      <article class="feature-section">
+        <div class="feature-inner feature-inner-reversed">
+
+          <div class="feature-visual">
+            <img
+              src="images/sunzet-reflect-hero.webp"
+              alt="A peaceful reading corner representing reflection and inner calm"
+              class="feature-image"
+              loading="lazy"
+            />
+          </div>
+
+          <div class="feature-content">
+
+            <div class="feature-heading-row">
+              <p class="eyebrow">
+                Reflect
+              </p>
+
+              <span class="access-label access-label-premium">
+                Premium
+              </span>
+            </div>
+
+            <h2 class="feature-title">
+              Make space for your inner world.
+            </h2>
+
+            <p class="feature-description">
+              Explore your thoughts, dreams and intuition
+              through guided tools designed to help you notice
+              patterns and understand yourself more deeply.
+            </p>
+
+            <ul class="feature-list">
+              <li>Dream journal and dream interpretation</li>
+              <li>Personal tarot readings and tarot journal</li>
+              <li>Guided reflection</li>
+              <li>Your private journal history</li>
+            </ul>
+
+            <a
+              href="premium.html"
+              class="text-link"
+            >
+              Explore Sunzet Premium
+              <span aria-hidden="true">→</span>
+            </a>
+
+          </div>
+
+        </div>
+      </article>
+
+
+      <!-- GROW -->
+      <article class="feature-section feature-section-soft">
+        <div class="feature-inner">
+
+          <div class="feature-visual">
+            <img
+              src="images/sunzet-grow-hero.webp"
+              alt="A bright greenhouse representing growth and new possibilities"
+              class="feature-image"
+              loading="lazy"
+            />
+          </div>
+
+          <div class="feature-content">
+
+            <div class="feature-heading-row">
+              <p class="eyebrow">
+                Grow
+              </p>
+
+              <span class="access-label access-label-premium">
+                Premium
+              </span>
+            </div>
+
+            <h2 class="feature-title">
+              Turn intentions into meaningful growth.
+            </h2>
+
+            <p class="feature-description">
+              Create space for the life you want to build with
+              thoughtful tools for manifestation, visualisation
+              and personal development.
+            </p>
+
+            <ul class="feature-list">
+              <li>Manifestation journal and themes</li>
+              <li>Vision board</li>
+              <li>Manifestation activities and games</li>
+              <li>Crystal universe and guidance</li>
+            </ul>
+
+            <a
+              href="premium.html"
+              class="text-link"
+            >
+              Discover all Premium features
+              <span aria-hidden="true">→</span>
+            </a>
+
+          </div>
+
+        </div>
+      </article>
+
+    </section>
+
+
+    <!-- DAILY EXPERIENCE -->
+    <section class="experience-section">
+      <div class="experience-inner">
+
+        <div class="experience-heading">
+
+          <p class="eyebrow">
+            Made for everyday life
+          </p>
+
+          <h2 class="section-title">
+            Gentle structure without the pressure.
+          </h2>
+
+          <p class="section-description">
+            Sunzet helps you take one day at a time. There are
+            no streaks to protect, no perfect routine to follow
+            and no need to do everything at once.
+          </p>
+
+        </div>
+
+        <div class="experience-grid">
+
+          <article class="experience-card">
+            <span class="experience-number">
+              01
+            </span>
+
+            <h3>
+              Begin with today
+            </h3>
+
+            <p>
+              See what matters now and create a manageable
+              rhythm for the day ahead.
+            </p>
+          </article>
+
+          <article class="experience-card">
+            <span class="experience-number">
+              02
+            </span>
+
+            <h3>
+              Pause and notice
+            </h3>
+
+            <p>
+              Make room for thoughts, emotions, dreams and
+              meaningful moments.
+            </p>
+          </article>
+
+          <article class="experience-card">
+            <span class="experience-number">
+              03
+            </span>
+
+            <h3>
+              Grow in your own way
+            </h3>
+
+            <p>
+              Explore the tools that feel helpful and leave
+              the rest for another day.
+            </p>
+          </article>
+
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- PREMIUM TEASER -->
+    <section class="premium-teaser-section">
+      <div class="premium-teaser-inner">
+
+        <div class="premium-teaser-content">
+
+          <p class="eyebrow eyebrow-light">
+            Sunzet Premium
+          </p>
+
+          <h2>
+            Unlock the complete
+            Sunzet experience.
+          </h2>
+
+          <p>
+            Go beyond everyday planning with dream
+            interpretation, tarot, manifestation, vision
+            boards, crystals and deeper reflection tools —
+            all gathered in one peaceful space.
+          </p>
+
+          <div class="premium-teaser-actions">
+            <a
+              href="premium.html"
+              class="light-button"
+            >
+              Explore Premium
+            </a>
+
+            <span>
+              The free planning tools remain available without
+              Premium.
+            </span>
+          </div>
+
+        </div>
+
+        <div class="premium-teaser-visual">
+          <img
+            src="images/sunzet-premium-hero.webp"
+            alt="A warm and peaceful space representing the complete Sunzet Premium experience"
+            loading="lazy"
+          />
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- VALUES -->
+    <section class="values-section">
+      <div class="values-inner">
+
+        <div class="values-heading">
+          <p class="eyebrow">
+            Thoughtfully created
+          </p>
+
+          <h2 class="section-title">
+            A quieter kind of app.
+          </h2>
+        </div>
+
+        <div class="values-grid">
+
+          <article class="value-item">
+            <h3>
+              Calm by design
+            </h3>
+
+            <p>
+              A soft visual experience created to feel
+              welcoming rather than overwhelming.
+            </p>
+          </article>
+
+          <article class="value-item">
+            <h3>
+              Personal to you
+            </h3>
+
+            <p>
+              Choose the tools that support you and shape
+              Sunzet around your own life.
+            </p>
+          </article>
+
+          <article class="value-item">
+            <h3>
+              No pressure
+            </h3>
+
+            <p>
+              Sunzet supports your rhythm without streaks,
+              competition or unrealistic expectations.
+            </p>
+          </article>
+
+          <article class="value-item">
+            <h3>
+              One connected space
+            </h3>
+
+            <p>
+              Planning, reflection and growth come together
+              without feeling like separate parts of your life.
+            </p>
+          </article>
+
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- FAQ -->
+    <section class="faq-section">
+      <div class="faq-inner">
+
+        <div class="faq-heading">
+          <p class="eyebrow">
+            Questions
+          </p>
+
+          <h2 class="section-title">
+            A little more about Sunzet.
+          </h2>
+        </div>
+
+        <div class="faq-list">
+
+          <details class="faq-item">
+            <summary>
+              Is Sunzet free to use?
+            </summary>
+
+            <p>
+              Yes. The core planning tools, including the
+              calendar, shopping list and to-do list, are
+              available in the free version of Sunzet.
+            </p>
+          </details>
+
+          <details class="faq-item">
+            <summary>
+              What is included with Sunzet Premium?
+            </summary>
+
+            <p>
+              Premium unlocks the complete reflection and
+              personal growth experience, including dream
+              interpretation, tarot, manifestation tools,
+              vision boards, crystals and additional features.
+            </p>
+          </details>
+
+          <details class="faq-item">
+            <summary>
+              Do I need Premium to organise my day?
+            </summary>
+
+            <p>
+              No. You can use Sunzet's essential calendar,
+              shopping and task tools without subscribing to
+              Premium.
+            </p>
+          </details>
+
+          <details class="faq-item">
+            <summary>
+              Can I cancel Premium?
+            </summary>
+
+            <p>
+              Yes. Premium subscriptions can be managed or
+              cancelled through the platform where the
+              subscription was purchased.
+            </p>
+          </details>
+
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- DOWNLOAD -->
+    <section
+      class="download-section"
+      id="download"
+    >
+      <div class="download-inner">
+
+        <div class="download-content">
+
+          <p class="eyebrow">
+            Your space is waiting
+          </p>
+
+          <h2>
+            Bring a little more calm
+            into every day.
+          </h2>
+
+          <p>
+            Sunzet is being created as a mindful companion for
+            planning, reflection and personal growth.
+          </p>
+
+          <div class="store-buttons">
 
             <a
               href="#"
               class="store-button"
-              aria-label="App Store, coming soon"
+              aria-label="Download Sunzet on the App Store"
             >
-
-              <span
-                class="store-small"
-                data-en="Download on the"
-                data-no="Last ned fra"
-              >
+              <span class="store-button-small">
                 Download on the
               </span>
 
-              <span class="store-large">
+              <span class="store-button-large">
                 App Store
               </span>
-
             </a>
 
             <a
               href="#"
-              class="store-button store-button-outline"
-              aria-label="Google Play, coming soon"
+              class="store-button"
+              aria-label="Get Sunzet on Google Play"
             >
-
-              <span
-                class="store-small"
-                data-en="Get it on"
-                data-no="Last ned fra"
-              >
+              <span class="store-button-small">
                 Get it on
               </span>
 
-              <span class="store-large">
+              <span class="store-button-large">
                 Google Play
               </span>
-
             </a>
 
           </div>
 
-          <p
-            class="coming-soon"
-            data-en="Coming soon to iPhone and Android."
-            data-no="Kommer snart til iPhone og Android."
-          >
-            Coming soon to iPhone and Android.
+          <p class="availability-note">
+            Coming soon.
           </p>
-
-        </div>
-
-        <div class="hero-art">
-
-          <div class="hero-scene-frame">
-
-            <img
-              src="sunzet-home-hero.png"
-              alt="A calm Sunzet-inspired scene with a journal, crystal, tea and nature"
-              class="hero-scene"
-            />
-
-          </div>
 
         </div>
 
       </div>
-
-    </section>
-
-    <!-- =====================================
-         EXPERIENCE
-    ====================================== -->
-
-    <section class="experience-section">
-
-      <div class="page-shell">
-
-        <div class="experience-heading">
-
-          <p
-            class="eyebrow"
-            data-en="Explore Sunzet"
-            data-no="Utforsk Sunzet"
-          >
-            Explore Sunzet
-          </p>
-
-          <h2
-            data-en="Everything you need to organise, reflect and grow."
-            data-no="Alt du trenger for å planlegge, reflektere og vokse."
-          >
-            Everything you need to organise, reflect and grow.
-          </h2>
-
-          <p
-            data-en="Choose the part of Sunzet that fits the moment you are in."
-            data-no="Velg den delen av Sunzet som passer øyeblikket du er i."
-          >
-            Choose the part of Sunzet that fits the moment you are in.
-          </p>
-
-        </div>
-
-        <div class="category-grid">
-
-  <!-- REFLECT -->
-
-  <a
-    href="reflect.html"
-    class="category-card"
-  >
-
-    <div class="category-icon">
-      ☾
-    </div>
-
-    <h3
-      data-en="Reflect"
-      data-no="Reflekter"
-    >
-      Reflect
-    </h3>
-
-    <p
-      class="category-description"
-      data-en="Discover yourself through dreams, tarot and mindful journaling."
-      data-no="Oppdag deg selv gjennom drømmer, tarot og bevisst refleksjon."
-    >
-      Discover yourself through dreams, tarot and mindful journaling.
-    </p>
-
-    <ul class="category-list">
-
-      <li
-        data-en="Dream Journal"
-        data-no="Drømmedagbok"
-      >
-        Dream Journal
-      </li>
-
-      <li>
-        Tarot
-      </li>
-
-      <li>
-        Journal
-      </li>
-
-      <li
-        data-en="AI Reflection"
-        data-no="AI-refleksjon"
-      >
-        AI Reflection
-      </li>
-
-    </ul>
-
-    <span
-      class="category-link"
-      data-en="Explore Reflect →"
-      data-no="Utforsk Reflekter →"
-    >
-      Explore Reflect →
-    </span>
-
-  </a>
-
-  <!-- GROW -->
-
-  <a
-    href="grow.html"
-    class="category-card"
-  >
-
-    <div class="category-icon">
-      ✦
-    </div>
-
-    <h3
-      data-en="Grow"
-      data-no="Voks"
-    >
-      Grow
-    </h3>
-
-    <p
-      class="category-description"
-      data-en="Build gentle rituals through manifestation, crystals and chakra work."
-      data-no="Bygg rolige rutiner med manifestering, krystaller og chakraer."
-    >
-      Build gentle rituals through manifestation, crystals and chakra work.
-    </p>
-
-    <ul class="category-list">
-
-      <li
-        data-en="Manifestation"
-        data-no="Manifestering"
-      >
-        Manifestation
-      </li>
-
-      <li
-        data-en="Crystals"
-        data-no="Krystaller"
-      >
-        Crystals
-      </li>
-
-      <li
-        data-en="Chakras"
-        data-no="Chakraer"
-      >
-        Chakras
-      </li>
-
-      <li>
-        Vision Board
-      </li>
-
-    </ul>
-
-    <span
-      class="category-link"
-      data-en="Explore Grow →"
-      data-no="Utforsk Voks →"
-    >
-      Explore Grow →
-    </span>
-
-  </a>
-
-  <!-- ORGANISE -->
-
-  <a
-    href="organise.html"
-    class="category-card"
-  >
-
-    <div class="category-icon">
-      □
-    </div>
-
-    <h3
-      data-en="Organise"
-      data-no="Planlegg"
-    >
-      Organise
-    </h3>
-
-    <p
-      class="category-description"
-      data-en="Create calm structure for everyday life with practical planning tools."
-      data-no="Skap ro og struktur i hverdagen med praktiske planleggingsverktøy."
-    >
-      Create calm structure for everyday life with practical planning tools.
-    </p>
-
-    <ul class="category-list">
-
-      <li
-        data-en="Calendar"
-        data-no="Kalender"
-      >
-        Calendar
-      </li>
-
-      <li
-        data-en="To-do"
-        data-no="Gjøremål"
-      >
-        To-do
-      </li>
-
-      <li
-        data-en="Shopping"
-        data-no="Handleliste"
-      >
-        Shopping
-      </li>
-
-      <li
-        data-en="Reminders"
-        data-no="Påminnelser"
-      >
-        Reminders
-      </li>
-
-    </ul>
-
-    <span
-      class="category-link"
-      data-en="Explore Organise →"
-      data-no="Utforsk Planlegg →"
-    >
-      Explore Organise →
-    </span>
-
-  </a>
-
-</div>
-
-      </div>
-
-    </section>
-
-    <!-- =====================================
-         PREMIUM
-    ====================================== -->
-
-    <section class="premium-strip">
-
-      <div class="page-shell premium-inner">
-
-        <div
-          class="premium-symbol"
-          aria-hidden="true"
-        >
-          ✦
-        </div>
-
-        <div class="premium-copy">
-
-          <p class="premium-label">
-            Sunzet Premium
-          </p>
-
-          <p
-            class="premium-text"
-            data-en="Unlock more guidance, content and meaningful rituals."
-            data-no="Lås opp mer veiledning, innhold og meningsfulle ritualer."
-          >
-            Unlock more guidance, content and meaningful rituals.
-          </p>
-
-        </div>
-
-        <a
-  href="premium.html"
-  class="premium-button"
-  data-en="Explore Premium"
-  data-no="Se Premium"
->
-  Explore Premium
-</a>
-
-      </div>
-
     </section>
 
   </main>
 
-  <!-- =====================================
-       FOOTER
-  ====================================== -->
 
+  <!-- FOOTER -->
   <footer class="site-footer">
+    <div class="footer-inner">
 
-    <div class="page-shell footer-inner">
-
-      <nav
-        class="footer-links"
-        aria-label="Footer navigation"
-      >
+      <div class="footer-brand">
 
         <a
-          href="privacy.html"
-          data-en="Privacy"
-          data-no="Personvern"
+          href="index.html"
+          class="brand"
+          aria-label="Sunzet home"
         >
-          Privacy
+          <img
+            src="images/sunzet-logo.png"
+            alt="Sunzet"
+            class="footer-logo"
+          />
         </a>
 
-        <a
-          href="terms.html"
-          data-en="Terms"
-          data-no="Vilkår"
-        >
-          Terms
-        </a>
+        <p>
+          A calmer way to plan, reflect and grow.
+        </p>
 
-        <a
-          href="support.html"
-          data-en="Support"
-          data-no="Hjelp"
-        >
-          Support
-        </a>
+      </div>
 
-        <a
-          href="mailto:sunzet.app@gmail.com"
-          data-en="Contact"
-          data-no="Kontakt"
-        >
-          Contact
-        </a>
+      <div class="footer-navigation">
 
-      </nav>
+        <div class="footer-column">
+          <h3>
+            Explore
+          </h3>
 
-      <p>
-        © 2026 Sunzet
-      </p>
+          <a href="#discover">
+            Discover
+          </a>
+
+          <a href="premium.html">
+            Premium
+          </a>
+
+          <a href="#download">
+            Get Sunzet
+          </a>
+        </div>
+
+        <div class="footer-column">
+          <h3>
+            Information
+          </h3>
+
+          <a href="#">
+            Privacy
+          </a>
+
+          <a href="#">
+            Terms
+          </a>
+
+          <a href="mailto:hello@sunzet.app">
+            Contact
+          </a>
+        </div>
+
+      </div>
 
     </div>
 
+    <div class="footer-bottom">
+      <p>
+        © <span id="current-year"></span> Sunzet.
+        All rights reserved.
+      </p>
+    </div>
   </footer>
 
-  <!-- =====================================
-       LANGUAGE
-  ====================================== -->
 
   <script>
-    const languageButtons =
-      document.querySelectorAll(
-        ".language-button"
-      );
+    const mobileMenuButton =
+      document.querySelector('.mobile-menu-button');
 
-    const translatedElements =
-      document.querySelectorAll(
-        "[data-en][data-no]"
-      );
+    const mobileNavigation =
+      document.querySelector('.mobile-navigation');
 
-    const setLanguage = (language) => {
-      document.documentElement.lang =
-        language === "no"
-          ? "nb"
-          : "en";
+    const mobileNavigationLinks =
+      document.querySelectorAll('.mobile-navigation a');
 
-      translatedElements.forEach(
-        (element) => {
-          element.textContent =
-            element.dataset[language];
-        }
-      );
+    if (mobileMenuButton && mobileNavigation) {
+      mobileMenuButton.addEventListener('click', () => {
+        const isOpen =
+          mobileNavigation.classList.toggle('is-open');
 
-      languageButtons.forEach(
-        (button) => {
-          button.classList.toggle(
-            "active",
-            button.dataset.language === language
-          );
-        }
-      );
-
-      localStorage.setItem(
-        "sunzet-language",
-        language
-      );
-    };
-
-    languageButtons.forEach(
-      (button) => {
-        button.addEventListener(
-          "click",
-          () => {
-            setLanguage(
-              button.dataset.language
-            );
-          }
+        mobileMenuButton.classList.toggle(
+          'is-open',
+          isOpen
         );
-      }
-    );
 
-    const savedLanguage =
-      localStorage.getItem(
-        "sunzet-language"
-      );
+        mobileMenuButton.setAttribute(
+          'aria-expanded',
+          String(isOpen)
+        );
+      });
+    }
 
-    const browserLanguage =
-      navigator.language
-        .toLowerCase()
-        .startsWith("no")
-        ? "no"
-        : "en";
+    mobileNavigationLinks.forEach((link) => {
+      link.addEventListener('click', () => {
+        mobileNavigation.classList.remove('is-open');
+        mobileMenuButton.classList.remove('is-open');
 
-    setLanguage(
-      savedLanguage ||
-      browserLanguage
-    );
+        mobileMenuButton.setAttribute(
+          'aria-expanded',
+          'false'
+        );
+      });
+    });
+
+    const currentYear =
+      document.getElementById('current-year');
+
+    if (currentYear) {
+      currentYear.textContent =
+        new Date().getFullYear();
+    }
   </script>
 
 </body>
