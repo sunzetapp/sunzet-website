@@ -1,45 +1,42 @@
 <!DOCTYPE html>
-<html lang="no">
+<html lang="nb">
 
 <head>
 
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<meta
+  name="viewport"
+  content="width=device-width,initial-scale=1"
+>
+
+<meta
+  name="description"
+  content="Finn hjelp, støtte og kontaktinformasjon for Sunzet."
+>
 
 <title>Hjelp og støtte — Sunzet</title>
 
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link
+  rel="preconnect"
+  href="https://fonts.googleapis.com"
+>
 
-<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=Playfair+Display:wght@500;600&display=swap" rel="stylesheet">
+<link
+  rel="preconnect"
+  href="https://fonts.gstatic.com"
+  crossorigin
+>
 
-<link rel="stylesheet" href="styles.css">
+<link
+  href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=Playfair+Display:wght@500;600&display=swap"
+  rel="stylesheet"
+>
 
-<style>
-
-.language-switch{
-    display:flex;
-    justify-content:flex-end;
-    margin-bottom:25px;
-    gap:10px;
-}
-
-.language-switch button{
-    border:none;
-    background:none;
-    cursor:pointer;
-    font-family:'DM Sans',sans-serif;
-    font-size:15px;
-    color:#6b6b6b;
-    transition:.2s;
-}
-
-.language-switch button.active{
-    color:#A8894A;
-    font-weight:600;
-}
-
-</style>
+<link
+  rel="stylesheet"
+  href="styles.css"
+>
 
 </head>
 
@@ -47,231 +44,46 @@
 
 <header class="site-header">
 
-<div class="header-inner">
-
-<a href="index.html">
-<img src="sunzet-logo.png" class="brand-logo" alt="Sunzet">
-</a>
-
-<nav class="desktop-navigation">
-
-<a href="index.html">Home</a>
-<a href="premium.html">Premium</a>
-
-</nav>
-
-</div>
-
-</header>
-
-<main>
-
-<section class="legal-hero">
-
-<div class="legal-shell">
-
-<div class="language-switch">
-
-<button id="noBtn" class="active">
-🇳🇴 Norsk
-</button>
-
-<button id="enBtn">
-🇬🇧 English
-</button>
-
-</div>
-
-<p class="eyebrow">
-Sunzet
-</p>
-
-<h1 id="title">
-Hjelp og støtte
-</h1>
-
-<p id="intro">
-Her finner du hjelp med Sunzet og kontaktinformasjon.
-</p>
-
-</div>
-
-</section>
-
-<section class="legal-content">
-
-<div class="legal-shell">
-
-<h2 id="contactTitle">
-Kontakt oss
-</h2>
-
-<p id="contactText">
-Send e-post til <strong>sunzet.app@gmail.com</strong>.
-Beskriv gjerne hvilken enhet du bruker, hva du forsøkte å gjøre og hva som skjedde.
-</p>
-
-<h2 id="premiumTitle">
-Premium og abonnement
-</h2>
-
-<p id="premiumText">
-Abonnement administreres gjennom App Store eller Google Play.
-</p>
-
-<h2 id="technicalTitle">
-Tekniske problemer
-</h2>
-
-<p id="technicalText">
-Prøv å lukke og åpne appen, kontroller internettforbindelsen og installer den nyeste versjonen.
-</p>
-
-<h2 id="privacyTitle">
-Personvern og vilkår
-</h2>
-
-<p id="privacyText">
-Du finner mer informasjon på sidene for Personvern og Vilkår.
-</p>
-
-</div>
-
-</section>
-
-</main>
-
-<footer class="site-footer">
-
-<div class="footer-inner">
-
-<div class="footer-brand">
-
-<img src="sunzet-logo.png" class="footer-logo" alt="Sunzet">
-
-<span>© 2026 Sunzet</span>
-
-</div>
-
-<nav>
-
-<a href="privacy.html">
-Privacy
-</a>
-
-<a href="terms.html">
-Terms
-</a>
-
-<a href="support.html">
-Support
-</a>
-
-<a href="mailto:sunzet.app@gmail.com">
-Contact
-</a>
-
-</nav>
-
-</div>
-
-</footer>
-
-<script>
-
-const norwegian = {
-
-title:"Hjelp og støtte",
-
-intro:"Her finner du hjelp med Sunzet og kontaktinformasjon.",
-
-contactTitle:"Kontakt oss",
-
-contactText:"Send e-post til <strong>sunzet.app@gmail.com</strong>. Beskriv gjerne hvilken enhet du bruker, hva du forsøkte å gjøre og hva som skjedde.",
-
-premiumTitle:"Premium og abonnement",
-
-premiumText:"Abonnement administreres gjennom App Store eller Google Play.",
-
-technicalTitle:"Tekniske problemer",
-
-technicalText:"Prøv å lukke og åpne appen, kontroller internettforbindelsen og installer den nyeste versjonen.",
-
-privacyTitle:"Personvern og vilkår",
-
-privacyText:"Du finner mer informasjon på sidene for Personvern og Vilkår."
-
-};
-
-const english = {
-
-title:"Support",
-
-intro:"Find help, answers and contact information for Sunzet.",
-
-contactTitle:"Contact us",
-
-contactText:"Email <strong>sunzet.app@gmail.com</strong>. Please include your device, what you were trying to do and what happened.",
-
-premiumTitle:"Premium & Subscriptions",
-
-premiumText:"Subscriptions are managed through the Apple App Store or Google Play.",
-
-technicalTitle:"Technical issues",
-
-technicalText:"Try restarting the app, checking your internet connection and installing the latest version.",
-
-privacyTitle:"Privacy & Terms",
-
-privacyText:"More information can be found on the Privacy Policy and Terms pages."
-
-};
-
-function setLanguage(language){
-
-document.documentElement.lang =
-language===norwegian ? "no" : "en";
-
-document.getElementById("title").innerHTML=language.title;
-document.getElementById("intro").innerHTML=language.intro;
-
-document.getElementById("contactTitle").innerHTML=language.contactTitle;
-document.getElementById("contactText").innerHTML=language.contactText;
-
-document.getElementById("premiumTitle").innerHTML=language.premiumTitle;
-document.getElementById("premiumText").innerHTML=language.premiumText;
-
-document.getElementById("technicalTitle").innerHTML=language.technicalTitle;
-document.getElementById("technicalText").innerHTML=language.technicalText;
-
-document.getElementById("privacyTitle").innerHTML=language.privacyTitle;
-document.getElementById("privacyText").innerHTML=language.privacyText;
-
-}
-
-const noBtn=document.getElementById("noBtn");
-const enBtn=document.getElementById("enBtn");
-
-noBtn.onclick=()=>{
-
-setLanguage(norwegian);
-
-noBtn.classList.add("active");
-enBtn.classList.remove("active");
-
-};
-
-enBtn.onclick=()=>{
-
-setLanguage(english);
-
-enBtn.classList.add("active");
-noBtn.classList.remove("active");
-
-};
-
-</script>
-
-</body>
-
-</html>
+  <div class="header-inner">
+
+    <a href="index.html">
+
+      <img
+        src="sunzet-logo.png"
+        class="brand-logo"
+        alt="Sunzet"
+      >
+
+    </a>
+
+    <nav class="desktop-navigation">
+
+      <a
+        href="index.html"
+        data-i18n="home"
+      >
+        Hjem
+      </a>
+
+      <a href="premium.html">
+        Premium
+      </a>
+
+      <a
+        href="support.html"
+        data-i18n="support"
+      >
+        Hjelp
+      </a>
+
+      <div class="language-switcher">
+
+        <button
+          class="language-button is-active"
+          data-language="no"
+          type="button"
+        >
+          NO
+        </button>
+
+        <span>/</
