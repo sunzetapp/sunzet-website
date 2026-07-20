@@ -3,60 +3,145 @@
 
 <head>
 
-<meta charset="UTF-8">
+  <meta charset="UTF-8">
 
-<meta
-  name="viewport"
-  content="width=device-width,initial-scale=1"
->
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1"
+  >
 
-<meta
-  name="description"
-  content="Finn hjelp, støtte og kontaktinformasjon for Sunzet."
->
+  <meta
+    name="description"
+    content="Finn hjelp, støtte og kontaktinformasjon for Sunzet."
+  >
 
-<title>Hjelp og støtte — Sunzet</title>
+  <title>
+    Hjelp og støtte — Sunzet
+  </title>
 
-<link
-  rel="preconnect"
-  href="https://fonts.googleapis.com"
->
+  <link
+    rel="preconnect"
+    href="https://fonts.googleapis.com"
+  >
 
-<link
-  rel="preconnect"
-  href="https://fonts.gstatic.com"
-  crossorigin
->
+  <link
+    rel="preconnect"
+    href="https://fonts.gstatic.com"
+    crossorigin
+  >
 
-<link
-  href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=Playfair+Display:wght@500;600&display=swap"
-  rel="stylesheet"
->
+  <link
+    href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=Playfair+Display:wght@500;600&display=swap"
+    rel="stylesheet"
+  >
 
-<link
-  rel="stylesheet"
-  href="styles.css"
->
+  <link
+    rel="stylesheet"
+    href="styles.css"
+  >
 
 </head>
 
 <body>
 
-<header class="site-header">
+  <header class="site-header">
 
-  <div class="header-inner">
+    <div class="header-inner">
 
-    <a href="index.html">
+      <a href="index.html">
 
-      <img
-        src="sunzet-logo.png"
-        class="brand-logo"
-        alt="Sunzet"
-      >
+        <img
+          src="sunzet-logo.png"
+          class="brand-logo"
+          alt="Sunzet"
+        >
 
-    </a>
+      </a>
 
-    <nav class="desktop-navigation">
+      <nav class="desktop-navigation">
+
+        <a
+          href="index.html"
+          data-i18n="home"
+        >
+          Hjem
+        </a>
+
+        <a href="premium.html">
+          Premium
+        </a>
+
+        <a
+          href="support.html"
+          data-i18n="support"
+        >
+          Hjelp
+        </a>
+
+        <div class="language-switcher">
+
+          <button
+            class="language-button is-active"
+            data-language="no"
+            type="button"
+          >
+            NO
+          </button>
+
+          <span>/</span>
+
+          <button
+            class="language-button"
+            data-language="en"
+            type="button"
+          >
+            EN
+          </button>
+
+        </div>
+
+      </nav>
+
+      <div class="mobile-header-actions">
+
+        <div class="language-switcher">
+
+          <button
+            class="language-button is-active"
+            data-language="no"
+            type="button"
+          >
+            NO
+          </button>
+
+          <span>/</span>
+
+          <button
+            class="language-button"
+            data-language="en"
+            type="button"
+          >
+            EN
+          </button>
+
+        </div>
+
+        <button
+          class="mobile-menu-button"
+          type="button"
+          aria-label="Åpne meny"
+        >
+
+          <span></span>
+          <span></span>
+
+        </button>
+
+      </div>
+
+    </div>
+
+    <nav class="mobile-navigation">
 
       <a
         href="index.html"
@@ -76,14 +161,806 @@
         Hjelp
       </a>
 
-      <div class="language-switcher">
+    </nav>
 
-        <button
-          class="language-button is-active"
-          data-language="no"
-          type="button"
+  </header>
+
+  <main>
+
+    <section class="legal-hero">
+
+      <div class="legal-shell">
+
+        <div data-lang-content="no">
+
+          <p class="eyebrow">
+            Sunzet
+          </p>
+
+          <h1>
+            Hjelp og støtte
+          </h1>
+
+          <p>
+            Her finner du hjelp med Sunzet og informasjon om
+            hvordan du kan kontakte oss.
+          </p>
+
+        </div>
+
+        <div
+          data-lang-content="en"
+          hidden
         >
-          NO
-        </button>
 
-        <span>/</
+          <p class="eyebrow">
+            Sunzet
+          </p>
+
+          <h1>
+            Help and Support
+          </h1>
+
+          <p>
+            Find help with Sunzet and information about how to
+            contact us.
+          </p>
+
+        </div>
+
+      </div>
+
+    </section>
+
+    <section class="legal-content">
+
+      <div class="legal-shell">
+
+        <div data-lang-content="no">
+
+          <h2>
+            KONTAKT OSS
+          </h2>
+
+          <p>
+            Har du spørsmål, trenger hjelp eller ønsker å melde
+            fra om et teknisk problem, kan du kontakte oss på:
+          </p>
+
+          <p>
+            <a href="mailto:sunzet.app@gmail.com">
+              sunzet.app@gmail.com
+            </a>
+          </p>
+
+          <p>
+            Beskriv gjerne:
+          </p>
+
+          <ul>
+
+            <li>
+              hvilken enhet du bruker
+            </li>
+
+            <li>
+              hvilken versjon av operativsystemet enheten bruker
+            </li>
+
+            <li>
+              hva du forsøkte å gjøre
+            </li>
+
+            <li>
+              hva som skjedde
+            </li>
+
+            <li>
+              om problemet oppstår hver gang
+            </li>
+
+          </ul>
+
+          <p>
+            Du kan også legge ved et skjermbilde dersom det gjør
+            problemet enklere å forstå.
+          </p>
+
+          <h2>
+            PREMIUM OG ABONNEMENT
+          </h2>
+
+          <p>
+            Sunzet tilbyr en gratisversjon og et valgfritt
+            Premium-abonnement.
+          </p>
+
+          <p>
+            Premium-abonnementer kjøpes og administreres gjennom
+            Apple App Store eller Google Play Store.
+          </p>
+
+          <p>
+            Dette betyr at betaling, fornyelse og oppsigelse
+            administreres gjennom kontoen din hos Apple eller
+            Google.
+          </p>
+
+          <h3>
+            Administrere abonnement på iPhone eller iPad
+          </h3>
+
+          <ol>
+
+            <li>
+              Åpne Innstillinger på enheten.
+            </li>
+
+            <li>
+              Trykk på navnet ditt.
+            </li>
+
+            <li>
+              Trykk på Abonnementer.
+            </li>
+
+            <li>
+              Velg Sunzet.
+            </li>
+
+          </ol>
+
+          <p>
+            Der kan du se informasjon om abonnementet og
+            administrere eller avslutte det.
+          </p>
+
+          <h3>
+            Administrere abonnement på Android
+          </h3>
+
+          <ol>
+
+            <li>
+              Åpne Google Play.
+            </li>
+
+            <li>
+              Trykk på profilbildet ditt.
+            </li>
+
+            <li>
+              Velg Betalinger og abonnementer.
+            </li>
+
+            <li>
+              Velg Abonnementer.
+            </li>
+
+            <li>
+              Velg Sunzet.
+            </li>
+
+          </ol>
+
+          <p>
+            Sunzet har ikke tilgang til betalingskortopplysningene
+            dine og kan ikke avslutte abonnementet på dine vegne.
+          </p>
+
+          <h2>
+            GJENOPPRETTE PREMIUM
+          </h2>
+
+          <p>
+            Dersom du tidligere har kjøpt Premium, men ikke lenger
+            har tilgang, bør du først kontrollere at du er logget
+            inn med den samme Apple- eller Google-kontoen som ble
+            brukt ved kjøpet.
+          </p>
+
+          <p>
+            Dersom appen inneholder et valg for å gjenopprette
+            kjøp, kan du bruke dette for å hente
+            abonnementsstatusen på nytt.
+          </p>
+
+          <p>
+            Kontakt oss dersom problemet fortsetter.
+          </p>
+
+          <h2>
+            TEKNISKE PROBLEMER
+          </h2>
+
+          <p>
+            Dersom Sunzet ikke fungerer som forventet, kan du
+            prøve følgende:
+          </p>
+
+          <ul>
+
+            <li>
+              lukk appen helt og åpne den på nytt
+            </li>
+
+            <li>
+              kontroller at enheten har en stabil
+              internettforbindelse
+            </li>
+
+            <li>
+              kontroller om en nyere versjon av Sunzet er
+              tilgjengelig
+            </li>
+
+            <li>
+              start enheten på nytt
+            </li>
+
+            <li>
+              kontroller at enheten har tilstrekkelig ledig
+              lagringsplass
+            </li>
+
+          </ul>
+
+          <p>
+            Dersom problemet ikke løses, kan du sende oss en
+            e-post med informasjon om hva som skjer.
+          </p>
+
+          <h2>
+            VARSLER
+          </h2>
+
+          <p>
+            Sunzet kan bruke lokale varsler, for eksempel til
+            kalenderpåminnelser.
+          </p>
+
+          <p>
+            Dersom varsler ikke vises, bør du kontrollere
+            varselinnstillingene for Sunzet på enheten.
+          </p>
+
+          <p>
+            På iPhone og iPad finner du vanligvis dette under:
+          </p>
+
+          <p>
+            <strong>
+              Innstillinger → Varslinger → Sunzet
+            </strong>
+          </p>
+
+          <p>
+            På Android kan plasseringen variere avhengig av
+            enhetsmodell og operativsystem.
+          </p>
+
+          <h2>
+            LOKALT LAGRET INNHOLD
+          </h2>
+
+          <p>
+            Det meste av innholdet du oppretter i Sunzet, lagres
+            lokalt på enheten din.
+          </p>
+
+          <p>
+            Dette kan blant annet omfatte:
+          </p>
+
+          <ul>
+
+            <li>
+              kalenderavtaler
+            </li>
+
+            <li>
+              handlelister
+            </li>
+
+            <li>
+              gjøremålslister
+            </li>
+
+            <li>
+              journalnotater
+            </li>
+
+            <li>
+              drømmer
+            </li>
+
+            <li>
+              tarotlegginger
+            </li>
+
+            <li>
+              favoritter
+            </li>
+
+            <li>
+              appinnstillinger
+            </li>
+
+          </ul>
+
+          <p>
+            Dersom appen slettes, kan lokalt lagret innhold også
+            bli slettet.
+          </p>
+
+          <p>
+            Sunzet kan normalt ikke gjenopprette lokalt innhold
+            som er slettet fra enheten.
+          </p>
+
+          <h2>
+            PERSONVERN
+          </h2>
+
+          <p>
+            Informasjon om hvordan Sunzet behandler opplysninger,
+            finner du i vår personvernerklæring:
+          </p>
+
+          <p>
+            <a href="privacy.html">
+              Les personvernerklæringen
+            </a>
+          </p>
+
+          <h2>
+            VILKÅR
+          </h2>
+
+          <p>
+            Informasjon om vilkårene for bruk av Sunzet finner du
+            her:
+          </p>
+
+          <p>
+            <a href="terms.html">
+              Les vilkårene
+            </a>
+          </p>
+
+          <h2>
+            KONTAKT
+          </h2>
+
+          <p>
+            Du er velkommen til å kontakte oss dersom du har
+            spørsmål, tilbakemeldinger eller forslag.
+          </p>
+
+          <p>
+            <a href="mailto:sunzet.app@gmail.com">
+              sunzet.app@gmail.com
+            </a>
+          </p>
+
+          <p>
+            Vi svarer så snart vi har anledning.
+          </p>
+
+        </div>
+
+        <div
+          data-lang-content="en"
+          hidden
+        >
+
+          <h2>
+            CONTACT US
+          </h2>
+
+          <p>
+            If you have a question, need help or would like to
+            report a technical issue, you can contact us at:
+          </p>
+
+          <p>
+            <a href="mailto:sunzet.app@gmail.com">
+              sunzet.app@gmail.com
+            </a>
+          </p>
+
+          <p>
+            Please include:
+          </p>
+
+          <ul>
+
+            <li>
+              the device you are using
+            </li>
+
+            <li>
+              the operating-system version installed on the
+              device
+            </li>
+
+            <li>
+              what you were trying to do
+            </li>
+
+            <li>
+              what happened
+            </li>
+
+            <li>
+              whether the issue occurs every time
+            </li>
+
+          </ul>
+
+          <p>
+            You may also include a screenshot if it helps explain
+            the issue.
+          </p>
+
+          <h2>
+            PREMIUM AND SUBSCRIPTIONS
+          </h2>
+
+          <p>
+            Sunzet offers a free version and an optional Premium
+            subscription.
+          </p>
+
+          <p>
+            Premium subscriptions are purchased and managed
+            through Apple App Store or Google Play Store.
+          </p>
+
+          <p>
+            This means that payment, renewal and cancellation are
+            managed through your Apple or Google account.
+          </p>
+
+          <h3>
+            Managing a subscription on iPhone or iPad
+          </h3>
+
+          <ol>
+
+            <li>
+              Open Settings on your device.
+            </li>
+
+            <li>
+              Tap your name.
+            </li>
+
+            <li>
+              Tap Subscriptions.
+            </li>
+
+            <li>
+              Select Sunzet.
+            </li>
+
+          </ol>
+
+          <p>
+            You can view subscription information and manage or
+            cancel your subscription there.
+          </p>
+
+          <h3>
+            Managing a subscription on Android
+          </h3>
+
+          <ol>
+
+            <li>
+              Open Google Play.
+            </li>
+
+            <li>
+              Tap your profile picture.
+            </li>
+
+            <li>
+              Select Payments and subscriptions.
+            </li>
+
+            <li>
+              Select Subscriptions.
+            </li>
+
+            <li>
+              Select Sunzet.
+            </li>
+
+          </ol>
+
+          <p>
+            Sunzet does not have access to your payment-card
+            details and cannot cancel the subscription on your
+            behalf.
+          </p>
+
+          <h2>
+            RESTORING PREMIUM
+          </h2>
+
+          <p>
+            If you previously purchased Premium but no longer
+            have access, first make sure you are signed in with
+            the same Apple or Google account that was used for
+            the purchase.
+          </p>
+
+          <p>
+            If the app provides an option to restore purchases,
+            you can use it to retrieve your subscription status
+            again.
+          </p>
+
+          <p>
+            Contact us if the issue continues.
+          </p>
+
+          <h2>
+            TECHNICAL ISSUES
+          </h2>
+
+          <p>
+            If Sunzet is not working as expected, try the
+            following:
+          </p>
+
+          <ul>
+
+            <li>
+              close the app completely and open it again
+            </li>
+
+            <li>
+              make sure the device has a stable internet
+              connection
+            </li>
+
+            <li>
+              check whether a newer version of Sunzet is
+              available
+            </li>
+
+            <li>
+              restart the device
+            </li>
+
+            <li>
+              make sure the device has sufficient free storage
+            </li>
+
+          </ul>
+
+          <p>
+            If the issue is not resolved, email us with
+            information about what is happening.
+          </p>
+
+          <h2>
+            NOTIFICATIONS
+          </h2>
+
+          <p>
+            Sunzet may use local notifications, for example for
+            calendar reminders.
+          </p>
+
+          <p>
+            If notifications do not appear, check the
+            notification settings for Sunzet on your device.
+          </p>
+
+          <p>
+            On iPhone and iPad, these settings are normally found
+            under:
+          </p>
+
+          <p>
+            <strong>
+              Settings → Notifications → Sunzet
+            </strong>
+          </p>
+
+          <p>
+            On Android, the location may vary depending on the
+            device model and operating system.
+          </p>
+
+          <h2>
+            LOCALLY STORED CONTENT
+          </h2>
+
+          <p>
+            Most content you create in Sunzet is stored locally
+            on your device.
+          </p>
+
+          <p>
+            This may include:
+          </p>
+
+          <ul>
+
+            <li>
+              calendar events
+            </li>
+
+            <li>
+              shopping lists
+            </li>
+
+            <li>
+              to-do lists
+            </li>
+
+            <li>
+              journal entries
+            </li>
+
+            <li>
+              dreams
+            </li>
+
+            <li>
+              tarot readings
+            </li>
+
+            <li>
+              favourites
+            </li>
+
+            <li>
+              app settings
+            </li>
+
+          </ul>
+
+          <p>
+            If the app is deleted, locally stored content may
+            also be deleted.
+          </p>
+
+          <p>
+            Sunzet normally cannot recover local content that has
+            been deleted from the device.
+          </p>
+
+          <h2>
+            PRIVACY
+          </h2>
+
+          <p>
+            Information about how Sunzet processes information is
+            available in our Privacy Policy:
+          </p>
+
+          <p>
+            <a href="privacy.html">
+              Read the Privacy Policy
+            </a>
+          </p>
+
+          <h2>
+            TERMS
+          </h2>
+
+          <p>
+            Information about the terms for using Sunzet is
+            available here:
+          </p>
+
+          <p>
+            <a href="terms.html">
+              Read the Terms of Use
+            </a>
+          </p>
+
+          <h2>
+            CONTACT
+          </h2>
+
+          <p>
+            You are welcome to contact us with questions,
+            feedback or suggestions.
+          </p>
+
+          <p>
+            <a href="mailto:sunzet.app@gmail.com">
+              sunzet.app@gmail.com
+            </a>
+          </p>
+
+          <p>
+            We will respond as soon as reasonably possible.
+          </p>
+
+        </div>
+
+      </div>
+
+    </section>
+
+  </main>
+
+  <footer class="site-footer">
+
+    <div class="footer-inner">
+
+      <div class="footer-brand">
+
+        <img
+          src="sunzet-logo.png"
+          class="footer-logo"
+          alt="Sunzet"
+        >
+
+        <span>
+          © 2026 Sunzet
+        </span>
+
+      </div>
+
+      <nav>
+
+        <a
+          href="index.html"
+          data-i18n="home"
+        >
+          Hjem
+        </a>
+
+        <a href="premium.html">
+          Premium
+        </a>
+
+        <a
+          href="privacy.html"
+          data-i18n="privacy"
+        >
+          Personvern
+        </a>
+
+        <a
+          href="terms.html"
+          data-i18n="terms"
+        >
+          Vilkår
+        </a>
+
+        <a
+          href="support.html"
+          data-i18n="support"
+        >
+          Hjelp
+        </a>
+
+        <a
+          href="mailto:sunzet.app@gmail.com"
+          data-i18n="contact"
+        >
+          Kontakt
+        </a>
+
+      </nav>
+
+    </div>
+
+  </footer>
+
+  <script src="language.js"></script>
+
+  <script src="script.js"></script>
+
+</body>
+
+</html>
